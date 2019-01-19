@@ -1,4 +1,21 @@
-html {
-  background-color: red; }
+*:not(iframe) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 0; }
+  *:not(iframe):focus {
+    outline: 0; }
 
 /*# sourceMappingURL=style.css.map */
