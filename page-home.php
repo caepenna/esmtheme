@@ -29,6 +29,33 @@
       <a href="#">conheça a frente</a>
     </section>
 
+    <section>
+      <h2>Notícias</h2>
+      <ul>
+        <li>
+          <img src="" alt="">
+          <div class="">
+            <h4>Cateforia</h4>
+            <h3>Exemplo de notícia: título curto em duas linhas</h3>
+          </div>
+        </li>
+        <li>
+          <img src="" alt="">
+          <div class="">
+            <h4>Cateforia</h4>
+            <h3>Exemplo de notícia: título curto em duas linhas</h3>
+          </div>
+        </li>
+        <li>
+          <img src="" alt="">
+          <div class="">
+            <h4>Cateforia</h4>
+            <h3>Exemplo de notícia: título curto em duas linhas</h3>
+          </div>
+        </li>
+      </ul>
+    </section>
+
   </main>
 
 <?php endwhile; ?>
