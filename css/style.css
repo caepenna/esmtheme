@@ -32,7 +32,7 @@ html {
   -webkit-box-sizing: border-box; }
 
 ::selection {
-  background-color: lightpink; }
+  background-color: #ACDAEE; }
 
 button, input[type="submit"] {
   cursor: pointer; }
@@ -65,12 +65,37 @@ main > section {
       padding-right: calc((100vw - 72rem) / 2); } }
   @media (min-width: 801px) {
     main > section {
-      padding-top: 6rem;
-      padding-bottom: 6rem; } }
+      padding-top: 8rem;
+      padding-bottom: 8rem; } }
   main > section:first-of-type {
     padding-top: 8rem; }
     @media (min-width: 801px) {
       main > section:first-of-type {
-        padding-top: 10rem; } }
+        padding-top: 12rem; } }
+
+.esm-footer {
+  background-color: #272727;
+  color: #fff;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  @media (min-width: 801px) {
+    .esm-footer {
+      padding-top: 8rem;
+      padding-bottom: 8rem; } }
+  @media (min-width: 801px) {
+    .esm-footer {
+      padding-left: calc(2rem + 1vw);
+      padding-right: calc(2rem + 1vw); } }
+  @media (min-width: 1153px) {
+    .esm-footer {
+      padding-left: calc(4rem + 4vw);
+      padding-right: calc(4rem + 4vw); } }
+  @media (min-width: 1921px) {
+    .esm-footer {
+      padding-left: calc((100vw - 72rem) / 2);
+      padding-right: calc((100vw - 72rem) / 2); } }
 
 /*# sourceMappingURL=style.css.map */

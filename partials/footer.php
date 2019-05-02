@@ -11,7 +11,7 @@
     $baseurl = get_template_directory_uri();
 ?>
 
-    <footer>
+    <footer class="esm-footer">
 
       <section>
         <div class="board">
