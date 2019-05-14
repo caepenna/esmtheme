@@ -18,6 +18,12 @@
   *:not(iframe):focus {
     outline: 0; }
 
+h1, h2, h3 {
+  font-family: avory-i-latin, sans-serif; }
+
+h4, h5, h6 {
+  font-family: freight-sans-pro, sans-serif; }
+
 html {
   font-size: 16px;
   font-weight: 400;
