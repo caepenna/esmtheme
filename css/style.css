@@ -207,9 +207,9 @@ main > section {
     font-size: 32px;
     margin-left: -16px; }
     .esm-header > .menu:hover {
-      opacity: 0.8;
-      transition: all 0.2s ease;
-      transform: scale(1.25); }
+      opacity: 0.9;
+      transition: all 0.3s ease;
+      transform: scale(1.125); }
     .esm-header > .menu:before, .esm-header > .menu:after {
       content: "";
       width: 1em;
@@ -262,6 +262,28 @@ main > section {
     text-align: right; }
     .esm-footer > .right > .medias {
       margin-top: 40px; }
+
+.esm-input {
+  border-bottom: 2px solid #fff; }
+
+.esm-button {
+  background-color: #F7C1C1;
+  color: #272727;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: freight-sans-pro, sans-serif;
+  font-variant: small-caps; }
+  .esm-button:hover {
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    transform: scale(1.125); }
 
 .section-follow {
   padding-left: 1rem;

@@ -17,10 +17,10 @@
           <h2 class="title -uppercase">Acompanhe a Frente</h2>
           <p class="subtitle">Participe da nossa lista de e-mails e fique por dentro de todas as novidades sobre a Frente, projetos e ações parceiros.</p>
           <form class="form" action="index.html" method="post">
-            <input type="text" name="name" placeholder="seu nome">
-            <input type="text" name="email" placeholder="seu e-mail">
+            <input class="esm-input" type="text" name="name" placeholder="seu nome">
+            <input class="esm-input" type="text" name="email" placeholder="seu e-mail">
             <br>
-            <button type="submit">Cadastrar</button>
+            <button class="esm-button" type="submit">Cadastrar</button>
           </form>
         </div>
       </section>
