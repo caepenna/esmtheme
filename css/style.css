@@ -164,6 +164,76 @@ main > section {
       main > section:first-of-type {
         padding-top: 12rem; } }
 
+.esm-header {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #272727;
+  color: #fff;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  display: flex; }
+  @media (min-width: 801px) {
+    .esm-header {
+      padding-left: calc(2rem + 1vw);
+      padding-right: calc(2rem + 1vw); } }
+  @media (min-width: 1153px) {
+    .esm-header {
+      padding-left: calc(4rem + 4vw);
+      padding-right: calc(4rem + 4vw); } }
+  @media (min-width: 1921px) {
+    .esm-header {
+      padding-left: calc((100vw - 72rem) / 2);
+      padding-right: calc((100vw - 72rem) / 2); } }
+  .esm-header > .navigation {
+    display: none; }
+  .esm-header > .title {
+    font-family: freight-macro-pro, sans-serif;
+    flex-grow: 1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 24px;
+    line-height: 64px;
+    text-align: center;
+    padding-right: calc( 64px - (64px / 4) ); }
+    @media (min-width: 801px) {
+      .esm-header > .title {
+        font-size: 30px; } }
+  .esm-header > .menu {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    font-size: 32px;
+    margin-left: -16px; }
+    .esm-header > .menu:hover {
+      opacity: 0.8;
+      transition: all 0.2s ease;
+      transform: scale(1.25); }
+    .esm-header > .menu:before, .esm-header > .menu:after {
+      content: "";
+      width: 1em;
+      height: 0.125em;
+      background-color: currentColor;
+      display: block;
+      position: absolute;
+      transition: all 0.2s linear; }
+    .esm-header > .menu:before {
+      top: 0.625em;
+      left: 0.5em;
+      box-shadow: 0 0.3125em 0 0 currentColor; }
+    .esm-header > .menu:after {
+      top: 1.25em;
+      left: 0.5em; }
+    .esm-header > .menu.--x:before, .esm-header > .menu.--x:after {
+      top: 0.9375em;
+      left: 0.5em; }
+    .esm-header > .menu.--x:before {
+      transform: rotate(45deg);
+      box-shadow: 0 0 0 0 transparent; }
+    .esm-header > .menu.--x:after {
+      transform: rotate(-45deg); }
+
 .esm-footer {
   padding-left: 1rem;
   padding-right: 1rem;

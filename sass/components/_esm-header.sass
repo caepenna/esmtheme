@@ -1,0 +1,65 @@
+.esm-header
+  $menu-size: 64px
+  +container-width
+  background-color: $color-blackboard
+  color: #fff
+  padding-top: 28px
+  padding-bottom: 28px
+  display: flex
+
+  > .navigation
+    display: none
+
+  > .title
+    font-family: $font-family-body-serif
+    flex-grow: 1
+    text-transform: uppercase
+    letter-spacing: 3px
+    font-size: 24px
+    line-height: 64px
+    text-align: center
+    padding-right: calc( #{$menu-size} - (#{$menu-size} / 4) )
+    +media-mediumup
+      font-size: 30px
+
+  > .menu
+    width: $menu-size
+    height: $menu-size
+    position: relative
+    color: #fff
+    cursor: pointer
+    font-size: $menu-size/2
+    margin-left: -$menu-size/4
+
+    &:hover
+      opacity: 0.8
+      transition: all 0.2s ease
+      transform: scale(1.25)
+
+    &:before,
+    &:after
+      content: ''
+      width: 1em
+      height: 0.125em
+      background-color: currentColor
+      display: block
+      position: absolute
+      transition: all 0.2s linear
+    &:before
+      top: 0.625em
+      left: 0.5em
+      box-shadow: 0 0.3125em 0 0 currentColor
+    &:after
+      top: 1.25em
+      left: 0.5em
+
+    &.--x
+      &:before,
+      &:after
+        top: 0.9375em
+        left: 0.5em
+      &:before
+        transform: rotate(45deg)
+        box-shadow: 0 0 0 0 transparent
+      &:after
+        transform: rotate(-45deg)

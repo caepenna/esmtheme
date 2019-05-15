@@ -21,8 +21,8 @@
   </head>
   <body>
     <header class="esm-header">
+      <button class="menu js-menu" type="button" name="button"></button>
       <h1 class="title">Título da página</h1>
-      <button class="menu" type="button" name="button"></button>
       <div class="navigation">
         <nav>
           <a href="#">Início</a>
