@@ -27,7 +27,7 @@
 
       <footer class="esm-footer">
         <div class="left">
-          <img src="" alt="">
+          <img src="" alt="Frente Nacional Escola sem Mordaça">
         </div>
         <div class="right">
           <h4>Encontre a Frente nas mídias:</h4>

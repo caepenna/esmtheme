@@ -20,7 +20,19 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <header>
-      <h1>header</h1>
-      <h4>header</h4>
+    <header class="esm-header">
+      <h1 class="title">Título da página</h1>
+      <button class="menu" type="button" name="button"></button>
+      <div class="navigation">
+        <nav>
+          <a href="#">Início</a>
+          <a href="#">Estratégias</a>
+          <a href="#">Casos modelo</a>
+          <a href="#">Downloads</a>
+          <a href="#">Bibliografia</a>
+          <a href="#">Projetos</a>
+          <a href="#">Blog</a>
+        </nav>
+        <img src="" alt="Frente Nacional Escola sem Mordaça">
+      </div>
     </header>
