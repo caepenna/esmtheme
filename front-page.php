@@ -16,9 +16,9 @@
 
   <main>
 
-    <section>
-      <div class="logo">
-        <h1>Frente Nacional Escola Sem Mordaça</h1>
+    <section class="section-hero">
+      <div class="board">
+        <h1 class="title">Frente</br>Nacional</br>Escola</br>Sem</br><span class="-strike">Mordaça</span></h1>
       </div>
       <p>Aqui você encontra as orientações que precisa para enfrentar a censura nas escolas. Pais, alunos, o corpo técnico das escolas também estão convidados a aprenderem um pouco mais.</p>
       <a href="#">conheça a frente</a>
@@ -27,7 +27,7 @@
     <section>
       <h2>Educador, proteja-se!</h2>
       <p>Aqui você encontra as orientações que precisa para enfrentar a censura nas escolas. Pais, alunos, o corpo técnico das escolas também estão convidados a aprenderem um pouco mais.</p>
-      <a href="#">conheça a frente</a>
+      <a class="link" href="#">conheça a frente</a>
     </section>
 
     <section>
