@@ -40,13 +40,18 @@
     <?php
       //vars
       $depo = get_field('depoimento');
-      $link = get_post_permalink();
+      $id = $post->post_name;
+      $titulo = get_the_title();
     ?>
 
     <div>
-      <?php if( $depo ): ?>
-        <a <?php if( $link ): ?>href="<?php echo $link ?>"<?php endif; ?> ><?php echo $depo ?></a>
-      <?php endif; ?>
+        <a href="#<?php echo $id ?>">
+          <?php if( $depo ): ?>
+            <?php echo $depo ?>
+          <?php else: ?>
+            <?php echo $titulo; ?>
+          <?php endif; ?>
+        </a>
     </div>
 
   <?php $i++; endforeach; wp_reset_postdata(); ?>
@@ -61,30 +66,33 @@
       $intro = get_field('intro');
       $detalhes = get_field('detalhes');
       $como_se_proteger = get_field('como_se_proteger');
+      $id = $post->post_name;
     ?>
+    <section id="<?php echo $id ?>">
 
-    <?php if( $titulo ): ?>
-      <h2><?php echo $titulo ?></h2>
-    <?php endif; ?>
+      <?php if( $titulo ): ?>
+        <h2><?php echo $titulo ?></h2>
+      <?php endif; ?>
 
-    <?php if ($capa) : ?>
-      <?php echo wp_get_attachment_image($capa, 'medium_large'); ?>
-    <?php endif; ?>
+      <?php if ($capa) : ?>
+        <?php echo wp_get_attachment_image($capa, 'medium_large'); ?>
+      <?php endif; ?>
 
-    <?php if( $intro ): ?>
-      <h6>Intro</h6>
-      <p><?php echo $intro ?></p>
-    <?php endif; ?>
+      <?php if( $intro ): ?>
+        <p><?php echo $intro ?></p>
+      <?php endif; ?>
 
-    <?php if( $detalhes ): ?>
-      <h6>Detalhes</h6>
-      <p><?php echo $detalhes ?></p>
-    <?php endif; ?>
+      <?php if( $detalhes ): ?>
+        <a>Mais detalhes</a>
+        <p><?php echo $detalhes ?></p>
+      <?php endif; ?>
 
-    <?php if( $como_se_proteger ): ?>
-      <h3>Como se proteger?</h3>
-      <?php echo $como_se_proteger ?>
-    <?php endif; ?>
+      <?php if( $como_se_proteger ): ?>
+        <h3>Como se proteger?</h3>
+        <?php echo $como_se_proteger ?>
+      <?php endif; ?>
+
+    </section>
 
   <?php $i++; endforeach; wp_reset_postdata(); ?>
 

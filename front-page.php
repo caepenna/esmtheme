@@ -26,37 +26,12 @@
       <a href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
     </section>
 
-    <section>
-      <h2>Educador, proteja-se!</h2>
-      <p>Aqui você encontra as orientações que precisa para enfrentar a censura nas escolas. Pais, alunos, o corpo técnico das escolas também estão convidados a aprenderem um pouco mais.</p>
-      <a href="#">conheça a frente</a>
-    </section>
+		<?php get_template_part( 'partials/slider', 'casos' ); ?>
 
-    <section>
+		<section>
       <h2>Notícias</h2>
-      <ul>
-        <li>
-          <img src="" alt="">
-          <div class="">
-            <h4>Categoria</h4>
-            <h3>Exemplo de notícia: título curto em duas linhas</h3>
-          </div>
-        </li>
-        <li>
-          <img src="" alt="">
-          <div class="">
-            <h4>Categoria</h4>
-            <h3>Exemplo de notícia: título curto em duas linhas</h3>
-          </div>
-        </li>
-        <li>
-          <img src="" alt="">
-          <div class="">
-            <h4>Categoria</h4>
-            <h3>Exemplo de notícia: título curto em duas linhas</h3>
-          </div>
-        </li>
-      </ul>
+				<?php get_template_part( 'partials/slider', 'archive' ); ?>
+      <a href="<?php echo get_post_type_archive_link('post');?>">Mais notícias</a>
     </section>
 
   </main>
