@@ -26,6 +26,12 @@
       <a href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
     </section>
 
+    <section>
+      <h2>Educador, proteja-se!</h2>
+      <p>Aqui você encontra as orientações que precisa para enfrentar a censura nas escolas. Pais, alunos, o corpo técnico das escolas também estão convidados a aprenderem um pouco mais.</p>
+      <a class="link" href="#">conheça a frente</a>
+    </section>
+
 		<?php get_template_part( 'partials/slider', 'casos' ); ?>
 
 		<section>
