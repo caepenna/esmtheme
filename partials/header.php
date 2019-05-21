@@ -22,7 +22,7 @@
   <body>
     <header class="esm-header">
       <button class="menu js-menu" type="button" name="button"></button>
-      <h1 class="title">Título da página</h1>
+      <h1 class="title"><?php the_field(titulo_curto); ?></h1>
       <div class="navigation">
         <nav>
           <a href="#">Início</a>

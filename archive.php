@@ -15,7 +15,15 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
-
+		<section>
+				<?php get_template_part( 'partials/slider', 'archive' ); ?>
+    </section>
+		<section>
+				<?php get_template_part( 'partials/gallery', 'archive' ); ?>
+    </section>
+		<section>
+				<?php get_template_part( 'partials/filters' ); ?>
+    </section>
   </main>
 
 <?php endwhile; ?>

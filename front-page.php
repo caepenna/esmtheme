@@ -9,7 +9,9 @@
 ?>
 
 <?php
+	// vars
   $baseurl = get_template_directory_uri();
+	$botao_capa = get_field('botao_capa');
 ?>
 
 <?php if ( have_posts() ) : the_post(); ?>
@@ -20,41 +22,16 @@
       <div class="board">
         <h1 class="title">Frente</br>Nacional</br>Escola</br>Sem</br><span class="-strike">Mordaça</span></h1>
       </div>
-      <p>Aqui você encontra as orientações que precisa para enfrentar a censura nas escolas. Pais, alunos, o corpo técnico das escolas também estão convidados a aprenderem um pouco mais.</p>
-      <a href="#">conheça a frente</a>
+      <p><?php the_content(); ?></p>
+      <a href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
     </section>
 
-    <section>
-      <h2>Educador, proteja-se!</h2>
-      <p>Aqui você encontra as orientações que precisa para enfrentar a censura nas escolas. Pais, alunos, o corpo técnico das escolas também estão convidados a aprenderem um pouco mais.</p>
-      <a class="link" href="#">conheça a frente</a>
-    </section>
+		<?php get_template_part( 'partials/slider', 'casos' ); ?>
 
-    <section>
+		<section>
       <h2>Notícias</h2>
-      <ul>
-        <li>
-          <img src="" alt="">
-          <div class="">
-            <h4>Cateforia</h4>
-            <h3>Exemplo de notícia: título curto em duas linhas</h3>
-          </div>
-        </li>
-        <li>
-          <img src="" alt="">
-          <div class="">
-            <h4>Cateforia</h4>
-            <h3>Exemplo de notícia: título curto em duas linhas</h3>
-          </div>
-        </li>
-        <li>
-          <img src="" alt="">
-          <div class="">
-            <h4>Cateforia</h4>
-            <h3>Exemplo de notícia: título curto em duas linhas</h3>
-          </div>
-        </li>
-      </ul>
+				<?php get_template_part( 'partials/slider', 'archive' ); ?>
+      <a href="<?php echo get_post_type_archive_link('post');?>">Mais notícias</a>
     </section>
 
   </main>
