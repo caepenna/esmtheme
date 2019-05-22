@@ -29,7 +29,7 @@
       <a href="#">conheça a frente</a>
     </section>
 
-    <section>
+    <section class="section-news">
       <h2>Notícias</h2>
       <ul>
         <li>
