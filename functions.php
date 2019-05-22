@@ -31,6 +31,7 @@ function esm_scripts() {
   wp_enqueue_style('theme_style', $theme_style);
   wp_deregister_script('jquery');
   wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), $ver = false, false );
+  wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), $ver = false, true );
 }
 add_action( 'wp_enqueue_scripts', 'esm_scripts' );
 
