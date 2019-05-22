@@ -1,6 +1,5 @@
 .section-hero
-  background-color: $color-pinkchalk
-  color: $color-blackboard
+  background-color: rgba($color-pinkchalk, 0.5)
   padding-left: calc( (100vw - 240px) / 2 )
   padding-right: calc( (100vw - 240px) / 2 )
   +media-mediumup
@@ -28,9 +27,7 @@
     margin-top: 60px
 
   > .link
+    +font-link
     margin-top: 30px
     display: block
-    text-transform: uppercase
-    font-variant: small-caps
-    font-weight: 900
     text-align: center

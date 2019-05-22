@@ -264,27 +264,26 @@ main > section {
   border-bottom: 2px solid #fff; }
 
 .esm-button {
-  background-color: #F7C1C1;
-  color: #272727;
-  font-weight: 900;
   font-size: 20px;
   line-height: 30px;
+  font-family: freight-sans-pro, sans-serif;
+  font-variant: small-caps;
+  font-weight: 900;
+  background-color: #F7C1C1;
+  color: #272727;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 30px;
   padding-right: 30px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: freight-sans-pro, sans-serif;
-  font-variant: small-caps; }
+  letter-spacing: 1px; }
   .esm-button:hover {
     opacity: 0.9;
     transition: all 0.3s ease;
     transform: scale(1.125); }
 
 .section-hero {
-  background-color: #F7C1C1;
-  color: #272727;
+  background-color: rgba(247, 193, 193, 0.5);
   padding-left: calc( (100vw - 240px) / 2 );
   padding-right: calc( (100vw - 240px) / 2 ); }
   @media (min-width: 801px) {
@@ -312,12 +311,17 @@ main > section {
     text-align: center;
     margin-top: 60px; }
   .section-hero > .link {
-    margin-top: 30px;
-    display: block;
-    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: freight-sans-pro, sans-serif;
     font-variant: small-caps;
     font-weight: 900;
+    margin-top: 30px;
+    display: block;
     text-align: center; }
+
+.section-news {
+  background-color: rgba(247, 193, 193, 0.5); }
 
 .section-follow {
   padding-left: 1rem;
