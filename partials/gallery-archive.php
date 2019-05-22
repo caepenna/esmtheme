@@ -10,12 +10,22 @@
     $postsPerPage = 6;
     $postType = 'post';
     $order = 'desc';
-    $query_args = array(
-        'posts_per_page' => $postsPerPage,
-        'post_type' => $postType,
-        'order' => $order,
-        'post_status' => 'publish'
-    );
+    if ($current_category):
+      $query_args = array(
+          'posts_per_page' => $postsPerPage,
+          'post_type' => $postType,
+          'order' => $order,
+          'post_status' => 'publish',
+          'cat' => $current_category
+      );
+    else:
+      $query_args = array(
+          'posts_per_page' => $postsPerPage,
+          'post_type' => $postType,
+          'order' => $order,
+          'post_status' => 'publish'
+      );
+    endif;
     $posts_query = new WP_Query( $query_args );
     if ($posts_query -> have_posts()) :
         $posts_count = wp_count_posts('post')->publish;
