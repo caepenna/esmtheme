@@ -1,16 +1,36 @@
 .section-hero
   background-color: $color-pinkchalk
   color: $color-blackboard
+  padding-left: calc( (100vw - 240px) / 2 )
+  padding-right: calc( (100vw - 240px) / 2 )
+  +media-mediumup
+    padding-left: calc( (100vw - 480px) / 2 )
+    padding-right: calc( (100vw - 480px) / 2 )
 
   > .board
     background-color: $color-blackboard
     color: #fff
+    padding: 20px
+    box-shadow: 4px 4px 0 0 rgba($color-blackboard, 0.5)
+    +media-mediumup
+      padding: 42px
+      box-shadow: 8px 8px 0 0 rgba($color-blackboard, 0.5)
     > .title
       line-height: 24px
       font-size: 22px
       text-transform: uppercase
-      box-shadow: 4px 4px 0 0 rgba($color-blackboard, 0.5)
       +media-mediumup
         line-height: 50px
         font-size: 46px
-        box-shadow: 8px 8px 0 0 rgba($color-blackboard, 0.5)
+
+  > p
+    text-align: center
+    margin-top: 60px
+
+  > .link
+    margin-top: 30px
+    display: block
+    text-transform: uppercase
+    font-variant: small-caps
+    font-weight: 900
+    text-align: center

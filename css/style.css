@@ -25,12 +25,9 @@ h1, h2, h3 {
   font-family: avory-i-latin, sans-serif; }
 
 p {
-  font-size: 20px;
-  line-height: 32px; }
-  @media (min-width: 801px) {
-    p {
-      font-size: 26px;
-      line-height: 40px; } }
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500; }
 
 h1 {
   font-size: 60px;
@@ -287,20 +284,40 @@ main > section {
 
 .section-hero {
   background-color: #F7C1C1;
-  color: #272727; }
+  color: #272727;
+  padding-left: calc( (100vw - 240px) / 2 );
+  padding-right: calc( (100vw - 240px) / 2 ); }
+  @media (min-width: 801px) {
+    .section-hero {
+      padding-left: calc( (100vw - 480px) / 2 );
+      padding-right: calc( (100vw - 480px) / 2 ); } }
   .section-hero > .board {
     background-color: #272727;
-    color: #fff; }
+    color: #fff;
+    padding: 20px;
+    box-shadow: 4px 4px 0 0 rgba(39, 39, 39, 0.5); }
+    @media (min-width: 801px) {
+      .section-hero > .board {
+        padding: 42px;
+        box-shadow: 8px 8px 0 0 rgba(39, 39, 39, 0.5); } }
     .section-hero > .board > .title {
       line-height: 24px;
       font-size: 22px;
-      text-transform: uppercase;
-      box-shadow: 4px 4px 0 0 rgba(39, 39, 39, 0.5); }
+      text-transform: uppercase; }
       @media (min-width: 801px) {
         .section-hero > .board > .title {
           line-height: 50px;
-          font-size: 46px;
-          box-shadow: 8px 8px 0 0 rgba(39, 39, 39, 0.5); } }
+          font-size: 46px; } }
+  .section-hero > p {
+    text-align: center;
+    margin-top: 60px; }
+  .section-hero > .link {
+    margin-top: 30px;
+    display: block;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-weight: 900;
+    text-align: center; }
 
 .section-follow {
   padding-left: 1rem;
