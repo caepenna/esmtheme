@@ -1,7 +1,7 @@
 <?php
-/* Template Name: Categoria */
+/* Template Name: Categoria de arquivo */
 /**
- * The template for displaying the category page
+ * The template for displaying the downloads category page
  *
  * @package ESM
  */
@@ -12,17 +12,21 @@
   $baseurl = get_template_directory_uri();
 ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
+Teste
 
+<?php while ( have_posts() ) : the_post(); ?>
   <main>
-		<h1><?php single_cat_title(); ?></h1>
+		<h1><?php //single_cat_title(); ?></h1>
 		<a href="javascript:history.back()">Voltar</a>
-		<?php set_query_var( 'current_category', absint( $cat ) );?>
+		<?php
+			$taxo = get_queried_object()->term_id;
+			set_query_var( 'current_category', absint( $taxo ) );
+		?>
 		<section>
 				<?php get_template_part( 'partials/gallery', 'archive' ); ?>
     </section>
 		<section>
-				<?php set_query_var( 'taxonomy', 'category' );?>
+				<?php set_query_var( 'taxonomy', 'tipo_de_arquivo' );?>
 				<?php get_template_part( 'partials/filters' ); ?>
     </section>
   </main>

@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Notícias */
+/* Template Name: Downloads */
 /**
  * The template for displaying the archive page
  *
@@ -14,22 +14,15 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+	<?php set_query_var( 'post_type', 'arquivo' );?>
   <main>
-		<?php
-			set_query_var( 'post_type', 'post' );
-		?>
-		<section>
-				<?php get_template_part( 'partials/slider', 'archive' ); ?>
-    </section>
-		<section>
-				<?php get_template_part( 'partials/gallery', 'archive' ); ?>
-    </section>
 		<section>
 				<?php
-					set_query_var( 'taxonomy', 'category' );
+					set_query_var( 'taxonomy', 'tipo_de_arquivo' );
 					get_template_part( 'partials/filters' );
 				?>
     </section>
+		<?php get_template_part( 'partials/gallery', 'downloads' ); ?>
   </main>
 
 <?php endwhile; ?>

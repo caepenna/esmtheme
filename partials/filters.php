@@ -13,7 +13,7 @@
 
   <?php
     $categories = get_terms( array(
-        'taxonomy' => 'category',
+        'taxonomy' => $taxonomy,
         'hide_empty' => false,
     ) );
     foreach($categories as $term) {
