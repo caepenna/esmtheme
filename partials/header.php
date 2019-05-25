@@ -20,7 +20,11 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <header class="esm-header">
+    <?php if ( is_front_page() ): ?>
+      <header class="esm-header -home">
+    <?php else: ?>
+      <header class="esm-header">
+    <?php endif; ?>
       <button class="menu js-menu" type="button" name="button"></button>
       <h1 class="title">
         <?php

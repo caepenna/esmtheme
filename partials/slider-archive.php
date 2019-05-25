@@ -29,11 +29,11 @@
       ?>
         <li class="news-card">
           <a href="<?php echo $link; ?>">
-            <article class="post-thumb slide card visible">
+            <article class="card">
               <figure>
                 <?php echo wp_get_attachment_image($thumbnail, 'large'); ?>
               </figure>
-              <div class="info post-info">
+              <div class="info">
                 <h4 class="tag -uppercase"><?php echo $area_name; ?></h4>
                 <h3 class="title -uppercase"><?php echo $titulo; ?></h3>
               </div>
