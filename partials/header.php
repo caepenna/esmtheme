@@ -24,15 +24,15 @@
       <button class="menu js-menu" type="button" name="button"></button>
       <h1 class="title"><?php the_field(titulo_curto); ?></h1>
       <div class="navigation">
-        <nav>
-          <a href="#">Início</a>
-          <a href="#">Estratégias</a>
-          <a href="#">Casos modelo</a>
-          <a href="#">Downloads</a>
-          <a href="#">Bibliografia</a>
-          <a href="#">Projetos</a>
-          <a href="#">Blog</a>
-        </nav>
+        <?php wp_nav_menu(
+          array(
+            'theme_location' => 'header-menu',
+            'container' => '',
+            'container_id' => '',
+            'container_class' => '',
+            'items_wrap' => '<ul class="list-pages">%3$s</ul>'
+          )
+        ); ?>
         <img src="" alt="Frente Nacional Escola sem Mordaça">
       </div>
     </header>

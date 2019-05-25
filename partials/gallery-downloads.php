@@ -1,22 +1,29 @@
 <?php
 /**
- * Galeria de notícias
+ * Lista de downloads
  *
  * @package ESM
  */
 ?>
 
+
 <?php
     $postsPerPage = 6;
     $postType = $post_type;
     $order = 'desc';
-    if ($current_category):
+    if ($tipo_de_arquivo):
       $query_args = array(
           'posts_per_page' => $postsPerPage,
           'post_type' => $postType,
           'order' => $order,
           'post_status' => 'publish',
-          'cat' => $current_category
+          'tax_query' => array(
+            array (
+              'taxonomy' => 'tipo_de_arquivo',
+              'field' => 'slug',
+              'terms' => $tipo_de_arquivo,
+            )
+          )
       );
     else:
       $query_args = array(
@@ -38,7 +45,7 @@
                 $i = 1;
                 while ($posts_query -> have_posts()) : $posts_query -> the_post();
                 $titulo = get_the_title();
-                $link = get_permalink();
+                $link = get_field('arquivo');
                 $postcat = get_the_category( $post->ID );
                 if ( ! empty( $postcat ) ) {
                     $area_slug = $postcat[0]->slug;
@@ -46,18 +53,20 @@
 
                     $term_id = $postcat[0]->term_id;
                     $taxonomy = $postcat[0]->taxonomy;
+                }
+                $file_types = get_the_terms( get_the_ID(), 'tipo_de_arquivo' );
+                if ( ! empty( $file_types ) ) {
+                    $file_type_slug = $file_types[0]->slug;
+                    $file_type_name = $file_types[0]->name;
 
+                    $file_type_id = $terms[0]->term_id;
                 }
             ?>
-            <a href="<?php echo $link; ?>">
-                <figure>
-                  <?php echo wp_get_attachment_image($thumbnail, 'large'); ?>
-                </figure>
-                <div>
-                  <h4><?php echo $area_name; ?></h4>
-                  <h3><?php echo $titulo; ?></h3>
-                </div>
-              </a>
+              <div>
+                <p><?php echo $file_type_name; ?></p>
+                <h3><?php echo $titulo; ?></h3>
+                <a href="<?php echo $link; ?>">Baixar</a>
+              </div>
 
             <?php $i++; endwhile; ?>
         </div>
@@ -70,7 +79,7 @@
             data-post-type="<?php echo $postType; ?>"
             data-ppp="<?php echo $postsPerPage; ?>"
             data-offset="<?php echo $postsPerPage; ?>">
-            Ver mais
+            Carregar mais
           </a>
     </div>
 </section>

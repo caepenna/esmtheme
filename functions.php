@@ -31,6 +31,7 @@ function esm_scripts() {
   wp_enqueue_style('theme_style', $theme_style);
   wp_deregister_script('jquery');
   wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), $ver = false, false );
+  wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), $ver = false, true );
 }
 add_action( 'wp_enqueue_scripts', 'esm_scripts' );
 
@@ -149,7 +150,7 @@ function cptui_register_my_cpts() {
 		"labels" => $labels,
 		"description" => "Experiências reais, vividas por colegas professores, em diferentes regiões do país.",
 		"public" => true,
-		"publicly_queryable" => true,
+		"publicly_queryable" => false,
 		"show_ui" => true,
 		"delete_with_user" => false,
 		"show_in_rest" => true,
@@ -165,8 +166,8 @@ function cptui_register_my_cpts() {
 		"rewrite" => array( "slug" => "arquivo", "with_front" => true ),
 		"query_var" => true,
 		"menu_position" => 7,
-		"supports" => array( "title", "editor", "thumbnail", "custom-fields" ),
-		"taxonomies" => array( "category", "post_tag" ),
+		"supports" => array( "title", "custom-fields" ),
+		"taxonomies" => array( "category", "post_tag", "tipo_de_arquivo" ),
 	);
 
 	register_post_type( "arquivo", $args );
@@ -355,6 +356,56 @@ function cptui_register_my_cpts() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
+
+function cptui_register_my_taxes() {
+
+	/**
+	 * Taxonomy: Tipos de arquivos.
+	 */
+
+	$labels = array(
+		"name" => __( "Tipos de arquivos", "esm" ),
+		"singular_name" => __( "Tipo de arquivo", "esm" ),
+		"menu_name" => __( "Tipos de arquivos", "esm" ),
+		"all_items" => __( "Todos os tipos de arquivos", "esm" ),
+		"edit_item" => __( "Editar tipo de arquivo", "esm" ),
+		"view_item" => __( "Ver tipo de arquivo", "esm" ),
+		"update_item" => __( "Atualizar tipo de arquivo", "esm" ),
+		"add_new_item" => __( "adicionar novo tipo de arquivo", "esm" ),
+		"new_item_name" => __( "Novo tipo de arquivo", "esm" ),
+		"parent_item" => __( "Tipo de arquivo ascendente", "esm" ),
+		"parent_item_colon" => __( "Tipo de arquivo ascendente:", "esm" ),
+		"search_items" => __( "Procurar tipo de arquivo", "esm" ),
+		"popular_items" => __( "Tipos de arquivos populares", "esm" ),
+		"separate_items_with_commas" => __( "Separar tipos de arquivos com vírgulas", "esm" ),
+		"add_or_remove_items" => __( "Adicionar ou excluir tipos de arquivos", "esm" ),
+		"choose_from_most_used" => __( "Escolha entre os tipos de arquivos mais usados", "esm" ),
+		"not_found" => __( "Nenhum tipo de arquivo encontrado", "esm" ),
+		"no_terms" => __( "Nenhum tipo de arquivo", "esm" ),
+		"items_list_navigation" => __( "Navegação da lista de tipos de arquivos", "esm" ),
+		"items_list" => __( "Lista de tipos de arquivos", "esm" ),
+	);
+
+	$args = array(
+		"label" => __( "Tipos de arquivos", "esm" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+    "rewrite"      => array('slug' => 'downloads'),
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"rest_base" => "tipo_de_arquivo",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => false,
+		);
+	register_taxonomy( "tipo_de_arquivo", array( "arquivo" ), $args );
+}
+add_action( 'init', 'cptui_register_my_taxes' );
 
 
 // Advanced custom fields

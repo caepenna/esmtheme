@@ -1,7 +1,7 @@
 <?php
-/* Template Name: Notícias */
+/* Template Name: Categoria */
 /**
- * The template for displaying the archive page
+ * The template for displaying the category page
  *
  * @package ESM
  */
@@ -15,20 +15,15 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
-		<?php
-			set_query_var( 'post_type', 'post' );
-		?>
-		<section>
-				<?php get_template_part( 'partials/slider', 'archive' ); ?>
-    </section>
+		<h1><?php single_cat_title(); ?></h1>
+		<a href="javascript:history.back()">Voltar</a>
+		<?php set_query_var( 'current_category', absint( $cat ) );?>
 		<section>
 				<?php get_template_part( 'partials/gallery', 'archive' ); ?>
     </section>
 		<section>
-				<?php
-					set_query_var( 'taxonomy', 'category' );
-					get_template_part( 'partials/filters' );
-				?>
+				<?php set_query_var( 'taxonomy', 'category' );?>
+				<?php get_template_part( 'partials/filters' ); ?>
     </section>
   </main>
 
