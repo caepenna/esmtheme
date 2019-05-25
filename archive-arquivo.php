@@ -1,11 +1,14 @@
 <?php
-/* Template Name: Downloads */
-/**
- * The template for displaying the archive page
- *
- * @package ESM
- */
-	get_template_part( 'partials/header' );
+	/* Template Name: Downloads */
+	/**
+	 * The template for displaying the archive page
+	 *
+	 * @package ESM
+	 */
+	 set_query_var( 'post_type', 'arquivo' );
+	 set_query_var( 'taxonomy', 'tipo_de_arquivo' );
+
+	 get_template_part( 'partials/header' );
 ?>
 
 <?php
@@ -13,14 +16,10 @@
 ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-
-	<?php set_query_var( 'post_type', 'arquivo' );?>
   <main>
+		<h1>Leia e compartilhe materiais livremente.</h1>
 		<section>
-				<?php
-					set_query_var( 'taxonomy', 'tipo_de_arquivo' );
-					get_template_part( 'partials/filters' );
-				?>
+				<?php get_template_part( 'partials/filters' ); ?>
     </section>
 		<?php get_template_part( 'partials/gallery', 'downloads' ); ?>
   </main>

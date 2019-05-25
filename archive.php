@@ -5,35 +5,26 @@
  *
  * @package ESM
  */
-	get_template_part( 'partials/header' );
-?>
+ set_query_var( 'post_type', 'post' );
+ set_query_var( 'taxonomy', 'category' );
 
-<?php
-  $baseurl = get_template_directory_uri();
+	get_template_part( 'partials/header' );
 ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
-		<?php
-			set_query_var( 'post_type', 'post' );
-		?>
 		<section>
-				<?php get_template_part( 'partials/slider', 'archive' ); ?>
+			<?php get_template_part( 'partials/slider', 'posts' ); ?>
     </section>
 		<section>
-				<?php get_template_part( 'partials/gallery', 'archive' ); ?>
+				<?php get_template_part( 'partials/gallery', 'posts' ); ?>
     </section>
 		<section>
-				<?php
-					set_query_var( 'taxonomy', 'category' );
-					get_template_part( 'partials/filters' );
-				?>
+				<?php get_template_part( 'partials/filters' ); ?>
     </section>
   </main>
 
 <?php endwhile; ?>
 
-<?php
-  get_template_part( 'partials/footer' );
-?>
+<?php get_template_part( 'partials/footer' ); ?>
