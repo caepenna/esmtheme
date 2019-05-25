@@ -7,6 +7,13 @@
   padding-bottom: 28px
   display: flex
 
+  &.-home
+    background-color: transparent
+    color: $color-blackboard
+    position: absolute
+    > .title
+      display: none
+
   > .navigation
     display: none
 
@@ -26,7 +33,6 @@
     width: $menu-size
     height: $menu-size
     position: relative
-    color: #fff
     cursor: pointer
     font-size: $menu-size/2
     margin-left: -$menu-size/4

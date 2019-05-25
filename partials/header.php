@@ -41,10 +41,10 @@
             'theme_location' => 'header-menu',
             'container' => '',
             'container_id' => '',
-            'container_class' => '',
-            'items_wrap' => '<ul class="list-pages">%3$s</ul>'
+            'container_class' => 'container-class',
+            'items_wrap' => '<ul>%3$s</ul>'
           )
         ); ?>
-        <img src="" alt="Frente Nacional Escola sem Mordaça">
+        <img src="<?php echo $baseurl.'/images/logo.svg'?>" alt="Frente Nacional Escola sem Mordaça">
       </div>
     </header>

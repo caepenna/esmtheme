@@ -181,6 +181,12 @@ main > section {
     .esm-header {
       padding-left: calc((100vw - 72rem) / 2);
       padding-right: calc((100vw - 72rem) / 2); } }
+  .esm-header.-home {
+    background-color: transparent;
+    color: #272727;
+    position: absolute; }
+    .esm-header.-home > .title {
+      display: none; }
   .esm-header > .navigation {
     display: none; }
   .esm-header > .title {
@@ -199,7 +205,6 @@ main > section {
     width: 64px;
     height: 64px;
     position: relative;
-    color: #fff;
     cursor: pointer;
     font-size: 32px;
     margin-left: -16px; }
