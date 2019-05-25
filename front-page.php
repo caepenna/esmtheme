@@ -9,8 +9,6 @@
 ?>
 
 <?php
-	// vars
-  $baseurl = get_template_directory_uri();
 	$botao_capa = get_field('botao_capa');
 ?>
 
@@ -26,24 +24,22 @@
       <a class="link" href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
     </section>
 
-    <section>
-      <h2>Educador, proteja-se!</h2>
-      <p>Aqui você encontra as orientações que precisa para enfrentar a censura nas escolas. Pais, alunos, o corpo técnico das escolas também estão convidados a aprenderem um pouco mais.</p>
-      <a class="link" href="#">conheça a frente</a>
-    </section>
-
-		<?php get_template_part( 'partials/slider', 'casos' ); ?>
+		<?php get_template_part( 'partials/slider', 'cases' ); ?>
 
 		<section class="section-news">
       <h2>Notícias</h2>
-				<?php get_template_part( 'partials/slider', 'archive' ); ?>
-      <a href="<?php echo get_post_type_archive_link('post');?>">Mais notícias</a>
+				<?php get_template_part( 'partials/slider', 'posts' ); ?>
+      	<a href="/noticias">Mais notícias</a>
+    </section>
+
+		<section class="section-books">
+      <h2>Conheça a causa, suas origens e seus fundamentos.</h2>
+			<?php get_template_part( 'partials/slider', 'books' ); ?>
+      <a href="<?php echo get_post_type_archive_link('livro');?>">Mais livros</a>
     </section>
 
   </main>
 
 <?php endif; ?>
 
-<?php
-  get_template_part( 'partials/footer' );
-?>
+<?php get_template_part( 'partials/footer' ); ?>
