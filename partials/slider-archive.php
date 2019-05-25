@@ -23,13 +23,13 @@
               $area_slug = $postcat[0]->slug;
               $area_name = $postcat[0]->name;
           }
-          $thumbnail = get_post_thumbnail_id();
+          $thumbnail = get_the_post_thumbnail_url();
           $titulo = get_the_title();
           $link = get_permalink();
       ?>
         <li class="news-card">
           <a href="<?php echo $link; ?>">
-            <article style="background-image: url('<?php echo wp_get_attachment_url($thumbnail); ?>')" class="card">
+            <article style="background-image: url('<?php echo $thumbnail; ?>')" class="card">
               <div class="info">
                 <h4 class="tag -uppercase"><?php echo $area_name; ?></h4>
                 <h3 class="title -uppercase"><?php echo $titulo; ?></h3>
