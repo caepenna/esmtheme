@@ -27,6 +27,7 @@
 		<?php get_template_part( 'partials/slider', 'cases' ); ?>
 
 		<section class="section-news">
+<<<<<<< HEAD
       <h2>Notícias</h2>
 				<?php get_template_part( 'partials/slider', 'posts' ); ?>
       	<a href="/noticias">Mais notícias</a>
@@ -36,6 +37,10 @@
       <h2>Conheça a causa, suas origens e seus fundamentos.</h2>
 			<?php get_template_part( 'partials/slider', 'books' ); ?>
       <a href="<?php echo get_post_type_archive_link('livro');?>">Mais livros</a>
+=======
+      <h2 class="title -uppercase">Notícias</h2>
+			<?php get_template_part( 'partials/slider', 'archive' ); ?>
+>>>>>>> a171a8bb3508a795bad2e6633c80f114b113a0b7
     </section>
 
   </main>
