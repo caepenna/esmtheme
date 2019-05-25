@@ -150,7 +150,7 @@ function cptui_register_my_cpts() {
 		"labels" => $labels,
 		"description" => "Experiências reais, vividas por colegas professores, em diferentes regiões do país.",
 		"public" => true,
-		"publicly_queryable" => true,
+		"publicly_queryable" => false,
 		"show_ui" => true,
 		"delete_with_user" => false,
 		"show_in_rest" => true,
@@ -167,7 +167,7 @@ function cptui_register_my_cpts() {
 		"query_var" => true,
 		"menu_position" => 7,
 		"supports" => array( "title", "custom-fields" ),
-		"taxonomies" => array( "category", "post_tag" ),
+		"taxonomies" => array( "category", "post_tag", "tipo_de_arquivo" ),
 	);
 
 	register_post_type( "arquivo", $args );
@@ -396,7 +396,7 @@ function cptui_register_my_taxes() {
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"query_var" => true,
-		"rewrite" => array( 'slug' => 'tipo_de_arquivo', 'with_front' => true, ),
+    "rewrite"      => array('slug' => 'downloads'),
 		"show_admin_column" => false,
 		"show_in_rest" => true,
 		"rest_base" => "tipo_de_arquivo",
