@@ -22,7 +22,15 @@
   <body>
     <header class="esm-header">
       <button class="menu js-menu" type="button" name="button"></button>
-      <h1 class="title"><?php the_field(titulo_curto); ?></h1>
+      <h1 class="title">
+        <?php
+          if($page_title):
+            echo $page_title;
+          else:
+            the_field(titulo_curto);
+          endif;
+        ?>
+      </h1>
       <div class="navigation">
         <?php wp_nav_menu(
           array(
