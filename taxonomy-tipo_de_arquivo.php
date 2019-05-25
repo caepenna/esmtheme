@@ -12,26 +12,21 @@
   $baseurl = get_template_directory_uri();
 ?>
 
-Teste
-
-<?php while ( have_posts() ) : the_post(); ?>
-  <main>
-		<h1><?php //single_cat_title(); ?></h1>
-		<a href="javascript:history.back()">Voltar</a>
-		<?php
-			$taxo = get_queried_object()->term_id;
-			set_query_var( 'current_category', absint( $taxo ) );
-		?>
-		<section>
-				<?php get_template_part( 'partials/gallery', 'archive' ); ?>
-    </section>
-		<section>
-				<?php set_query_var( 'taxonomy', 'tipo_de_arquivo' );?>
-				<?php get_template_part( 'partials/filters' ); ?>
-    </section>
-  </main>
-
-<?php endwhile; ?>
+<?php
+	set_query_var( 'post_type', 'arquivo' );
+	set_query_var( 'taxonomy', 'tipo_de_arquivo' );
+	set_query_var( 'tipo_de_arquivo', get_query_var( 'term' ) );
+?>
+<main>
+	<h1><?php single_term_title(); ?></h1>
+	<a href="javascript:history.back()">Voltar</a>
+	<section>
+			<?php
+				get_template_part( 'partials/filters' );
+			?>
+  </section>
+	<?php get_template_part( 'partials/gallery', 'downloads' ); ?>
+</main>
 
 <?php
   get_template_part( 'partials/footer' );

@@ -11,7 +11,7 @@
     $postsPerPage = 6;
     $postType = $post_type;
     $order = 'desc';
-    if ($current_taxonomy):
+    if ($tipo_de_arquivo):
       $query_args = array(
           'posts_per_page' => $postsPerPage,
           'post_type' => $postType,
@@ -21,7 +21,7 @@
             array (
               'taxonomy' => 'tipo_de_arquivo',
               'field' => 'slug',
-              'terms' => $current_taxonomy,
+              'terms' => $tipo_de_arquivo,
             )
           )
       );
