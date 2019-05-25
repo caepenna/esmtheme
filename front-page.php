@@ -35,9 +35,8 @@
 		<?php get_template_part( 'partials/slider', 'casos' ); ?>
 
 		<section class="section-news">
-      <h2>Notícias</h2>
-				<?php get_template_part( 'partials/slider', 'archive' ); ?>
-      <a href="<?php echo get_post_type_archive_link('post');?>">Mais notícias</a>
+      <h2 class="title -uppercase">Notícias</h2>
+			<?php get_template_part( 'partials/slider', 'archive' ); ?>
     </section>
 
   </main>

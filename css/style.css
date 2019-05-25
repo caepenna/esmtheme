@@ -322,6 +322,9 @@ main > section {
 
 .section-news {
   background-color: rgba(247, 193, 193, 0.5); }
+  .section-news > .title {
+    text-align: center;
+    margin-bottom: 62px; }
 
 .section-follow {
   padding-left: 1rem;
@@ -355,5 +358,37 @@ main > section {
       margin-top: 50px; }
       .section-follow > .board > .form > .esm-button {
         margin-top: 50px; }
+
+.news-slider {
+  display: flex; }
+
+.news-card {
+  height: 520px;
+  width: 80%;
+  display: block;
+  background-color: #F7C1C1;
+  position: relative; }
+  .news-card > a > article > .info {
+    position: absolute;
+    left: -35px;
+    bottom: 70px;
+    max-width: 100%;
+    background-color: #fff; }
+    .news-card > a > article > .info > .tag {
+      background-color: #272727;
+      color: #F7C1C1;
+      display: block;
+      font-variant: small-caps;
+      font-size: 18px;
+      line-height: 24px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 15px;
+      padding-right: 15px; }
+    .news-card > a > article > .info > .title {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */
