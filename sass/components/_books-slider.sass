@@ -1,6 +1,7 @@
 .books-slider
   padding-left: 80px
   padding-right: 80px
+  position: relative
 
   .book
     display: flex
@@ -21,3 +22,32 @@
         +font-link
         margin-top: 40px
         display: inline-block
+
+  .owl-nav
+    > button.owl-next,
+    > button.owl-prev
+      position: absolute
+      position: absolute
+      top: 50%
+      width: 40px
+      height: 80px
+      transform: translateY(-50%)
+      background-image: url('../assets/images/arrow.svg')
+      background-repeat: no-repeat
+      background-position: center center
+      color: transparent
+      transition: all 0.3s ease
+    > button.owl-next
+      transform: translateY(-50%) rotate(180deg)
+      right: 0
+      &:hover
+        transform: translateY(-50%) rotate(180deg) translateX(-5px)
+    > button.owl-prev
+      left: 0
+      &:hover
+        transform: translateY(-50%) translateX(-5px)
+    +media-mediumup
+      > button.owl-next
+        right: -40px
+      > button.owl-prev
+        left: -40px
