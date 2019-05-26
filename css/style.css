@@ -561,6 +561,18 @@ main > section {
         .section-hero > .board > .title {
           line-height: 50px;
           font-size: 46px; } }
+      .section-hero > .board > .title > .-strike {
+        position: relative; }
+        .section-hero > .board > .title > .-strike::after {
+          content: "";
+          z-index: 2;
+          position: absolute;
+          height: 15px;
+          left: -10px;
+          right: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(247, 193, 193, 0.5); }
   .section-hero > p {
     text-align: center;
     margin-top: 60px; }

@@ -21,6 +21,18 @@
       +media-mediumup
         line-height: 50px
         font-size: 46px
+      > .-strike
+        position: relative
+        &::after
+          content: ''
+          z-index: 2
+          position: absolute
+          height: 15px
+          left: -10px
+          right: -10px
+          top: 50%
+          transform: translateY(-50%)
+          background-color: rgba($color-pinkchalk, 0.5)
 
   > p
     text-align: center
