@@ -28,9 +28,9 @@
     <?php get_template_part( 'partials/slider', 'cases' ); ?>
 
 		<section class="section-news">
-      <h2>Notícias</h2>
-				<?php get_template_part( 'partials/slider', 'archive' ); ?>
-      	<a class="esm-button" href="/noticias">Mais notícias</a>
+      <h2 class="title">Notícias</h2>
+			<?php get_template_part( 'partials/slider', 'archive' ); ?>
+    	<a class="esm-button" href="/noticias">Mais notícias</a>
     </section>
 
 		<section class="section-books">
