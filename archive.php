@@ -14,14 +14,12 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
-		<section>
-			<?php get_template_part( 'partials/slider', 'posts' ); ?>
+		<section class="section-news">
+			<?php get_template_part( 'partials/slider', 'archive' ); ?>
     </section>
+		<?php get_template_part( 'partials/gallery', 'posts' ); ?>
 		<section>
-				<?php get_template_part( 'partials/gallery', 'posts' ); ?>
-    </section>
-		<section>
-				<?php get_template_part( 'partials/filters' ); ?>
+			<?php get_template_part( 'partials/filters' ); ?>
     </section>
   </main>
 

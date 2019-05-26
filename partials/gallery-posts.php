@@ -37,6 +37,7 @@
             <?php
                 $i = 1;
                 while ($posts_query -> have_posts()) : $posts_query -> the_post();
+                $thumbnail = get_post_thumbnail_id();
                 $titulo = get_the_title();
                 $link = get_permalink();
                 $postcat = get_the_category( $post->ID );

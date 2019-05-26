@@ -28,6 +28,10 @@ p {
   font-size: 15px;
   line-height: 24px;
   font-weight: 500; }
+  @media (min-width: 801px) {
+    p {
+      font-size: 18px;
+      line-height: 30px; } }
 
 h1 {
   font-size: 60px;
@@ -188,7 +192,248 @@ main > section {
     .esm-header.-home > .title {
       display: none; }
   .esm-header > .navigation {
-    display: none; }
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #fff;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #272727;
+    transition: 0.3s ease;
+    z-index: 8;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between; }
+    @media (min-width: 801px) {
+      .esm-header > .navigation {
+        padding-left: calc(2rem + 1vw);
+        padding-right: calc(2rem + 1vw); } }
+    @media (min-width: 1153px) {
+      .esm-header > .navigation {
+        padding-left: calc(4rem + 4vw);
+        padding-right: calc(4rem + 4vw); } }
+    @media (min-width: 1921px) {
+      .esm-header > .navigation {
+        padding-left: calc((100vw - 72rem) / 2);
+        padding-right: calc((100vw - 72rem) / 2); } }
+    .esm-header > .navigation > ul {
+      margin-top: 180px; }
+      .esm-header > .navigation > ul > li {
+        font-family: avory-i-latin, sans-serif;
+        text-transform: uppercase;
+        font-size: 30px;
+        line-height: 40px;
+        opacity: 0;
+        transform: translateX(-50%); }
+        .esm-header > .navigation > ul > li:not(:first-child) {
+          margin-top: 20px; }
+  .esm-header.-open > .navigation {
+    pointer-events: auto;
+    opacity: 1; }
+    .esm-header.-open > .navigation > ul > li {
+      opacity: 1;
+      transform: translateX(0); }
+      .esm-header.-open > .navigation > ul > li:nth-child(1) {
+        transition: all 0.4s 0.05s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(2) {
+        transition: all 0.4s 0.1s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(3) {
+        transition: all 0.4s 0.15s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(4) {
+        transition: all 0.4s 0.2s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(5) {
+        transition: all 0.4s 0.25s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(6) {
+        transition: all 0.4s 0.3s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(7) {
+        transition: all 0.4s 0.35s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(8) {
+        transition: all 0.4s 0.4s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(9) {
+        transition: all 0.4s 0.45s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(10) {
+        transition: all 0.4s 0.5s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(11) {
+        transition: all 0.4s 0.55s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(12) {
+        transition: all 0.4s 0.6s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(13) {
+        transition: all 0.4s 0.65s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(14) {
+        transition: all 0.4s 0.7s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(15) {
+        transition: all 0.4s 0.75s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(16) {
+        transition: all 0.4s 0.8s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(17) {
+        transition: all 0.4s 0.85s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(18) {
+        transition: all 0.4s 0.9s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(19) {
+        transition: all 0.4s 0.95s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(20) {
+        transition: all 0.4s 1s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(21) {
+        transition: all 0.4s 1.05s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(22) {
+        transition: all 0.4s 1.1s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(23) {
+        transition: all 0.4s 1.15s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(24) {
+        transition: all 0.4s 1.2s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(25) {
+        transition: all 0.4s 1.25s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(26) {
+        transition: all 0.4s 1.3s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(27) {
+        transition: all 0.4s 1.35s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(28) {
+        transition: all 0.4s 1.4s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(29) {
+        transition: all 0.4s 1.45s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(30) {
+        transition: all 0.4s 1.5s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(31) {
+        transition: all 0.4s 1.55s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(32) {
+        transition: all 0.4s 1.6s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(33) {
+        transition: all 0.4s 1.65s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(34) {
+        transition: all 0.4s 1.7s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(35) {
+        transition: all 0.4s 1.75s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(36) {
+        transition: all 0.4s 1.8s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(37) {
+        transition: all 0.4s 1.85s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(38) {
+        transition: all 0.4s 1.9s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(39) {
+        transition: all 0.4s 1.95s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(40) {
+        transition: all 0.4s 2s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(41) {
+        transition: all 0.4s 2.05s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(42) {
+        transition: all 0.4s 2.1s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(43) {
+        transition: all 0.4s 2.15s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(44) {
+        transition: all 0.4s 2.2s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(45) {
+        transition: all 0.4s 2.25s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(46) {
+        transition: all 0.4s 2.3s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(47) {
+        transition: all 0.4s 2.35s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(48) {
+        transition: all 0.4s 2.4s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(49) {
+        transition: all 0.4s 2.45s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(50) {
+        transition: all 0.4s 2.5s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(51) {
+        transition: all 0.4s 2.55s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(52) {
+        transition: all 0.4s 2.6s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(53) {
+        transition: all 0.4s 2.65s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(54) {
+        transition: all 0.4s 2.7s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(55) {
+        transition: all 0.4s 2.75s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(56) {
+        transition: all 0.4s 2.8s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(57) {
+        transition: all 0.4s 2.85s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(58) {
+        transition: all 0.4s 2.9s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(59) {
+        transition: all 0.4s 2.95s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(60) {
+        transition: all 0.4s 3s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(61) {
+        transition: all 0.4s 3.05s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(62) {
+        transition: all 0.4s 3.1s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(63) {
+        transition: all 0.4s 3.15s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(64) {
+        transition: all 0.4s 3.2s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(65) {
+        transition: all 0.4s 3.25s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(66) {
+        transition: all 0.4s 3.3s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(67) {
+        transition: all 0.4s 3.35s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(68) {
+        transition: all 0.4s 3.4s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(69) {
+        transition: all 0.4s 3.45s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(70) {
+        transition: all 0.4s 3.5s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(71) {
+        transition: all 0.4s 3.55s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(72) {
+        transition: all 0.4s 3.6s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(73) {
+        transition: all 0.4s 3.65s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(74) {
+        transition: all 0.4s 3.7s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(75) {
+        transition: all 0.4s 3.75s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(76) {
+        transition: all 0.4s 3.8s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(77) {
+        transition: all 0.4s 3.85s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(78) {
+        transition: all 0.4s 3.9s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(79) {
+        transition: all 0.4s 3.95s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(80) {
+        transition: all 0.4s 4s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(81) {
+        transition: all 0.4s 4.05s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(82) {
+        transition: all 0.4s 4.1s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(83) {
+        transition: all 0.4s 4.15s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(84) {
+        transition: all 0.4s 4.2s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(85) {
+        transition: all 0.4s 4.25s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(86) {
+        transition: all 0.4s 4.3s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(87) {
+        transition: all 0.4s 4.35s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(88) {
+        transition: all 0.4s 4.4s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(89) {
+        transition: all 0.4s 4.45s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(90) {
+        transition: all 0.4s 4.5s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(91) {
+        transition: all 0.4s 4.55s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(92) {
+        transition: all 0.4s 4.6s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(93) {
+        transition: all 0.4s 4.65s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(94) {
+        transition: all 0.4s 4.7s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(95) {
+        transition: all 0.4s 4.75s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(96) {
+        transition: all 0.4s 4.8s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(97) {
+        transition: all 0.4s 4.85s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(98) {
+        transition: all 0.4s 4.9s ease; }
+      .esm-header.-open > .navigation > ul > li:nth-child(99) {
+        transition: all 0.4s 4.95s ease; }
   .esm-header > .title {
     font-family: freight-macro-pro, sans-serif;
     flex-grow: 1;
@@ -205,6 +450,7 @@ main > section {
     width: 64px;
     height: 64px;
     position: relative;
+    z-index: 9;
     cursor: pointer;
     font-size: 32px;
     margin-left: -16px; }
@@ -227,14 +473,16 @@ main > section {
     .esm-header > .menu:after {
       top: 1.25em;
       left: 0.5em; }
-    .esm-header > .menu.--x:before, .esm-header > .menu.--x:after {
-      top: 0.9375em;
-      left: 0.5em; }
-    .esm-header > .menu.--x:before {
-      transform: rotate(45deg);
-      box-shadow: 0 0 0 0 transparent; }
-    .esm-header > .menu.--x:after {
-      transform: rotate(-45deg); }
+    .esm-header > .menu.--x {
+      color: #fff; }
+      .esm-header > .menu.--x:before, .esm-header > .menu.--x:after {
+        top: 0.9375em;
+        left: 0.5em; }
+      .esm-header > .menu.--x:before {
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 0 transparent; }
+      .esm-header > .menu.--x:after {
+        transform: rotate(-45deg); }
 
 .esm-footer {
   padding-left: 1rem;
@@ -269,11 +517,12 @@ main > section {
   border-bottom: 2px solid #fff; }
 
 .esm-button {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 20px;
   font-family: freight-sans-pro, sans-serif;
-  font-variant: small-caps;
   font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   background-color: #F7C1C1;
   color: #272727;
   padding-top: 15px;
@@ -316,11 +565,12 @@ main > section {
     text-align: center;
     margin-top: 60px; }
   .section-hero > .link {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 20px;
     font-family: freight-sans-pro, sans-serif;
-    font-variant: small-caps;
     font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     margin-top: 30px;
     display: block;
     text-align: center; }
@@ -368,11 +618,12 @@ main > section {
   display: flex; }
 
 .news-card {
-  height: 520px;
-  width: 80%;
-  display: block;
+  width: 80vw;
   background-color: #F7C1C1;
   position: relative; }
+  .news-card > a > article {
+    height: 520px;
+    display: block; }
   .news-card > a > article > .info {
     position: absolute;
     left: -35px;

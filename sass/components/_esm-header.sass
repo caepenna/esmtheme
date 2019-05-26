@@ -15,7 +15,41 @@
       display: none
 
   > .navigation
-    display: none
+    +container-width
+    color: #fff
+    opacity: 0
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: $color-blackboard
+    transition: 0.3s ease
+    z-index: 8
+    pointer-events: none
+    display: flex
+    justify-content: space-between
+    > ul
+      margin-top: 180px
+      > li
+        font-family: $font-family-heading
+        text-transform: uppercase
+        font-size: 30px
+        line-height: 40px
+        opacity: 0
+        transform: translateX(-50%)
+        &:not(:first-child)
+          margin-top: 20px
+
+  &.-open > .navigation
+    pointer-events: auto
+    opacity: 1
+    > ul > li
+      opacity: 1
+      transform: translateX(0)
+      @for $i from 1 through 99
+        &:nth-child(#{$i})
+          transition: all 0.4s #{$i * 0.05}s ease
 
   > .title
     font-family: $font-family-body-serif
@@ -33,6 +67,7 @@
     width: $menu-size
     height: $menu-size
     position: relative
+    z-index: 9
     cursor: pointer
     font-size: $menu-size/2
     margin-left: -$menu-size/4
@@ -58,6 +93,7 @@
       left: 0.5em
 
     &.--x
+      color: #fff
       &:before,
       &:after
         top: 0.9375em
