@@ -34,6 +34,10 @@ function esm_scripts() {
   wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), $ver = false, true );
   wp_enqueue_style('owl', get_template_directory_uri() . '/css/owl.carousel.min.css');
   wp_enqueue_style('owl_theme', get_template_directory_uri() . '/css/owl.theme.default.min.css');
+  if ( is_page_template( 'page-projects.php' ) ) {
+    wp_enqueue_style('mapbox-style', 'https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css');
+    wp_enqueue_script( 'mapbox-gl','https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js', array(), $ver = false, false );
+  }
   wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), $ver = false, false );
   if ( ! is_page_template( 'single.php' ) ) {}
 }
@@ -61,7 +65,7 @@ function cptui_register_my_cpts() {
 
 	$labels = array(
 		"name" => __( "Projetos", "esm" ),
-		"singular_name" => __( "Projeto Modelo", "esm" ),
+		"singular_name" => __( "Projeto", "esm" ),
 		"menu_name" => __( "Projetos", "esm" ),
 		"all_items" => __( "Todos os projetos", "esm" ),
 		"add_new" => __( "Adicionar novo", "esm" ),
