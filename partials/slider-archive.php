@@ -28,13 +28,11 @@
           $link = get_permalink();
       ?>
         <li class="news-card">
-          <a href="<?php echo $link; ?>">
-            <article style="background-image: url('<?php echo $thumbnail; ?>')" class="card">
-              <div class="info">
-                <h4 class="tag -uppercase"><?php echo $area_name; ?></h4>
-                <h3 class="title -uppercase"><?php echo $titulo; ?></h3>
-              </div>
-            </article>
+          <a class="card" href="<?php echo $link; ?>" style="background-image: url('<?php echo $thumbnail; ?>')">
+            <div class="info">
+              <h4 class="tag -uppercase"><?php echo $area_name; ?></h4>
+              <h3 class="title -uppercase"><?php echo $titulo; ?></h3>
+            </div>
           </a>
         </li>
 

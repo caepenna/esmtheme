@@ -1,0 +1,23 @@
+.books-slider
+  padding-left: 80px
+  padding-right: 80px
+
+  > li
+    display: flex
+
+    > .info
+      margin-left: 80px
+
+      > .excerpt
+        display: flex
+        margin-top: 40px
+        > p
+          width: 65%
+        > .metainfo
+          margin-left: 40px
+          width: calc(35% - 40px)
+
+      > .link
+        +font-link
+        margin-top: 40px
+        display: inline-block

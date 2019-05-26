@@ -17,30 +17,36 @@
   if ($posts_query -> have_posts()) :
 ?>
 
-  <ul>
+  <ul class="books-slider">
+
     <?php
       while ($posts_query -> have_posts()) : $posts_query -> the_post();
         $thumbnail = get_post_thumbnail_id();
         $titulo = get_the_title();
         $link = get_permalink();
     ?>
+
       <li>
-        <a href="<?php echo $link; ?>">
-          <?php echo wp_get_attachment_image($thumbnail, 'large'); ?>
-          <h3><?php echo $titulo; ?></h3>
-          <p><?php the_excerpt(); ?></p>
-          <div>
-            <p>Autor: <?php the_field('autor'); ?></p>
-            <p>Editora: <?php the_field('editora'); ?></p>
-            <p>Ano: <?php the_field('ano'); ?></p>
+        <?php echo wp_get_attachment_image($thumbnail, 'large'); ?>
+        <article class="info">
+          <h4><?php echo $titulo; ?></h4>
+          <div class="excerpt">
+            <p><?php the_excerpt(); ?></p>
+            <div class="metainfo">
+              <p>Autor: <?php the_field('autor'); ?></p>
+              <p>Editora: <?php the_field('editora'); ?></p>
+              <p>Ano: <?php the_field('ano'); ?></p>
+            </div>
           </div>
-        </a>
+          <a class="link" href="<?php echo $link; ?>">Saiba mais…</a>
+      </article>
       </li>
 
     <?php
       endwhile;
       wp_reset_postdata();
     ?>
-</ul>
+
+  </ul>
 
 <?php endif; ?>
