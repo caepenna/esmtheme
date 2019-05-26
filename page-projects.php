@@ -12,8 +12,8 @@
 
   <main>
 
-    <section>
-      <h1>Descubra projetos pela educação  sem censura pelo Brasil</h1>
+    <section class="section-title">
+      <h2 class="title">Descubra projetos pela educação  sem censura <em>pelo Brasil</em></h2>
     </section>
     <?php get_template_part( 'partials/project-map' ); ?>
 

@@ -717,6 +717,16 @@ main > section {
   margin-bottom: 80px;
   width: 100%; }
 
+.section-title {
+  background-color: #272727;
+  color: #fff;
+  border-top: 1px solid #fff; }
+  .section-title > .title {
+    text-transform: uppercase; }
+    .section-title > .title > em {
+      color: #A7E1BB;
+      font-weight: 900; }
+
 .news-card {
   width: 80vw;
   background-color: #F7C1C1;
