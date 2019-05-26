@@ -15,7 +15,10 @@
     if ($posts_query -> have_posts()) :
 ?>
 
-  <div class="news-slider owl-carousel">
+  <div class="news-slider">
+    <a class="prev"></a>
+    <a class="next"></a>
+    <div class="owl-carousel">
       <?php
           while ($posts_query -> have_posts()) : $posts_query -> the_post();
           $postcat = get_the_category( $post->ID );
@@ -40,16 +43,17 @@
         endwhile;
         wp_reset_postdata();
       ?>
+    </div>
   </div>
 
   <script type="text/javascript">
-      var owl_news = $('.news-slider.owl-carousel');
-      owl_news.owlCarousel({
-          loop: true,
-          dots: false,
-          items: 1,
-          margin: 0
-      });
+    var owl_news = $('.news-slider .owl-carousel');
+    owl_news.owlCarousel({
+      loop: true,
+      dots: false,
+      items: 1,
+      margin: 0
+    });
   </script>
 
 <?php endif; ?>

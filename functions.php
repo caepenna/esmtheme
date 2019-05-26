@@ -28,7 +28,6 @@ add_action( 'after_setup_theme', 'esm_setup' );
 
 function esm_scripts() {
   $theme_style = get_template_directory_uri() . '/css/style.css';
-  wp_enqueue_style('theme_style', $theme_style);
   wp_deregister_script('jquery');
   wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), $ver = false, false );
   wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), $ver = false, true );
@@ -39,6 +38,7 @@ function esm_scripts() {
     wp_enqueue_script( 'mapbox-gl','https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js', array(), $ver = false, false );
   }
   wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), $ver = false, false );
+  wp_enqueue_style('theme_style', $theme_style);
   if ( ! is_page_template( 'single.php' ) ) {}
 }
 add_action( 'wp_enqueue_scripts', 'esm_scripts' );

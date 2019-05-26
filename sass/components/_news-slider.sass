@@ -1,1 +1,23 @@
 .news-slider
+  position: relative
+  > .prev,
+  > .next
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 9
+    cursor: pointer
+  > .prev
+    transform: translateX(-100%)
+    background-image: linear-gradient(to left, transparent, rgba(mix($color-bluechalk, #fff), 0.7) 10%)
+    &:hover
+      background: none
+  > .next
+    transform: translateX(100%)
+    background-image: linear-gradient(to left, rgba(mix($color-bluechalk, #fff), 0.7) 90%, transparent)
+    &:hover
+      background: none
+  > .owl-carousel .owl-stage-outer
+    overflow: visible
