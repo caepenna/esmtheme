@@ -1,0 +1,27 @@
+.section-projects
+  padding: 0
+  display: flex
+  > .list
+    +container-width
+    padding-top: $space-deca
+    padding-bottom: $space-deca
+    padding-right: 80px
+    +media-mediumup
+      padding-top: $space-hecto
+      padding-bottom: $space-hecto
+  > .list,
+  > .map
+    width: 50%
+  > .map
+    background-color: $color-greenchalk
+    position: relative
+    > h6
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      padding: 30px 40px
+      width: 480px
+      box-shadow: 0 4px 12px rgba($color-blackboard, 0.5)
+      text-align: center
+      background-color: #fff

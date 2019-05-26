@@ -16,12 +16,17 @@
 ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
+
   <main>
-		<h1>Leia e compartilhe materiais livremente.</h1>
-		<section>
-				<?php get_template_part( 'partials/filters' ); ?>
+
+    <section class="section-title">
+  		<h2 class="title">Leia e compartilhe  materiais <em>livremente</em></h2>
     </section>
-		<?php get_template_part( 'partials/gallery', 'downloads' ); ?>
+    <section>
+      <?php get_template_part( 'partials/filters' ); ?>
+    </section>
+    <?php get_template_part( 'partials/gallery', 'downloads' ); ?>
+
   </main>
 
 <?php endwhile; ?>

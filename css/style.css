@@ -162,11 +162,6 @@ main > section {
     main > section {
       padding-top: 8rem;
       padding-bottom: 8rem; } }
-  main > section:first-of-type {
-    padding-top: 8rem; }
-    @media (min-width: 801px) {
-      main > section:first-of-type {
-        padding-top: 12rem; } }
 
 .esm-header {
   padding-left: 1rem;
@@ -722,10 +717,53 @@ main > section {
   color: #fff;
   border-top: 1px solid #fff; }
   .section-title > .title {
+    max-width: 820px;
     text-transform: uppercase; }
     .section-title > .title > em {
       color: #A7E1BB;
       font-weight: 900; }
+
+.section-projects {
+  padding: 0;
+  display: flex; }
+  .section-projects > .list {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-right: 80px; }
+    @media (min-width: 801px) {
+      .section-projects > .list {
+        padding-left: calc(2rem + 1vw);
+        padding-right: calc(2rem + 1vw); } }
+    @media (min-width: 1153px) {
+      .section-projects > .list {
+        padding-left: calc(4rem + 4vw);
+        padding-right: calc(4rem + 4vw); } }
+    @media (min-width: 1921px) {
+      .section-projects > .list {
+        padding-left: calc((100vw - 72rem) / 2);
+        padding-right: calc((100vw - 72rem) / 2); } }
+    @media (min-width: 801px) {
+      .section-projects > .list {
+        padding-top: 8rem;
+        padding-bottom: 8rem; } }
+  .section-projects > .list,
+  .section-projects > .map {
+    width: 50%; }
+  .section-projects > .map {
+    background-color: #A7E1BB;
+    position: relative; }
+    .section-projects > .map > h6 {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 30px 40px;
+      width: 480px;
+      box-shadow: 0 4px 12px rgba(39, 39, 39, 0.5);
+      text-align: center;
+      background-color: #fff; }
 
 .news-card {
   width: 80vw;
