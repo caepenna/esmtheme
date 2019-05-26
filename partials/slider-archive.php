@@ -15,7 +15,7 @@
     if ($posts_query -> have_posts()) :
 ?>
 
-  <ul class="news-slider">
+  <div class="news-slider owl-carousel">
       <?php
           while ($posts_query -> have_posts()) : $posts_query -> the_post();
           $postcat = get_the_category( $post->ID );
@@ -27,19 +27,29 @@
           $titulo = get_the_title();
           $link = get_permalink();
       ?>
-        <li class="news-card">
+        <div class="news-card">
           <a class="card" href="<?php echo $link; ?>" style="background-image: url('<?php echo $thumbnail; ?>')">
             <div class="info">
               <h4 class="tag -uppercase"><?php echo $area_name; ?></h4>
               <h3 class="title -uppercase"><?php echo $titulo; ?></h3>
             </div>
           </a>
-        </li>
+        </div>
 
       <?php
         endwhile;
         wp_reset_postdata();
       ?>
-  </ul>
+  </div>
+
+  <script type="text/javascript">
+      var owl_news = $('.news-slider.owl-carousel');
+      owl_news.owlCarousel({
+          loop: true,
+          dots: false,
+          items: 1,
+          margin: 0
+      });
+  </script>
 
 <?php endif; ?>

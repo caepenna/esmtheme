@@ -683,16 +683,16 @@ main > section {
       line-height: 64px;
       letter-spacing: 3px;
       text-transform: uppercase; }
-    .section-cases > .left > .case {
+    .section-cases > .left > .carousel .case {
       margin-top: 50px; }
-      .section-cases > .left > .case > p {
+      .section-cases > .left > .carousel .case > p {
         font-size: 50px;
         line-height: 70px;
         font-family: avory-i-latin, sans-serif;
         font-weight: 700;
         border-left: 10px currentColor solid;
         padding-left: 30px; }
-      .section-cases > .left > .case > a {
+      .section-cases > .left > .carousel .case > a {
         font-size: 16px;
         line-height: 20px;
         font-family: freight-sans-pro, sans-serif;
