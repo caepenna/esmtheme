@@ -549,7 +549,6 @@ main > section {
     position: relative;
     z-index: 3; }
     .section-hero > .board::before {
-      background-color: transparent;
       background-image: linear-gradient(45deg, #272727 25%, transparent 25%, transparent 75%, #272727 75%, #272727), linear-gradient(45deg, #272727 25%, transparent 25%, transparent 75%, #272727 75%, #272727);
       background-size: 2px 2px;
       background-position: 0 0, 1px 1px;
@@ -580,7 +579,6 @@ main > section {
       .section-hero > .board > .title > .-strike {
         position: relative; }
         .section-hero > .board > .title > .-strike::after {
-          background-color: transparent;
           background-image: linear-gradient(45deg, #F7C1C1 25%, transparent 25%, transparent 75%, #F7C1C1 75%, #F7C1C1), linear-gradient(45deg, #F7C1C1 25%, transparent 25%, transparent 75%, #F7C1C1 75%, #F7C1C1);
           background-size: 2px 2px;
           background-position: 0 0, 1px 1px;
@@ -748,6 +746,15 @@ main > section {
       .section-projects > .list {
         padding-top: 8rem;
         padding-bottom: 8rem; } }
+    .section-projects > .list > ul > li {
+      border-top: rgba(39, 39, 39, 0.25) 1px solid;
+      padding-top: 30px;
+      margin-top: 30px; }
+      .section-projects > .list > ul > li > h5 {
+        margin-bottom: 10px; }
+      .section-projects > .list > ul > li > p {
+        color: rgba(39, 39, 39, 0.7);
+        font-style: italic; }
   .section-projects > .list,
   .section-projects > .map {
     width: 50%; }
