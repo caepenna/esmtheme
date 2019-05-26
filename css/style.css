@@ -133,7 +133,9 @@ table {
   font-variant-numeric: lining-nums; }
 
 body {
-  min-height: 100%; }
+  min-height: 100%;
+  width: 100vw;
+  overflow-x: hidden; }
 
 img {
   max-width: 100%; }
@@ -715,6 +717,8 @@ main > section {
         margin-top: 50px; }
   .section-cases > .right {
     background-color: #272727;
+    background-image: url("../assets/images/flag.svg");
+    background-size: cover;
     width: 50%; }
 
 .section-books > hr {
