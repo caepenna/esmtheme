@@ -513,6 +513,23 @@ main > section {
     text-align: right; }
     .esm-footer > .right > .medias {
       margin-top: 40px; }
+      .esm-footer > .right > .medias > a {
+        color: transparent;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin-left: 20px;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center center; }
+        .esm-footer > .right > .medias > a.facebook {
+          background-image: url("../assets/images/social-facebook.svg"); }
+        .esm-footer > .right > .medias > a.twitter {
+          background-image: url("../assets/images/social-twitter.svg"); }
+        .esm-footer > .right > .medias > a.instagram {
+          background-image: url("../assets/images/social-instagram.svg"); }
+        .esm-footer > .right > .medias > a.youtube {
+          background-image: url("../assets/images/social-youtube.svg"); }
 
 .esm-input {
   border-bottom: 2px solid #fff; }
