@@ -438,6 +438,7 @@ main > section {
     line-height: 64px;
     letter-spacing: 3px;
     text-transform: uppercase;
+    font-weight: 300;
     flex-grow: 1;
     text-align: center;
     padding-right: calc( 64px - (64px / 4) ); }
@@ -610,11 +611,23 @@ main > section {
     text-align: center; }
 
 .section-news {
-  background-color: rgba(247, 193, 193, 0.5); }
+  background-color: rgba(172, 218, 238, 0.5); }
   .section-news > .title {
     text-align: center;
     margin-bottom: 40px;
     text-transform: uppercase; }
+  .section-news > .link {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: freight-sans-pro, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 40px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 
 .section-follow {
   padding-left: 1rem;
@@ -680,7 +693,8 @@ main > section {
       font-size: 24px;
       line-height: 64px;
       letter-spacing: 3px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-weight: 300; }
     .section-cases > .left > .carousel .case {
       margin-top: 50px; }
       .section-cases > .left > .carousel .case > p {
@@ -772,10 +786,30 @@ main > section {
       text-align: center;
       background-color: #fff; }
 
-.news-card {
-  width: 80vw;
-  background-color: #F7C1C1;
+.news-slider {
   position: relative; }
+  .news-slider > .prev,
+  .news-slider > .next {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9; }
+  .news-slider > .prev {
+    transform: translateX(-100%); }
+  .news-slider > .next {
+    transform: translateX(100%); }
+  .news-slider > .owl-carousel .owl-stage-outer {
+    overflow: visible; }
+
+.news-card {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: #ACDAEE;
+  position: relative;
+  width: 75vw; }
   .news-card > .card {
     height: 520px;
     display: block;
@@ -785,10 +819,12 @@ main > section {
     left: -35px;
     bottom: 70px;
     max-width: 100%;
-    background-color: #fff; }
+    background-color: #fff;
+    opacity: 0;
+    transform: translateX(-50%); }
     .news-card > .card > .info > .tag {
       background-color: #272727;
-      color: #F7C1C1;
+      color: #ACDAEE;
       display: block;
       font-variant: small-caps;
       font-size: 18px;
@@ -802,6 +838,11 @@ main > section {
       padding-bottom: 30px;
       padding-left: 20px;
       padding-right: 20px; }
+
+.owl-item.active .news-card > .card > .info {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.6s ease; }
 
 .books-slider {
   padding-left: 80px;
