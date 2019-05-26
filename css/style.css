@@ -436,11 +436,11 @@ main > section {
         transition: all 0.4s 4.95s ease; }
   .esm-header > .title {
     font-family: freight-macro-pro, sans-serif;
-    flex-grow: 1;
-    text-transform: uppercase;
-    letter-spacing: 3px;
     font-size: 24px;
     line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    flex-grow: 1;
     text-align: center;
     padding-right: calc( 64px - (64px / 4) ); }
     @media (min-width: 801px) {
@@ -625,6 +625,60 @@ main > section {
       margin-top: 50px; }
       .section-follow > .board > .form > .esm-button {
         margin-top: 50px; }
+
+.section-cases {
+  padding: 0;
+  display: flex; }
+  .section-cases > .left {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-right: 40px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 50%; }
+    @media (min-width: 801px) {
+      .section-cases > .left {
+        padding-left: calc(2rem + 1vw);
+        padding-right: calc(2rem + 1vw); } }
+    @media (min-width: 1153px) {
+      .section-cases > .left {
+        padding-left: calc(4rem + 4vw);
+        padding-right: calc(4rem + 4vw); } }
+    @media (min-width: 1921px) {
+      .section-cases > .left {
+        padding-left: calc((100vw - 72rem) / 2);
+        padding-right: calc((100vw - 72rem) / 2); } }
+    @media (min-width: 801px) {
+      .section-cases > .left {
+        padding-top: 8rem;
+        padding-bottom: 8rem; } }
+    .section-cases > .left > .title {
+      font-family: freight-macro-pro, sans-serif;
+      font-size: 24px;
+      line-height: 64px;
+      letter-spacing: 3px;
+      text-transform: uppercase; }
+    .section-cases > .left > .case {
+      margin-top: 50px; }
+      .section-cases > .left > .case > p {
+        font-size: 50px;
+        line-height: 70px;
+        font-family: avory-i-latin, sans-serif;
+        font-weight: 700;
+        border-left: 10px currentColor solid;
+        padding-left: 30px; }
+      .section-cases > .left > .case > a {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: freight-sans-pro, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        display: inline-block;
+        margin-top: 50px; }
+  .section-cases > .right {
+    background-color: #272727;
+    width: 50%; }
 
 .news-slider {
   display: flex; }

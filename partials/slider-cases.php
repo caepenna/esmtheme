@@ -16,28 +16,26 @@
 
 <?php if( $casos ): ?>
   <!-- Slide automático que mostra chamadas e links pra cada caso aleatoriamente -->
-  <section>
-    <p>Casos modelo</p>
-    <div>
-
-    <!-- Loop que constrói slides com casos -->
-    <?php  $i = 1; foreach( $casos as $post ): setup_postdata( $post ); ?>
-      <?php
-        //vars
-        $depo = get_field('depoimento');
-        $id = $post->post_name;
-        $capa = get_post_thumbnail_id();
-      ?>
-
-      <div>
-        <?php if( $depo ): ?>
-          <p><?php echo $depo ?></p>
-          <a href="<?php echo get_site_url(); ?>/casos-modelo/#<?php echo $id ?>">Como agir?</a>
-        <?php endif; ?>
-      </div>
-
+  <section class="section-cases">
+    <div class="left">
+      <h2 class="title">Casos modelo</h2>
+      <!-- Loop que constrói slides com casos -->
+      <?php  $i = 1; foreach( $casos as $post ): setup_postdata( $post ); ?>
+        <?php
+          //vars
+          $depo = get_field('depoimento');
+          $id = $post->post_name;
+          $capa = get_post_thumbnail_id();
+        ?>
+        <article class="case">
+          <?php if( $depo ): ?>
+            <p><?php echo $depo ?></p>
+            <a href="<?php echo get_site_url(); ?>/casos-modelo/#<?php echo $id ?>">Saiba como agir</a>
+          <?php endif; ?>
+        </article>
       <?php $i++; endforeach; wp_reset_postdata(); ?>
     </div>
+    <div class="right"></div>
   </section>
 
 <?php endif; ?>

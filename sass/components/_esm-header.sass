@@ -52,12 +52,8 @@
           transition: all 0.4s #{$i * 0.05}s ease
 
   > .title
-    font-family: $font-family-body-serif
+    +title-small
     flex-grow: 1
-    text-transform: uppercase
-    letter-spacing: 3px
-    font-size: 24px
-    line-height: 64px
     text-align: center
     padding-right: calc( #{$menu-size} - (#{$menu-size} / 4) )
     +media-mediumup

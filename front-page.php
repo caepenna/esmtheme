@@ -25,9 +25,7 @@
       <a class="link" href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
     </section>
 
-    <section class="section-cases">
-      <?php get_template_part( 'partials/slider', 'cases' ); ?>
-    </section>
+    <?php get_template_part( 'partials/slider', 'cases' ); ?>
 
 		<section class="section-news">
       <h2>Notícias</h2>

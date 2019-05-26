@@ -1,0 +1,30 @@
+.section-cases
+  padding: 0
+  display: flex
+  > .left
+    +container-width
+    padding-right: 40px
+    padding-top: $space-deca
+    padding-bottom: $space-deca
+    width: 50%
+    +media-mediumup
+      padding-top: $space-hecto
+      padding-bottom: $space-hecto
+    > .title
+      +title-small
+    > .case
+      margin-top: 50px
+      > p
+        font-size: 50px
+        line-height: 70px
+        font-family: $font-family-heading
+        font-weight: 700
+        border-left: 10px currentColor solid
+        padding-left: 30px
+      > a
+        +font-link
+        display: inline-block
+        margin-top: 50px
+  > .right
+    background-color: $color-blackboard
+    width: 50%
