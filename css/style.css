@@ -775,6 +775,9 @@ main > section {
   .section-projects > .map {
     background-color: #A7E1BB;
     position: relative; }
+    .section-projects > .map > #map {
+      width: 100%;
+      height: 100%; }
     .section-projects > .map > h6 {
       position: absolute;
       bottom: 0;

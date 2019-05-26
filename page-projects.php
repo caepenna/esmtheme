@@ -38,11 +38,24 @@
         </ul>
       </div>
       <div class="map">
+        <div id="map"></div>
         <h6>Ouro Preto / MG</h6>
       </div>
     </section>
 
   </main>
+
+  <script type="text/javascript">
+    window.onload = function () {
+      mapboxgl.accessToken = 'pk.eyJ1IjoibGFib3VsYW5nZXJpZSIsImEiOiJjamZtcTVwMnUxM2JtMzBwbzhxaDE0MzRvIn0.IR-XQlIH_92_ZhqwsFwDhw';
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/laboulangerie/cjrkwgeqh0qs32sob15q8sc1g',
+        center: [-47.938,-15.796],
+        zoom: 11
+      });
+    };
+  </script>
 
 <?php endwhile; ?>
 
