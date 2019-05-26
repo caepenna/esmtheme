@@ -46,7 +46,10 @@
           loop: true,
           dots: false,
           items: 1,
-          margin: 0
+          margin: 0,
+          autoplay: true,
+          autoplayTimeout: 6000,
+          autoplayHoverPause: true
       });
   </script>
 

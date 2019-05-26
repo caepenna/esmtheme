@@ -54,6 +54,12 @@
       items: 1,
       margin: 0
     });
+    $('.news-slider .next').click(function() {
+        owl_news.trigger('next.owl.carousel');
+    })
+    $('.news-slider .prev').click(function() {
+        owl_news.trigger('prev.owl.carousel');
+    })
   </script>
 
 <?php endif; ?>
