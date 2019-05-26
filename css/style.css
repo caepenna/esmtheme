@@ -847,19 +847,19 @@ main > section {
 .books-slider {
   padding-left: 80px;
   padding-right: 80px; }
-  .books-slider > li {
+  .books-slider .book {
     display: flex; }
-    .books-slider > li > .info {
+    .books-slider .book > .info {
       margin-left: 80px; }
-      .books-slider > li > .info > .excerpt {
+      .books-slider .book > .info > .excerpt {
         display: flex;
         margin-top: 40px; }
-        .books-slider > li > .info > .excerpt > p {
+        .books-slider .book > .info > .excerpt > p {
           width: 65%; }
-        .books-slider > li > .info > .excerpt > .metainfo {
+        .books-slider .book > .info > .excerpt > .metainfo {
           margin-left: 40px;
           width: calc(35% - 40px); }
-      .books-slider > li > .info > .link {
+      .books-slider .book > .info > .link {
         font-size: 16px;
         line-height: 20px;
         font-family: freight-sans-pro, sans-serif;
