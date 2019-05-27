@@ -20,7 +20,7 @@
   <main>
 
     <section class="section-title">
-      <h2 class="title">Leia e compartilhe materiais <em>livremente</em></h2>
+      <h2 class="title">Leia e compartilhe  materiais <em>livremente.</em></h2>
     </section>
 
     <section>

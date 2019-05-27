@@ -31,11 +31,11 @@
         <article class="info">
           <h4><?php echo $titulo; ?></h4>
           <div class="excerpt">
-            <p><?php the_excerpt(); ?></p>
+            <?php the_excerpt(); ?>
             <div class="metainfo">
-              <p>Autor: <?php the_field('autor'); ?></p>
-              <p>Editora: <?php the_field('editora'); ?></p>
-              <p>Ano: <?php the_field('ano'); ?></p>
+              <p>Autor: <em><?php the_field('autor'); ?></em></p>
+              <p>Editora: <em><?php the_field('editora'); ?></em></p>
+              <p>Ano: <em><?php the_field('ano'); ?></em></p>
             </div>
           </div>
           <a class="link" href="<?php echo $link; ?>">Saiba mais…</a>

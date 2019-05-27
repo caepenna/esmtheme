@@ -12,9 +12,9 @@
 
   <main>
 
-    <section>
+    <section class="section-board -green">
       <div class="board">
-        <h1><?php the_title(); ?></h1>
+        <h3 class="title"><?php the_title(); ?></h3>
         <?php the_content(); ?>
       </div>
       <nav>
