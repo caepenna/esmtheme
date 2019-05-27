@@ -1,0 +1,30 @@
+.section-casesnav
+  background-color: $color-blackboard
+  color: #fff
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  counter-reset: link
+  padding-top: 0
+  > .link
+    font-family: $font-family-body-serif
+    font-style: italic
+    flex-basis: calc((100% / 3) - 80px)
+    margin-right: 80px
+    padding-left: 40px
+    position: relative
+    font-size: 18px
+    line-height: 30px
+    &::before
+      font-family: $font-family-heading
+      position: absolute
+      left: 0
+      font-size: 50px
+      line-height: 40px
+      counter-increment: link
+      content: counter(link)
+    &:hover
+      > span
+        transition: all 0.3s ease
+        background-color: #fff
+        color: $color-blackboard
