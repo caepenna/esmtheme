@@ -1,0 +1,34 @@
+.section-tactics
+  padding: 0
+  counter-reset: tactic
+  > .tactic
+    +container-width
+    counter-increment: tactic
+    background-color: rgba($color-greenchalk, .5)
+    padding-top: 120px
+    padding-bottom: 120px
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    &:nth-child(2)
+      background-color: white
+    > .info
+      width: calc(50% - 20px)
+      h2
+        +h4
+        &::before
+          content: counter(tactic) " - "
+      p
+        margin-top: 30px
+    > .illustration
+      width: calc(41.666667% - 20px)
+      .image
+        padding-top: 100%
+        position: relative
+        img
+          position: absolute
+          top: 0
+          width: 100%
+          bottom: 0
+          border-radius: 50%
+          object-fit: cover

@@ -71,6 +71,7 @@ h3 {
       line-height: 70px; } }
 
 h4 {
+  font-family: freight-sans-pro, sans-serif;
   font-size: 32px;
   line-height: 36px;
   font-weight: 900; }
@@ -84,6 +85,7 @@ h4 {
       line-height: 50px; } }
 
 h5 {
+  font-family: freight-sans-pro, sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700; }
@@ -97,6 +99,7 @@ h5 {
       line-height: 40px; } }
 
 h6 {
+  font-family: freight-sans-pro, sans-serif;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700; }
@@ -843,6 +846,22 @@ p:empty {
     padding-bottom: 80px;
     padding-left: calc(20px + 10vw);
     padding-right: calc(20px + 10vw); }
+  .section-board > .board > nav {
+    margin-top: 40px; }
+    .section-board > .board > nav > a {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: freight-sans-pro, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-right: 20px;
+      padding-right: 20px;
+      border-right: 2px solid white; }
+      .section-board > .board > nav > a:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none; }
   .section-board > .board > .title {
     text-transform: uppercase; }
     .section-board.-pink > .board > .title {
@@ -855,6 +874,65 @@ p:empty {
       color: #ACDAEE; }
   .section-board > .board > p {
     margin-top: 20px; }
+
+.section-tactics {
+  padding: 0;
+  counter-reset: tactic; }
+  .section-tactics > .tactic {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    counter-increment: tactic;
+    background-color: rgba(167, 225, 187, 0.5);
+    padding-top: 120px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    @media (min-width: 801px) {
+      .section-tactics > .tactic {
+        padding-left: calc(2rem + 1vw);
+        padding-right: calc(2rem + 1vw); } }
+    @media (min-width: 1153px) {
+      .section-tactics > .tactic {
+        padding-left: calc(4rem + 4vw);
+        padding-right: calc(4rem + 4vw); } }
+    @media (min-width: 1921px) {
+      .section-tactics > .tactic {
+        padding-left: calc((100vw - 72rem) / 2);
+        padding-right: calc((100vw - 72rem) / 2); } }
+    .section-tactics > .tactic:nth-child(2) {
+      background-color: white; }
+    .section-tactics > .tactic > .info {
+      width: calc(50% - 20px); }
+      .section-tactics > .tactic > .info h2 {
+        font-family: freight-sans-pro, sans-serif;
+        font-size: 32px;
+        line-height: 36px;
+        font-weight: 900; }
+        .section-tactics > .tactic > .info h2.-uppercase {
+          text-transform: uppercase; }
+        .section-tactics > .tactic > .info h2.-light {
+          font-weight: 400; }
+        @media (min-width: 801px) {
+          .section-tactics > .tactic > .info h2 {
+            font-size: 40px;
+            line-height: 50px; } }
+        .section-tactics > .tactic > .info h2::before {
+          content: counter(tactic) " - "; }
+      .section-tactics > .tactic > .info p {
+        margin-top: 30px; }
+    .section-tactics > .tactic > .illustration {
+      width: calc(41.666667% - 20px); }
+      .section-tactics > .tactic > .illustration .image {
+        padding-top: 100%;
+        position: relative; }
+        .section-tactics > .tactic > .illustration .image img {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          bottom: 0;
+          border-radius: 50%;
+          object-fit: cover; }
 
 .news-slider {
   position: relative; }
