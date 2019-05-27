@@ -655,14 +655,28 @@ p:empty {
     margin-right: auto; }
 
 .section-follow {
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: #272727;
   color: #fff;
   text-align: center;
   padding-top: 140px;
   padding-bottom: 140px; }
+  @media (min-width: 801px) {
+    .section-follow {
+      padding-left: calc(2rem + 1vw);
+      padding-right: calc(2rem + 1vw); } }
+  @media (min-width: 1153px) {
+    .section-follow {
+      padding-left: calc(4rem + 4vw);
+      padding-right: calc(4rem + 4vw); } }
+  @media (min-width: 1921px) {
+    .section-follow {
+      padding-left: calc((100vw - 72rem) / 2);
+      padding-right: calc((100vw - 72rem) / 2); } }
   .section-follow > .board {
     border: 4px solid #fff;
-    padding-top: 140px;
+    padding-top: 80px;
     padding-bottom: 80px;
     padding-left: calc(20px + 10vw);
     padding-right: calc(20px + 10vw); }
@@ -803,23 +817,44 @@ p:empty {
       background-color: #fff; }
 
 .section-board {
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: #272727;
   color: #fff;
   text-align: center;
   padding-top: 140px;
-  padding-bottom: 140px; }
+  padding-bottom: 140px;
+  padding-top: 100px; }
+  @media (min-width: 801px) {
+    .section-board {
+      padding-left: calc(2rem + 1vw);
+      padding-right: calc(2rem + 1vw); } }
+  @media (min-width: 1153px) {
+    .section-board {
+      padding-left: calc(4rem + 4vw);
+      padding-right: calc(4rem + 4vw); } }
+  @media (min-width: 1921px) {
+    .section-board {
+      padding-left: calc((100vw - 72rem) / 2);
+      padding-right: calc((100vw - 72rem) / 2); } }
   .section-board > .board {
     border: 4px solid #fff;
-    padding-top: 140px;
+    padding-top: 80px;
     padding-bottom: 80px;
     padding-left: calc(20px + 10vw);
     padding-right: calc(20px + 10vw); }
   .section-board > .board > .title {
     text-transform: uppercase; }
-    .section-board.-yellow > .board > .title {
-      color: #F6EBAE; }
     .section-board.-pink > .board > .title {
       color: #F7C1C1; }
+    .section-board.-yellow > .board > .title {
+      color: #F6EBAE; }
+    .section-board.-green > .board > .title {
+      color: #A7E1BB; }
+    .section-board.-blue > .board > .title {
+      color: #ACDAEE; }
+  .section-board > .board > p {
+    margin-top: 20px; }
 
 .news-slider {
   position: relative; }
