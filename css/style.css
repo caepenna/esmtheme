@@ -744,6 +744,37 @@ p:empty {
     background-size: cover;
     width: 50%; }
 
+.section-case {
+  border-top: 1px solid #272727; }
+  .section-case > .case {
+    display: flex; }
+    .section-case > .case > .img {
+      margin-left: 80px;
+      min-width: 400px;
+      display: block;
+      background-color: red;
+      height: 400px; }
+    .section-case > .case > .text > .intro {
+      color: rgba(39, 39, 39, 0.7);
+      font-family: freight-macro-pro, serif;
+      font-style: italic;
+      font-size: 28px;
+      line-height: 40px;
+      margin-top: 40px; }
+    .section-case > .case > .text p {
+      color: rgba(39, 39, 39, 0.7);
+      margin-top: 20px; }
+  .section-case > .protect {
+    border-top: 1px solid #272727;
+    padding-top: 70px;
+    margin-top: 70px;
+    display: flex; }
+    .section-case > .protect > .title {
+      min-width: 360px;
+      margin-right: 40px; }
+    .section-case > .protect > .content > p:not(:first-child) {
+      margin-top: 20px; }
+
 .section-books > hr {
   height: 10px;
   background-color: #272727;
@@ -855,6 +886,36 @@ p:empty {
       color: #ACDAEE; }
   .section-board > .board > p {
     margin-top: 20px; }
+
+.section-casesnav {
+  background-color: #272727;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  counter-reset: link;
+  padding-top: 0; }
+  .section-casesnav > .link {
+    font-family: freight-macro-pro, serif;
+    font-style: italic;
+    flex-basis: calc((100% / 3) - 80px);
+    margin-right: 80px;
+    padding-left: 40px;
+    position: relative;
+    font-size: 18px;
+    line-height: 30px; }
+    .section-casesnav > .link::before {
+      font-family: avory-i-latin, sans-serif;
+      position: absolute;
+      left: 0;
+      font-size: 50px;
+      line-height: 40px;
+      counter-increment: link;
+      content: counter(link); }
+    .section-casesnav > .link:hover > span {
+      transition: all 0.3s ease;
+      background-color: #fff;
+      color: #272727; }
 
 .news-slider {
   position: relative; }
