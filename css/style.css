@@ -141,7 +141,7 @@ img {
   max-width: 100%; }
 
 em {
-  font-weight: 700; }
+  font-weight: bolder; }
 
 main > section {
   padding-left: 1rem;
@@ -164,6 +164,9 @@ main > section {
     main > section {
       padding-top: 8rem;
       padding-bottom: 8rem; } }
+
+p:empty {
+  display: none; }
 
 .esm-header {
   padding-left: 1rem;
@@ -206,7 +209,8 @@ main > section {
     z-index: 8;
     pointer-events: none;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: flex-start; }
     @media (min-width: 801px) {
       .esm-header > .navigation {
         padding-left: calc(2rem + 1vw);
@@ -219,6 +223,8 @@ main > section {
       .esm-header > .navigation {
         padding-left: calc((100vw - 72rem) / 2);
         padding-right: calc((100vw - 72rem) / 2); } }
+    .esm-header > .navigation > img {
+      margin-top: 50px; }
     .esm-header > .navigation > ul {
       margin-top: 180px; }
       .esm-header > .navigation > ul > li {
@@ -435,7 +441,7 @@ main > section {
       .esm-header.-open > .navigation > ul > li:nth-child(99) {
         transition: all 0.4s 4.95s ease; }
   .esm-header > .title {
-    font-family: freight-macro-pro, sans-serif;
+    font-family: freight-macro-pro, serif;
     font-size: 24px;
     line-height: 64px;
     letter-spacing: 3px;
@@ -708,7 +714,7 @@ main > section {
         padding-top: 8rem;
         padding-bottom: 8rem; } }
     .section-cases > .left > .title {
-      font-family: freight-macro-pro, sans-serif;
+      font-family: freight-macro-pro, serif;
       font-size: 24px;
       line-height: 64px;
       letter-spacing: 3px;
@@ -887,10 +893,14 @@ main > section {
         display: flex;
         margin-top: 40px; }
         .books-slider .book > .info > .excerpt > p {
-          width: 65%; }
+          width: 65%;
+          color: rgba(39, 39, 39, 0.7); }
         .books-slider .book > .info > .excerpt > .metainfo {
           margin-left: 40px;
           width: calc(35% - 40px); }
+          .books-slider .book > .info > .excerpt > .metainfo > p {
+            font-style: italic;
+            font-family: freight-macro-pro, serif; }
       .books-slider .book > .info > .link {
         font-size: 16px;
         line-height: 20px;

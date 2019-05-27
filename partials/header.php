@@ -45,6 +45,6 @@
             'items_wrap' => '<ul>%3$s</ul>'
           )
         ); ?>
-        <img src="<?php echo $baseurl.'/images/logo.svg'?>" alt="Frente Nacional Escola sem Mordaça">
+        <img src="<?php echo $baseurl.'/assets/images/logo.svg' ?>" alt="Frente Nacional Escola sem Mordaça">
       </div>
     </header>
