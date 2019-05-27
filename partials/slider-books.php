@@ -31,7 +31,7 @@
         <article class="info">
           <h4><?php echo $titulo; ?></h4>
           <div class="excerpt">
-            <p><?php the_excerpt(); ?></p>
+            <?php the_excerpt(); ?>
             <div class="metainfo">
               <p>Autor: <em><?php the_field('autor'); ?></em></p>
               <p>Editora: <em><?php the_field('editora'); ?></em></p>

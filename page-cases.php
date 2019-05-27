@@ -12,10 +12,12 @@
 
   <main>
 
-    <section>
-      <h1><?php the_title(); ?></h1>
-      <?php the_content(); ?>
-      <?php echo wp_get_attachment_url(get_post_thumbnail_id(), 'full'); ?>
+    <section class="section-board -yellow">
+      <div class="board">
+        <h3 class="title"><?php the_title(); ?></h3>
+        <?php the_content(); ?>
+      </div>
+      <?php // echo wp_get_attachment_url(get_post_thumbnail_id(), 'full'); ?>
     </section>
 
   </main>
