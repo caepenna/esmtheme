@@ -824,7 +824,7 @@ p:empty {
   text-align: center;
   padding-top: 140px;
   padding-bottom: 140px;
-  padding-top: 100px; }
+  padding-top: 60px; }
   @media (min-width: 801px) {
     .section-board {
       padding-left: calc(2rem + 1vw);
