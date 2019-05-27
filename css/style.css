@@ -935,8 +935,13 @@ p:empty {
         padding-right: calc((100vw - 72rem) / 2); } }
     .section-tactics > .tactic:nth-child(2) {
       background-color: white; }
+      .section-tactics > .tactic:nth-child(2) > .info {
+        order: 0; }
+      .section-tactics > .tactic:nth-child(2) > .illustration {
+        order: 1; }
     .section-tactics > .tactic > .info {
-      width: calc(50% - 20px); }
+      width: calc(50% - 20px);
+      order: 1; }
       .section-tactics > .tactic > .info h2 {
         font-family: freight-sans-pro, sans-serif;
         font-size: 32px;
@@ -955,7 +960,8 @@ p:empty {
       .section-tactics > .tactic > .info p {
         margin-top: 30px; }
     .section-tactics > .tactic > .illustration {
-      width: calc(41.666667% - 20px); }
+      width: calc(41.666667% - 20px);
+      order: 0; }
       .section-tactics > .tactic > .illustration .image {
         padding-top: 100%;
         position: relative; }
@@ -963,6 +969,7 @@ p:empty {
           position: absolute;
           top: 0;
           width: 100%;
+          height: 100%;
           bottom: 0;
           border-radius: 50%;
           object-fit: cover; }
