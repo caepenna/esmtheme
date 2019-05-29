@@ -563,6 +563,18 @@ p:empty {
     transition: all 0.3s ease;
     transform: scale(1.125); }
 
+.esm-filters {
+  width: calc(25% - 20px); }
+  .esm-filters li {
+    margin-bottom: 20px; }
+    .esm-filters li a {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: freight-sans-pro, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em; }
+
 .section-hero {
   background-color: rgba(167, 225, 187, 0.5);
   padding-left: calc( (100vw - 240px) / 2 );
@@ -578,7 +590,7 @@ p:empty {
     position: relative;
     z-index: 3; }
     .section-hero > .board::before {
-      background-image: linear-gradient(45deg, #272727 25%, transparent 25%, transparent 75%, #272727 75%, #272727), linear-gradient(45deg, #272727 25%, transparent 25%, transparent 75%, #272727 75%, #272727);
+      background-image: url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23272727'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23272727'/%3E%3C/svg%3E");
       background-size: 2px 2px;
       background-position: 0 0, 1px 1px;
       content: "";
@@ -608,7 +620,7 @@ p:empty {
       .section-hero > .board > .title > .-strike {
         position: relative; }
         .section-hero > .board > .title > .-strike::after {
-          background-image: linear-gradient(45deg, #F7C1C1 25%, transparent 25%, transparent 75%, #F7C1C1 75%, #F7C1C1), linear-gradient(45deg, #F7C1C1 25%, transparent 25%, transparent 75%, #F7C1C1 75%, #F7C1C1);
+          background-image: url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23F7C1C1'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23F7C1C1'/%3E%3C/svg%3E");
           background-size: 2px 2px;
           background-position: 0 0, 1px 1px;
           content: "";
@@ -754,20 +766,17 @@ p:empty {
     .section-case > .case > .img {
       margin-left: 80px;
       min-width: 400px;
-      display: block;
-      background-image: linear-gradient(45deg, #F7C1C1 25%, transparent 25%, transparent 75%, #F7C1C1 75%, #F7C1C1), linear-gradient(45deg, #F7C1C1 25%, transparent 25%, transparent 75%, #F7C1C1 75%, #F7C1C1);
-      background-size: 2px 2px;
-      background-position: 0 0, 1px 1px;
-      height: 400px; }
+      display: block; }
+      .section-case > .case > .img img {
+        width: 100%;
+        height: auto; }
     .section-case > .case > .text > .intro {
-      color: rgba(39, 39, 39, 0.7);
       font-family: freight-macro-pro, serif;
       font-style: italic;
       font-size: 28px;
       line-height: 40px;
       margin-top: 40px; }
     .section-case > .case > .text p {
-      color: rgba(39, 39, 39, 0.7);
       margin-top: 20px; }
   .section-case > .protect {
     border-top: 1px solid #272727;
@@ -1003,6 +1012,44 @@ p:empty {
       transition: all 0.3s ease;
       background-color: #fff;
       color: #272727; }
+
+.section-downloads {
+  display: flex; }
+
+.section-downloadslist {
+  width: calc(75% - 20px); }
+  .section-downloadslist .list .download {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-top: 2px solid rgba(39, 39, 39, 0.25); }
+    .section-downloadslist .list .download .text {
+      width: calc(77.777778% - 20px); }
+      .section-downloadslist .list .download .text h3 {
+        font-family: freight-sans-pro, sans-serif;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700; }
+        .section-downloadslist .list .download .text h3.-uppercase {
+          text-transform: uppercase; }
+        .section-downloadslist .list .download .text h3.-light {
+          font-weight: 500; }
+        @media (min-width: 801px) {
+          .section-downloadslist .list .download .text h3 {
+            font-size: 30px;
+            line-height: 40px; } }
+    .section-downloadslist .list .download .link {
+      width: calc(22.222222% - 20px);
+      margin-left: 40px;
+      margin-top: 40px;
+      text-align: right; }
+      .section-downloadslist .list .download .link a {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: freight-sans-pro, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.1em; }
 
 .news-slider {
   position: relative; }

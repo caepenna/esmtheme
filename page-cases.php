@@ -87,13 +87,13 @@
             <?php endif; ?>
           </div>
 
-          <div class="img"></div>
+          <?php if ($capa) : ?>
+            <div class="img">
+              <?php echo wp_get_attachment_image($capa, 'medium_large'); ?>
+            </div>
+          <?php endif; ?>
 
         </div>
-
-        <?php if ($capa) : ?>
-          <?php echo wp_get_attachment_image($capa, 'medium_large'); ?>
-        <?php endif; ?>
 
         <?php if( $como_se_proteger ): ?>
           <div class="protect">
