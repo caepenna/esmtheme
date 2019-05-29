@@ -23,11 +23,10 @@
       <h2 class="title">Leia e compartilhe  materiais <em>livremente.</em></h2>
     </section>
 
-    <section>
+    <section class="section-downloads">
       <?php get_template_part( 'partials/filters' ); ?>
-    </section>
-
-    <?php get_template_part( 'partials/gallery', 'downloads' ); ?>
+    	<?php get_template_part( 'partials/gallery', 'downloads' ); ?>
+		</section>
 
   </main>
 

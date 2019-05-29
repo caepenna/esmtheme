@@ -6,7 +6,7 @@
  */
 ?>
 
-<ul>
+<ul class="esm-filters">
   <li>
     <a class="filter filter_posts active" data-post-type="post" data-post-category="">Todas</a>
   </li>
