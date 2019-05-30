@@ -1,49 +1,66 @@
 $nOfColumns: 12
-$gutter: 1rem
+$gutter: 40px
 $columnWidth: ( 100%/#{$nOfColumns} - #{$gutter} )
 
 $nOfColumnsTablet: 8
-$gutterTablet: 0.5rem
+$gutterTablet: 24px
 $columnWidthTablet: ( 100%/#{$nOfColumnsTablet} - #{$gutterTablet} )
 
 $nOfColumnsMobile: 4
-$gutterMobile: 0.5rem
+$gutterMobile: 24px
 $columnWidthMobile: ( 100%/#{$nOfColumnsMobile} - #{$gutterMobile} )
 
 $tabletWidth: 64rem
 $mobileWidth: 48rem
 
-@mixin grid($size)
+=grid-container
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  margin-right: calc(-#{$gutter}/2)
+  margin-left: calc(-#{$gutter}/2)
+  @media screen and (max-width: $tabletWidth)
+    margin-right: calc(-#{$gutterTablet}/2)
+    margin-left: calc(-#{$gutterTablet}/2)
+
+
+=grid($size, $columns:12)
+  $columnWidth: ( 100%/#{$columns} - #{$gutter} )
   display: block
-  float: left
   width: calc( (#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter})
   max-width: calc(100% - #{$gutter})
   margin-right: calc(#{$gutter}/2)
   margin-left: calc(#{$gutter}/2)
 
   @media screen and (max-width: $tabletWidth)
+    $columnWidthTablet: ( 100%/#{$columns} - #{$gutterTablet} )
     width: calc( (#{$columnWidthTablet})*#{$size} + (#{$size} - 1)*#{$gutterTablet})
     max-width: calc(100% - #{$gutterTablet})
     margin-right: calc(#{$gutterTablet}/2)
     margin-left: calc(#{$gutterTablet}/2)
 
   @media screen and (max-width: $mobileWidth)
+    $columnWidthMobile: ( 100%/#{$columns} - #{$gutterMobile} )
     width: calc( (#{$columnWidthMobile})*#{$size} + (#{$size} - 1)*#{$gutterMobile})
     max-width: calc(100% - #{$gutterMobile})
     margin-right: calc(#{$gutterMobile}/2)
     margin-left: calc(#{$gutterMobile}/2)
 
-@mixin offset($side, $size)
+=offset($size, $columns:12, $side:left)
+  $columnWidth: ( 100%/#{$columns} - #{$gutter} )
   margin-#{$side}: calc((#{$columnWidth})*#{$size} + (#{$size} - 1)*#{$gutter} + 1.5*#{$gutter})
 
   @media screen and (max-width: $tabletWidth)
+    $columnWidthTablet: ( 100%/#{$columns} - #{$gutterTablet} )
     margin-#{$side}: calc((#{$columnWidthTablet})*#{$size} + (#{$size} - 1)*#{$gutterTablet} + 1.5*#{$gutterTablet})
 
   @media screen and (max-width: $mobileWidth)
+    $columnWidthMobile: ( 100%/#{$columns} - #{$gutterMobile} )
     margin-#{$side}: calc((#{$columnWidthMobile})*#{$size} + (#{$size} - 1)*#{$gutterMobile} + 1.5*#{$gutterMobile})
 
 
-@mixin offsetLeft($size)
-  @include offset(left, $size)
-@mixin offsetRight($size)
-  @include offset(right, $size)
+=offsetLeft($size)
+  +offset(left, $size)
+
+=offsetRight($size)
+  +offset(right, $size)
