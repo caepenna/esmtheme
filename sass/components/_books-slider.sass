@@ -1,27 +1,30 @@
 .books-slider
-  padding-left: 80px
-  padding-right: 80px
+  //padding-left: 80px
+  //padding-right: 80px
   position: relative
 
   .book
-    display: flex
-
+    +grid-container
+    > img
+      +grid(2)
+      +offset(1)
+      padding-right: 20px
     > .info
-      margin-left: 80px
-
+      +grid(9)
+      > h4
       > .excerpt
         display: flex
         margin-top: 40px
-        > p
-          width: 65%
-          color: rgba($color-blackboard, 0.7)
-        > .metainfo
-          margin-left: 40px
-          width: calc(35% - 40px)
+        > div
+          +grid-container
           > p
-            font-style: italic
-            font-family: $font-family-body-serif
-
+            +grid(6, 9)
+            color: rgba($color-blackboard, 0.7)
+          > .metainfo
+            +grid(3, 9)
+            > p
+              font-style: italic
+              font-family: $font-family-body-serif
       > .link
         +font-link
         margin-top: 40px

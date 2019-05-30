@@ -1,35 +1,52 @@
-.section-case
-  border-top: 1px solid $color-blackboard
-  > .case
-    display: flex
-    > .img
-      margin-left: 80px
-      min-width: 400px
-      display: block
-      img
-        width: 100%
-        height: auto
-    > .text
-      > .intro
-        //color: rgba($color-blackboard, 0.7)
-        font-family: $font-family-body-serif
-        font-style: italic
-        font-size: 28px
-        line-height: 40px
-        margin-top: 40px
-      p
-        //color: rgba($color-blackboard, 0.7)
-        margin-top: 20px
-  > .protect
+.section-caseslist
+  counter-reset: case
+  > .section-case
     border-top: 1px solid $color-blackboard
-    padding-top: 70px
-    margin-top: 70px
-    display: flex
-    > .title
-      min-width: 360px
-      margin-right: 40px
-    > .content
-      > p
-        //color: rgba($color-blackboard, 0.7)
-        &:not(:first-child)
+    padding-top: 8rem
+    margin-top: 8rem
+    &:first-child
+      border-top: none
+      padding-top: 0
+      margin-top: 0
+    > .case
+      +grid-container
+      counter-increment: case
+      > .capa
+        +grid(4)
+        > .title
+          margin-top: 10px
+          border-top: 10px solid $color-blackboard
+          padding-top: 40px
+          &::before
+            content: counter(case) " - "
+        > .img
+          margin-top: 80px
+          img
+            width: 100%
+            height: auto
+      > .text
+        +grid(7)
+        +offset(1)
+        > .intro
+          font-family: $font-family-body-serif
+          font-style: italic
+          font-size: 28px
+          line-height: 40px
+          margin-top: 0
+        > .detalhes
+          margin-top: 40px
+        p
           margin-top: 20px
+    > .protect
+      +grid-container
+      border-top: 1px solid $color-blackboard
+      padding-top: 70px
+      margin-top: 70px
+      > .title
+        +grid(4)
+      > .content
+        +grid(7)
+        +offset(1)
+        > p
+          &:not(:first-child)
+            margin-top: 20px

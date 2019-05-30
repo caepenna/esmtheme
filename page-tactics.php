@@ -32,22 +32,24 @@
       		$imagem = get_sub_field('imagem');
       	?>
       		<article class="tactic">
-            <div class="info">
-              <?php if( $titulo ): ?>
-        				<h2><?php echo $titulo ?></h2>
-        			<?php endif; ?>
+            <div>
+              <div class="info">
+                <?php if( $titulo ): ?>
+          				<h2><?php echo $titulo ?></h2>
+          			<?php endif; ?>
 
-              <?php if( $texto ): ?>
-        				<p><?php echo $texto ?></p>
-        			<?php endif; ?>
-            </div>
-            <div class="illustration">
-              <!-- Se precisar da url (pra usar como background-image, por exemplo) -->
-              <?php //echo wp_get_attachment_url($imagem); ?>
+                <?php if( $texto ): ?>
+          				<p><?php echo $texto ?></p>
+          			<?php endif; ?>
+              </div>
+              <div class="illustration">
+                <!-- Se precisar da url (pra usar como background-image, por exemplo) -->
+                <?php //echo wp_get_attachment_url($imagem); ?>
 
-              <!-- Se for usar um elemento img. Com essa função, o Wordpress gera uma imagem responsiva usando o atributo srcset -->
-              <div class="image">
-                <?php echo wp_get_attachment_image($imagem, 'medium_large'); ?>
+                <!-- Se for usar um elemento img. Com essa função, o Wordpress gera uma imagem responsiva usando o atributo srcset -->
+                <div class="image">
+                  <?php echo wp_get_attachment_image($imagem, 'medium_large'); ?>
+                </div>
               </div>
             </div>
       		</article>

@@ -56,59 +56,64 @@
 
     </section>
 
+    <section class="section-caseslist">
+      <!-- Loop que constrói casos -->
+      <?php  $i = 1; foreach( $casos as $post ): setup_postdata( $post ); ?>
+        <?php
+          //vars
+          $titulo = get_the_title();
+          $capa = get_post_thumbnail_id();
+          $intro = get_field('intro');
+          $detalhes = get_field('detalhes');
+          $como_se_proteger = get_field('como_se_proteger');
+          $id = $post->post_name;
+        ?>
+        <div class="section-case" id="<?php echo $id ?>">
 
-    <!-- Loop que constrói casos -->
-    <?php  $i = 1; foreach( $casos as $post ): setup_postdata( $post ); ?>
-      <?php
-        //vars
-        $titulo = get_the_title();
-        $capa = get_post_thumbnail_id();
-        $intro = get_field('intro');
-        $detalhes = get_field('detalhes');
-        $como_se_proteger = get_field('como_se_proteger');
-        $id = $post->post_name;
-      ?>
-      <section class="section-case" id="<?php echo $id ?>">
+          <div class="case">
 
-        <div class="case">
+            <div class="capa">
+              <?php if( $titulo ): ?>
+                <h3 class="title -uppercase"><?php echo $titulo ?></h3>
+              <?php endif; ?>
+              <?php if ($capa) : ?>
+                <div class="img">
+                  <?php echo wp_get_attachment_image($capa, 'medium_large'); ?>
+                </div>
+              <?php endif; ?>
+            </div>
 
-          <div class="text">
-            <?php if( $titulo ): ?>
-              <h3 class="title -uppercase"><?php echo $titulo ?></h3>
-            <?php endif; ?>
+            <div class="text">
 
-            <?php if( $intro ): ?>
-              <p class="intro"><?php echo $intro ?></p>
-            <?php endif; ?>
+              <?php if( $intro ): ?>
+                <p class="intro"><?php echo $intro ?></p>
+              <?php endif; ?>
 
-            <?php if( $detalhes ): ?>
-              <!-- <a>Mais detalhes</a> -->
-              <?php echo $detalhes ?>
-            <?php endif; ?>
+              <?php if( $detalhes ): ?>
+                <div class="detalhes">
+                  <?php echo $detalhes ?>
+                </div>
+              <?php endif; ?>
+            </div>
+
           </div>
 
-          <?php if ($capa) : ?>
-            <div class="img">
-              <?php echo wp_get_attachment_image($capa, 'medium_large'); ?>
+          <?php if( $como_se_proteger ): ?>
+            <div class="protect">
+              <h3 class="title -uppercase -light">Como se proteger?</h3>
+              <div class="content">
+                <?php echo $como_se_proteger ?>
+              </div>
             </div>
           <?php endif; ?>
 
         </div>
 
-        <?php if( $como_se_proteger ): ?>
-          <div class="protect">
-            <h3 class="title -uppercase -light">Como se proteger?</h3>
-            <div class="content">
-              <?php echo $como_se_proteger ?>
-            </div>
-          </div>
-        <?php endif; ?>
+      <?php $i++; endforeach; wp_reset_postdata(); ?>
 
-      </section>
+    <?php endif; ?>
 
-    <?php $i++; endforeach; wp_reset_postdata(); ?>
-
-  <?php endif; ?>
+  </section>
 
 </main>
 

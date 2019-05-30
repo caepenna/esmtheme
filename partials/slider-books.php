@@ -17,7 +17,7 @@
   if ($posts_query -> have_posts()) :
 ?>
 
-  <ul class="books-slider owl-carousel">
+  <div class="books-slider owl-carousel">
 
     <?php
       while ($posts_query -> have_posts()) : $posts_query -> the_post();
@@ -26,28 +26,30 @@
         $link = get_permalink();
     ?>
 
-      <li class="book">
+      <div class="book">
         <?php echo wp_get_attachment_image($thumbnail, 'large'); ?>
         <article class="info">
           <h4><?php echo $titulo; ?></h4>
           <div class="excerpt">
-            <?php the_excerpt(); ?>
-            <div class="metainfo">
-              <p>Autor: <em><?php the_field('autor'); ?></em></p>
-              <p>Editora: <em><?php the_field('editora'); ?></em></p>
-              <p>Ano: <em><?php the_field('ano'); ?></em></p>
+            <div>
+              <?php the_excerpt(); ?>
+              <div class="metainfo">
+                <p>Autor: <em><?php the_field('autor'); ?></em></p>
+                <p>Editora: <em><?php the_field('editora'); ?></em></p>
+                <p>Ano: <em><?php the_field('ano'); ?></em></p>
+              </div>
             </div>
           </div>
           <a class="link" href="<?php echo $link; ?>">Saiba mais…</a>
       </article>
-      </li>
+    </div>
 
     <?php
       endwhile;
       wp_reset_postdata();
     ?>
 
-  </ul>
+  </div>
 
   <script type="text/javascript">
       var owl_books = $('.books-slider.owl-carousel');

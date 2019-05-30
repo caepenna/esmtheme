@@ -10,32 +10,43 @@
     display: flex
     flex-flow: row wrap
     justify-content: space-between
-    &:nth-child(2)
+    &:nth-child(2n+1)
+      > div
+        > .info
+          order: 0
+        > .illustration
+          +offset(1)
+          order: 1
+    &:nth-child(2n)
       background-color: white
+      > div
+        > .info
+          +offset(1)
+          order: 1
+        > .illustration
+          order: 0
+    > div
+      +grid-container
       > .info
-        order: 0
-      > .illustration
+        +grid(6)
         order: 1
-    > .info
-      width: calc(50% - 20px)
-      order: 1
-      h2
-        +h4
-        &::before
-          content: counter(tactic) " - "
-      p
-        margin-top: 30px
-    > .illustration
-      width: calc(41.666667% - 20px)
-      order: 0
-      .image
-        padding-top: 100%
-        position: relative
-        img
-          position: absolute
-          top: 0
-          width: 100%
-          height: 100%
-          bottom: 0
-          border-radius: 50%
-          object-fit: cover
+        h2
+          +h4
+          &::before
+            content: counter(tactic) " - "
+        p
+          margin-top: 30px
+      > .illustration
+        +grid(5)
+        order: 0
+        .image
+          padding-top: 100%
+          position: relative
+          img
+            position: absolute
+            top: 0
+            width: 100%
+            height: 100%
+            bottom: 0
+            border-radius: 50%
+            object-fit: cover
