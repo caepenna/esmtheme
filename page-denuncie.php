@@ -1,4 +1,5 @@
 <?php
+/* Template Name: Denuncie */
 /**
  * The template for displaying denuncie page
  *
