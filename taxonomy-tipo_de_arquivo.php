@@ -14,12 +14,14 @@
 ?>
 
 <main>
-	<h1><?php single_term_title(); ?></h1>
-	<a href="javascript:history.back()">Voltar</a>
-	<section>
+	<section class="section-title taxonomy">
+		<a href="<?php echo get_site_url(); ?>/downloads">Downloads</a>
+		<h2 class="title"><?php single_term_title(); ?></h2>
+	</section>
+	<section class="section-downloads">
 		<?php get_template_part( 'partials/filters' ); ?>
+		<?php get_template_part( 'partials/gallery', 'downloads' ); ?>
   </section>
-	<?php get_template_part( 'partials/gallery', 'downloads' ); ?>
 </main>
 
 <?php get_template_part( 'partials/footer' ); ?>

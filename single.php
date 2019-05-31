@@ -20,17 +20,19 @@
 	  endif;
 	?>
 
-  <main>
-    <div>
-    	<span><?php echo $area_name; ?></span>
-    </div>
-    <h1><?php the_title(); ?></h1>
-    <div>
-	  	<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'large', '', array('class' => '')); ?>
-    </div>
-    <div>
+  <main class="single-post">
+    <section>
+			<h3 class="title"><?php the_title(); ?></h3>
+    	<span class="tag"><?php echo $area_name; ?></span>
+    </section>
+    <section class="thumb">
+			<div class="image">
+	  		<?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'large', '', array('class' => '')); ?>
+			</div>
+    </section>
+    <section class="content">
     	<?php the_content(); ?>
-    </div>
+    </section>
   </main>
 	<?php get_template_part( 'partials/related-posts' ); ?>
 

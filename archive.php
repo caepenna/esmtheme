@@ -17,8 +17,8 @@
 		<section class="section-news">
 			<?php get_template_part( 'partials/slider', 'archive' ); ?>
     </section>
-		<?php get_template_part( 'partials/gallery', 'posts' ); ?>
-		<section>
+		<section class="section-posts">
+      <?php get_template_part( 'partials/gallery', 'posts' ); ?>
 			<?php get_template_part( 'partials/filters' ); ?>
     </section>
   </main>

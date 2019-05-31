@@ -13,13 +13,19 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
-		<section>
-      <h2>Conheça a causa, suas origens e seus fundamentos.</h2>
-			<?php get_template_part( 'partials/slider', 'books' ); ?>
+		<section class="section-title bg-white">
+      <h2 class="-uppercase">Conheça a causa, <em>suas&nbsp;origens</em> e <em>fundamentos</em></h2>
     </section>
-		<section>
-			<h2>Livros</h2>
+    <section class="bg-blackboard">
+      <?php get_template_part( 'partials/slider', 'books' ); ?>
+    </section>
+		<section class="section-subtitle">
+			<h3 class="title">Livros</h3>
 			<?php get_template_part( 'partials/gallery', 'books' ); ?>
+		</section>
+    <section class="section-subtitle">
+			<h3 class="title">Vídeos</h3>
+			<?php get_template_part( 'partials/gallery', 'videos' ); ?>
 		</section>
   </main>
 

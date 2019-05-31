@@ -34,7 +34,7 @@
     </section>
 
 		<section class="section-books">
-      <h2 class="-uppercase">Conheça a causa, <em>suas origens</em> e <em>base teórica</em></h2>
+      <h2 class="-uppercase">Conheça a causa, <em>suas origens</em> e <em>fundamentos</em></h2>
       <hr />
 			<?php get_template_part( 'partials/slider', 'books' ); ?>
     </section>

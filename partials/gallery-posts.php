@@ -31,8 +31,8 @@
         $posts_count = wp_count_posts('post')->publish;
 ?>
 
-<section>
-    <div>
+<section class="section-postlist">
+    <div class="list">
         <div id="ajaxContainer">
             <?php
                 $i = 1;
@@ -50,13 +50,13 @@
 
                 }
             ?>
-            <a href="<?php echo $link; ?>">
-                <figure>
+            <a href="<?php echo $link; ?>" class="post">
+                <figure class="thumb">
                   <?php echo wp_get_attachment_image($thumbnail, 'large'); ?>
+                  <h4 class="tag"><?php echo $area_name; ?></h4>
                 </figure>
                 <div>
-                  <h4><?php echo $area_name; ?></h4>
-                  <h3><?php echo $titulo; ?></h3>
+                  <h3 class="title"><?php echo $titulo; ?></h3>
                 </div>
               </a>
 
@@ -66,7 +66,7 @@
           e mostrar esse botão com display:none. Mas você pode usar a que quiser. esse id também vai ser necessário. -->
           <a
             id="more_posts"
-            class="loadmore <?php if ($i <= $posts_count): ?>d-inline-block<?php else: ?>d-none<?php endif; ?>"
+            class="esm-button loadmore <?php if ($i <= $posts_count): ?>d-inline-block<?php else: ?>d-none<?php endif; ?>"
             data-order="<?php echo $order; ?>"
             data-post-type="<?php echo $postType; ?>"
             data-ppp="<?php echo $postsPerPage; ?>"

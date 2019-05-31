@@ -1,0 +1,27 @@
+.section-postlist
+  width: calc(75% - 20px)
+  margin-right: 80px
+  .list
+    > #ajaxContainer
+      +grid-container
+      .post
+        +grid(6)
+        margin-bottom: 60px
+        .thumb
+          width: 100%
+          padding-top: 50%
+          position: relative
+          +checkboard-background($color-bluechalk)
+          margin-bottom: 10px
+        .tag
+          +font-link
+          position: absolute
+          top: 0
+          left: 0
+          padding: 10px
+          display: block
+          width: 100%
+          background-color: $color-blackboard
+          color: $color-bluechalk
+        .title
+          +h6

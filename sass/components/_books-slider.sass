@@ -1,8 +1,5 @@
 .books-slider
-  //padding-left: 80px
-  //padding-right: 80px
   position: relative
-
   .book
     +grid-container
     > img
@@ -58,3 +55,21 @@
         right: -40px
       > button.owl-prev
         left: -40px
+
+.bg-blackboard
+  background-color: $color-blackboard
+  .books-slider
+    .book
+      *
+        color: white
+      > img
+      > .info
+        > .excerpt
+          > div
+            > p
+              color: white
+    .owl-nav
+      > button.owl-next,
+      > button.owl-prev
+        background-image: url('../assets/images/arrow-white.svg')
+        color: transparent

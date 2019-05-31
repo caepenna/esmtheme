@@ -8,7 +8,7 @@
 
 <ul class="esm-filters">
   <li>
-    <a class="filter filter_posts active" data-post-type="post" data-post-category="">Todas</a>
+    <a class="filter filter_posts active" data-post-type="post" data-post-category="" href="<?php echo get_site_url(); ?>/downloads">Todas</a>
   </li>
 
   <?php

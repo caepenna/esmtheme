@@ -1,0 +1,29 @@
+.gallery-books
+  #ajaxContainer
+    +grid-container
+    > .book
+      +grid(6)
+      > div
+        +grid-container
+        > .cover
+          +grid(2, 6)
+          img
+            width: 100%
+            height: auto
+        > div
+          +grid(4, 6)
+          > .title
+            +h5
+            margin-bottom: 20px
+          > .metainfo
+            > p
+              font-style: italic
+              font-family: $font-family-body-serif
+  .more-books
+    text-align: center
+    padding-top: 80px
+    margin-top: 80px
+    border-top: 2px solid rgba($color-blackboard, .25)
+    > a
+      margin-left: auto
+      margin-right: auto

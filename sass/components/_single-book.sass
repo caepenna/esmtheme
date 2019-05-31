@@ -1,0 +1,51 @@
+.single-book
+  .bg-blackboard
+    background-color: $color-blackboard
+    border-top: 1px solid white
+  .intro
+    +grid-container
+    color: white
+    .cover
+      +grid(2)
+      img
+        width: 100%
+        height: auto
+    .info
+      +grid(9)
+      +offset(1)
+      border-top: 5px solid $color-bluechalk
+      padding-top: 40px
+      .container
+        +grid-container
+        h1
+          +grid(6, 9)
+          +h4
+        .metainfo
+          +grid(3, 9)
+          > p
+            font-style: italic
+            font-family: $font-family-body-serif
+  .book-about
+    .container
+      +grid-container
+      .resenha
+        +grid(8)
+        .title
+          +h3
+          text-transform: uppercase
+          margin-bottom: 40px
+      .author
+        +grid(3)
+        +offset(1)
+        p
+          font-size: 16px
+          line-height: 30px
+          font-style: italic
+          font-family: $font-family-body-serif
+        h3
+          +h6
+        img
+          width: 75%
+          height: auto
+          margin-bottom: 10px
+          padding

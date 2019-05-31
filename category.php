@@ -14,13 +14,14 @@
 ?>
 
 <main>
-	<h1><?php single_cat_title(); ?></h1>
-	<a href="javascript:history.back()">Voltar</a>
-	<section>
-		<?php get_template_part( 'partials/gallery', 'posts' ); ?>
-  </section>
-	<section>
+  <section class="section-title taxonomy">
+		<a href="<?php echo get_site_url(); ?>/noticias">Notícias</a>
+		<h2 class="title"><?php single_cat_title(); ?></h2>
+	</section>
+
+	<section class="section-posts">
 		<?php set_query_var( 'taxonomy', 'category' );?>
+    <?php get_template_part( 'partials/gallery', 'posts' ); ?>
 		<?php get_template_part( 'partials/filters' ); ?>
   </section>
 </main>
