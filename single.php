@@ -34,7 +34,7 @@
     	<?php the_content(); ?>
     </section>
   </main>
-	<?php get_template_part( 'partials/related-posts' ); ?>
+	<?php //get_template_part( 'partials/related-posts' ); ?>
 
 <?php endwhile; ?>
 
