@@ -15,7 +15,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
-    <img src="<?php echo $baseurl.'/assets/images/form_denuncia.png' ?>" style="width: 100%; height: auto;">
+    <img src="<?php echo $baseurl.'/assets/form_denuncia.png' ?>" style="width: 100%; height: auto;">
   </main>
 
 <?php endwhile; ?>
