@@ -1,0 +1,27 @@
+.report-form
+  padding-left: $space-centi*2
+  padding-right: $space-centi*2
+  +media-mediumup
+    padding-left: calc((#{$space-base} + 1vw) * 2 )
+    padding-right: calc((#{$space-base} + 1vw) * 2 )
+  +media-largeup
+    padding-left: calc((#{$space-deca} + 4vw) * 2 )
+    padding-right: calc((#{$space-deca} + 4vw) * 2 )
+  +media-hugeup
+    padding-left: calc(((100vw - 72rem) / 2) * 2 )
+    padding-right: calc(((100vw - 72rem) / 2) * 2 )
+  padding-top: 80px
+  padding-bottom: 80px
+
+  > label
+    +h5
+    display: block
+    margin-bottom: 40px
+
+  > input[type=text]
+    display: block
+    border-bottom: 2px solid $color-blackboard
+    padding-bottom: 20px
+    padding-top: 20px
+    width: 100%
+    margin-bottom: 80px
