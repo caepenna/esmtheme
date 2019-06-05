@@ -1,6 +1,6 @@
 <?php
 /**
- * Galeria de notícias
+ * Galeria de livros
  *
  * @package ESM
  */
