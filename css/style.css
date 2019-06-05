@@ -1844,7 +1844,9 @@ p:empty {
       margin-bottom: 10px; }
 
 .books-slider {
-  position: relative; }
+  position: relative;
+  padding-left: 60px;
+  padding-right: 60px; }
   .books-slider .book {
     display: flex;
     flex-flow: row wrap;
@@ -1985,9 +1987,9 @@ p:empty {
       transform: translateY(-50%) translateX(-5px); }
   @media (min-width: 801px) {
     .books-slider .owl-nav > button.owl-next {
-      right: -40px; }
+      right: -60px; }
     .books-slider .owl-nav > button.owl-prev {
-      left: -40px; } }
+      left: -60px; } }
 
 .bg-blackboard {
   background-color: #272727; }
