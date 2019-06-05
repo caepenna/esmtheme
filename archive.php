@@ -14,7 +14,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
   <main>
-		<section class="section-news">
+		<section class="section-news -dark">
 			<?php get_template_part( 'partials/slider', 'archive' ); ?>
     </section>
 		<section class="section-posts">

@@ -12,11 +12,15 @@
   > .prev
     transform: translateX(-100%)
     background-image: linear-gradient(to left, transparent, rgba(mix($color-bluechalk, #fff), 0.7) 10%)
+    @at-root .section-news.-dark &
+      background-image: linear-gradient(to left, transparent, rgba($color-blackboard, 0.7) 10%)
     &:hover
       background: none
   > .next
     transform: translateX(100%)
     background-image: linear-gradient(to left, rgba(mix($color-bluechalk, #fff), 0.7) 90%, transparent)
+    @at-root .section-news.-dark &
+      background-image: linear-gradient(to left, rgba($color-blackboard, 0.7) 90%, transparent)
     &:hover
       background: none
   > .owl-carousel .owl-stage-outer
