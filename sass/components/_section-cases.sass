@@ -6,8 +6,9 @@
     padding-right: 40px
     padding-top: $space-deca
     padding-bottom: $space-deca
-    width: 50%
+    max-width: 100%
     +media-mediumup
+      width: 50%
       padding-top: $space-hecto
       padding-bottom: $space-hecto
     > .title
@@ -30,3 +31,5 @@
     background-image: url('../assets/images/flag.svg')
     background-size: cover
     width: 50%
+    +media-mediumdown
+      display: none
