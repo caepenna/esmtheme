@@ -19,8 +19,12 @@
           > p
             +grid(6, 9)
             color: rgba($color-blackboard, 0.7)
+            +media-mediumdown
+              +grid(9, 9)
           > .metainfo
             +grid(3, 9)
+            +media-mediumdown
+              display: none
             > p
               font-style: italic
               font-family: $font-family-body-serif

@@ -1965,6 +1965,26 @@ p:empty {
                 max-width: calc(100% - 24px);
                 margin-right: calc(24px/2);
                 margin-left: calc(24px/2); } }
+            @media (max-width: 800px) {
+              .books-slider .book > .info > .excerpt > div > p {
+                display: block;
+                width: calc( (100%/9 - 40px)*9 + (9 - 1)*40px);
+                max-width: calc(100% - 40px);
+                margin-right: calc(40px/2);
+                margin-left: calc(40px/2); } }
+  @media screen and (max-width: 800px) and (max-width: 64rem) {
+    .books-slider .book > .info > .excerpt > div > p {
+      width: calc( (100%/9 - 24px)*9 + (9 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (max-width: 800px) and (max-width: 48rem) {
+    .books-slider .book > .info > .excerpt > div > p {
+      width: calc( (100%/9 - 24px)*9 + (9 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+
           .books-slider .book > .info > .excerpt > div > .metainfo {
             display: block;
             width: calc( (100%/9 - 40px)*3 + (3 - 1)*40px);
@@ -1983,6 +2003,9 @@ p:empty {
                 max-width: calc(100% - 24px);
                 margin-right: calc(24px/2);
                 margin-left: calc(24px/2); } }
+            @media (max-width: 800px) {
+              .books-slider .book > .info > .excerpt > div > .metainfo {
+                display: none; } }
             .books-slider .book > .info > .excerpt > div > .metainfo > p {
               font-style: italic;
               font-family: freight-macro-pro, serif; }
