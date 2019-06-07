@@ -20,7 +20,7 @@
   <main>
 
     <section class="section-title">
-      <h2 class="title">Encontre os projetos <em>"Escola sem Partido"</em> pelo Brasil.</h2>
+      <h2 class="title">Encontre os projetos <em>"Escola&nbsp;sem&nbsp;Partido"</em><br> pelo Brasil.</h2>
     </section>
 
     <?php
