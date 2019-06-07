@@ -1702,22 +1702,62 @@ p:empty {
       margin-left: calc(-24px/2); } }
   .gallery-videos #ajaxContainer > .video {
     display: block;
-    width: calc( (100%/12 - 40px)*4 + (4 - 1)*40px);
+    width: calc( (100%/12 - 40px)*12 + (12 - 1)*40px);
     max-width: calc(100% - 40px);
     margin-right: calc(40px/2);
     margin-left: calc(40px/2); }
     @media screen and (max-width: 64rem) {
       .gallery-videos #ajaxContainer > .video {
-        width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+        width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
         max-width: calc(100% - 24px);
         margin-right: calc(24px/2);
         margin-left: calc(24px/2); } }
     @media screen and (max-width: 48rem) {
       .gallery-videos #ajaxContainer > .video {
-        width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+        width: calc( (100%/12 - 24px)*12 + (12 - 1)*24px);
         max-width: calc(100% - 24px);
         margin-right: calc(24px/2);
         margin-left: calc(24px/2); } }
+    @media (min-width: 801px) {
+      .gallery-videos #ajaxContainer > .video {
+        display: block;
+        width: calc( (100%/12 - 40px)*6 + (6 - 1)*40px);
+        max-width: calc(100% - 40px);
+        margin-right: calc(40px/2);
+        margin-left: calc(40px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .gallery-videos #ajaxContainer > .video {
+      width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 48rem) {
+    .gallery-videos #ajaxContainer > .video {
+      width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+
+    @media (min-width: 1153px) {
+      .gallery-videos #ajaxContainer > .video {
+        display: block;
+        width: calc( (100%/12 - 40px)*4 + (4 - 1)*40px);
+        max-width: calc(100% - 40px);
+        margin-right: calc(40px/2);
+        margin-left: calc(40px/2); } }
+  @media screen and (min-width: 1153px) and (max-width: 64rem) {
+    .gallery-videos #ajaxContainer > .video {
+      width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (min-width: 1153px) and (max-width: 48rem) {
+    .gallery-videos #ajaxContainer > .video {
+      width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+
     .gallery-videos #ajaxContainer > .video > .cover {
       width: 100%;
       margin-bottom: 10px; }
