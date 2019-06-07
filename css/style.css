@@ -1001,58 +1001,61 @@ p:empty {
   flex-flow: row wrap; }
   .project-filters .select {
     text-align: center;
-    text-align-last: center;
-    background-color: white;
+    text-align-last: left;
     padding: 15px;
     position: relative; }
     @media (max-width: 800px) {
       .project-filters .select {
         width: 50%; } }
-    @media (max-width: 640px) {
-      .project-filters .select {
-        width: 100%; } }
     @media (min-width: 801px) {
       .project-filters .select {
         width: 25%; } }
+    @media (max-width: 640px) {
+      .project-filters .select.full {
+        width: 100%; } }
     .project-filters .select::before {
       content: "";
       width: 0;
       height: 0;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      border-top: 8px solid rgba(0, 0, 0, 0.2);
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #b4b4b4;
       position: absolute;
       display: block;
-      right: 20px;
+      right: 25px;
       bottom: 30px;
       pointer-events: none; }
     .project-filters .select > label {
-      width: 100%;
-      text-transform: uppercase;
-      font-weight: 400;
-      color: rgba(39, 39, 39, 0.6);
+      font-size: 16px;
+      line-height: 20px;
       font-family: freight-sans-pro, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(39, 39, 39, 0.6);
       font-size: 14px;
-      line-height: 14px;
-      letter-spacing: 2px; }
+      line-height: 30px;
+      text-align: left;
+      min-width: 100%;
+      display: block; }
     .project-filters .select > select {
       max-width: 100%;
       width: 100%;
       border: 1px solid currentColor;
       padding: 10px;
-      padding-left: 0;
+      padding-left: 15px;
       padding-right: 15px;
       font-family: freight-sans-pro, sans-serif;
       font-size: 18px;
       line-height: 18px;
       font-weight: 600;
       letter-spacing: -0.5px;
-      background-color: rgba(39, 39, 39, 0.075);
-      cursor: pointer; }
-      .project-filters .select > select:active, .project-filters .select > select:focus {
-        background-color: rgba(172, 218, 238, 0.075);
+      cursor: pointer;
+      border-radius: 2px; }
+      .project-filters .select > select.selected {
+        background-color: #272727;
         color: #ACDAEE;
-        background-color: rgba(172, 218, 238, 0.1); }
+        border: transparent; }
       .project-filters .select > select:hover {
         background-color: #fff;
         color: #000; }
@@ -1069,16 +1072,16 @@ p:empty {
       margin-right: calc(-24px/2);
       margin-left: calc(-24px/2); } }
   .section-projects > .project {
-    margin-bottom: 40px;
-    display: flex;
-    flex-flow: column wrap; }
+    margin-bottom: 40px; }
     @media (min-width: 801px) {
       .section-projects > .project {
         display: block;
         width: calc( (100%/12 - 40px)*4 + (4 - 1)*40px);
         max-width: calc(100% - 40px);
         margin-right: calc(40px/2);
-        margin-left: calc(40px/2); } }
+        margin-left: calc(40px/2);
+        display: flex;
+        flex-flow: column wrap; } }
   @media screen and (min-width: 801px) and (max-width: 64rem) {
     .section-projects > .project {
       width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
@@ -1098,7 +1101,9 @@ p:empty {
         width: calc( (100%/12 - 40px)*6 + (6 - 1)*40px);
         max-width: calc(100% - 40px);
         margin-right: calc(40px/2);
-        margin-left: calc(40px/2); } }
+        margin-left: calc(40px/2);
+        display: flex;
+        flex-flow: column wrap; } }
   @media screen and (max-width: 800px) and (max-width: 64rem) {
     .section-projects > .project {
       width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
