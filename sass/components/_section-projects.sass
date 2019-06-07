@@ -10,11 +10,17 @@
     padding: 20px
     text-align-last: center
     background-color: white
+
 .section-projects
   +grid-container
   align-content: stretch
   > .project
-    +grid(4)
+    +media-mediumup
+      +grid(4)
+    +media-mediumdown
+      +grid(6)
+    +media-smallonly
+      +grid(12)
     margin-bottom: 40px
     display: flex
     flex-flow: column wrap
