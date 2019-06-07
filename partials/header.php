@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/zgj0rir.css">
     <?php wp_head(); ?>
   </head>
-  <body>
+  <body <?php if ( is_front_page() ): echo 'class="home"'; endif; ?> >
     <?php if ( is_front_page() ): ?>
       <header class="esm-header -home">
     <?php else: ?>

@@ -588,6 +588,9 @@ p:empty {
       text-transform: uppercase;
       letter-spacing: 0.1em; }
 
+.home {
+  padding-top: 0; }
+
 .section-hero {
   background-color: rgba(167, 225, 187, 0.5);
   padding-left: calc( (100vw - 240px) / 2 );
@@ -1719,10 +1722,16 @@ p:empty {
       width: 100%;
       margin-bottom: 10px; }
       .gallery-videos #ajaxContainer > .video > .cover .thumbnail {
-        width: 100%; }
+        width: 100%;
+        position: relative;
+        padding-top: 50%; }
         .gallery-videos #ajaxContainer > .video > .cover .thumbnail img {
           width: 100%;
-          height: auto; }
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover; }
     .gallery-videos #ajaxContainer > .video > .title {
       font-family: freight-sans-pro, sans-serif;
       font-size: 20px;
