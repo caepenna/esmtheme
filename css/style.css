@@ -2322,6 +2322,44 @@ p:empty {
     .report-header > .paragraphs > p:not(:first-child) {
       margin-top: 20px; }
 
+.ThanksMsg {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  @media (min-width: 801px) {
+    .ThanksMsg {
+      padding-left: calc(2rem + 1vw);
+      padding-right: calc(2rem + 1vw); } }
+  @media (min-width: 1153px) {
+    .ThanksMsg {
+      padding-left: calc(4rem + 4vw);
+      padding-right: calc(4rem + 4vw); } }
+  @media (min-width: 1921px) {
+    .ThanksMsg {
+      padding-left: calc((100vw - 72rem) / 2);
+      padding-right: calc((100vw - 72rem) / 2); } }
+  .ThanksMsg * {
+    color: transparent; }
+  .ThanksMsg::after {
+    font-family: freight-sans-pro, sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    content: "Obrigado por entrar em contato! Responderemos seu e-mail em breve.";
+    color: #272727;
+    display: block; }
+    .ThanksMsg::after.-uppercase {
+      text-transform: uppercase; }
+    .ThanksMsg::after.-light {
+      font-weight: 500; }
+    @media (min-width: 801px) {
+      .ThanksMsg::after {
+        font-size: 30px;
+        line-height: 40px; } }
+
 .report-form {
   padding-left: 2rem;
   padding-right: 2rem;
