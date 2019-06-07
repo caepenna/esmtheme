@@ -43,7 +43,10 @@
           order: 1
       > .illustration
         order: 0
-        margin-bottom: 30px
+        margin-bottom: 40px
+        +grid(8)
+        +media-smallonly
+          +offset(2)
         +media-mediumup
           +grid(5)
         .image
