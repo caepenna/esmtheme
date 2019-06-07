@@ -22,7 +22,7 @@
       </div>
       <?php the_content(); ?>
       <!-- O Wordpress tá printando uns <p> a mais aqui -->
-      <a class="link" href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
+      <a class="link" href="http://www.parabolicadesign.com/escolasemmordaca/estrategias/"><?php echo $botao_capa['title']; ?></a>
     </section>
 
     <?php get_template_part( 'partials/slider', 'cases' ); ?>
