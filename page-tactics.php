@@ -16,11 +16,11 @@
       <div class="board">
         <h3 class="title"><?php the_title(); ?></h3>
         <?php the_content(); ?>
-        <nav>
+        <!-- <nav>
           <a href="#">Compartilhar</a>
           <a href="#">Baixar</a>
           <a href="#">Imprimir</a>
-        </nav>
+        </nav> -->
       </div>
     </section>
 
