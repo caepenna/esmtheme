@@ -13,15 +13,120 @@
   padding-top: 80px
   padding-bottom: 80px
 
-  > label
+  > label, > .label, > .select label, > .field-group .label
     +h5
     display: block
     margin-bottom: 40px
-
-  > input[type=text]
-    display: block
-    border-bottom: 2px solid $color-blackboard
-    padding-bottom: 20px
-    padding-top: 20px
-    width: 100%
+  > .field-group
     margin-bottom: 80px
+  > input, .field-group > input
+    &[type=text]
+      display: block
+      border-bottom: 2px solid $color-blackboard
+      padding-bottom: 20px
+      padding-top: 20px
+      width: 100%
+      margin-bottom: 80px
+    &[type="radio"]:checked,
+    &[type="radio"]:not(:checked),
+    &[type="checkbox"]:checked,
+    &[type="checkbox"]:not(:checked)
+      position: absolute
+      left: -9999px
+    &[type="radio"]:checked + label,
+    &[type="radio"]:not(:checked) + label,
+    &[type="checkbox"]:checked + label,
+    &[type="checkbox"]:not(:checked) + label
+      +p
+      position: relative
+      padding-left: 28px
+      cursor: pointer
+      margin-bottom: 20px
+      display: block
+    &[type="radio"]:checked + label:before,
+    &[type="radio"]:not(:checked) + label:before,
+    &[type="checkbox"]:checked + label:before,
+    &[type="checkbox"]:not(:checked) + label:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 18px
+      height: 18px
+      border: 1px solid #ddd
+      border-radius: 100%
+      background: #fff
+    &[type="checkbox"]:checked + label:before,
+    &[type="checkbox"]:not(:checked) + label:before
+      border-radius: 0
+    &[type="radio"]:checked + label:after,
+    &[type="radio"]:not(:checked) + label:after,
+    &[type="checkbox"]:checked + label:after,
+    &[type="checkbox"]:not(:checked) + label:after
+      content: ''
+      width: 12px
+      height: 12px
+      background: $color-pinkchalk
+      position: absolute
+      top: 4px
+      left: 4px
+      border-radius: 100%
+      -webkit-transition: all 0.2s ease
+      transition: all 0.2s ease
+    &[type="checkbox"]:checked + label:after,
+    &[type="checkbox"]:not(:checked) + label:after
+        border-radius: 0
+    &[type="radio"]:not(:checked) + label:after,
+    &[type="checkbox"]:not(:checked) + label:after
+      opacity: 0
+      -webkit-transform: scale(0)
+      transform: scale(0)
+    &[type="radio"]:checked + label:after,
+    &[type="checkbox"]:checked + label:after
+      opacity: 1
+      -webkit-transform: scale(1)
+      transform: scale(1)
+  > .select
+    +media-mediumdown
+      width: 50%
+    +media-smallonly
+      width: 100%
+    +media-mediumup
+      width: 25%
+    text-align: center
+    text-align-last: left
+    position: relative
+    margin-bottom: 80px
+    &::before
+      content: ''
+      width: 0
+      height: 0
+      border-left: 6px solid transparent
+      border-right: 6px solid transparent
+      border-top: 6px solid #b4b4b4
+      position: absolute
+      display: block
+      right: 25px
+      bottom: 30px
+      pointer-events: none
+    > select
+      max-width: 100%
+      width: 100%
+      border: 1px solid currentColor
+      padding: 10px
+      padding-left: 15px
+      padding-right: 15px
+      font-family: $font-family-body-sans
+      font-size: 18px
+      line-height: 18px
+      font-weight: 600
+      letter-spacing: -0.5px
+      cursor: pointer
+      border-radius: 2px
+      &.selected
+        background-color: $color-blackboard
+        color: $color-bluechalk
+        border: transparent
+      &:hover
+        background-color: #fff
+        color: #000

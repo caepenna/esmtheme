@@ -2294,7 +2294,11 @@ p:empty {
 
 .report-header {
   background-color: #F7C1C1;
-  display: flex; }
+  display: flex;
+  flex-flow: row wrap; }
+  @media (min-width: 801px) {
+    .report-header {
+      flex-flow: row nowrap; } }
   .report-header > .title {
     font-family: freight-sans-pro, sans-serif;
     font-size: 32px;
@@ -2303,7 +2307,8 @@ p:empty {
     min-width: 360px;
     margin-right: 140px;
     padding-top: 55px;
-    border-top: 5px solid #fff; }
+    border-top: 5px solid #fff;
+    margin-bottom: 40px; }
     .report-header > .title.-uppercase {
       text-transform: uppercase; }
     .report-header > .title.-light {
@@ -2334,27 +2339,125 @@ p:empty {
     .report-form {
       padding-left: calc(((100vw - 72rem) / 2) * 2 );
       padding-right: calc(((100vw - 72rem) / 2) * 2 ); } }
-  .report-form > label {
+  .report-form > label, .report-form > .label, .report-form > .select label, .report-form > .field-group .label {
     font-family: freight-sans-pro, sans-serif;
     font-size: 24px;
     line-height: 24px;
     font-weight: 700;
     display: block;
     margin-bottom: 40px; }
-    .report-form > label.-uppercase {
+    .report-form > label.-uppercase, .report-form > .label.-uppercase, .report-form > .select label.-uppercase, .report-form > .field-group .label.-uppercase {
       text-transform: uppercase; }
-    .report-form > label.-light {
+    .report-form > label.-light, .report-form > .label.-light, .report-form > .select label.-light, .report-form > .field-group .label.-light {
       font-weight: 500; }
     @media (min-width: 801px) {
-      .report-form > label {
+      .report-form > label, .report-form > .label, .report-form > .select label, .report-form > .field-group .label {
         font-size: 30px;
         line-height: 40px; } }
-  .report-form > input[type=text] {
+  .report-form > .field-group {
+    margin-bottom: 80px; }
+  .report-form > input[type=text], .report-form .field-group > input[type=text] {
     display: block;
     border-bottom: 2px solid #272727;
     padding-bottom: 20px;
     padding-top: 20px;
     width: 100%;
     margin-bottom: 80px; }
+  .report-form > input[type="radio"]:checked, .report-form > input[type="radio"]:not(:checked), .report-form > input[type="checkbox"]:checked, .report-form > input[type="checkbox"]:not(:checked), .report-form .field-group > input[type="radio"]:checked, .report-form .field-group > input[type="radio"]:not(:checked), .report-form .field-group > input[type="checkbox"]:checked, .report-form .field-group > input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px; }
+  .report-form > input[type="radio"]:checked + label, .report-form > input[type="radio"]:not(:checked) + label, .report-form > input[type="checkbox"]:checked + label, .report-form > input[type="checkbox"]:not(:checked) + label, .report-form .field-group > input[type="radio"]:checked + label, .report-form .field-group > input[type="radio"]:not(:checked) + label, .report-form .field-group > input[type="checkbox"]:checked + label, .report-form .field-group > input[type="checkbox"]:not(:checked) + label {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block; }
+    @media (min-width: 801px) {
+      .report-form > input[type="radio"]:checked + label, .report-form > input[type="radio"]:not(:checked) + label, .report-form > input[type="checkbox"]:checked + label, .report-form > input[type="checkbox"]:not(:checked) + label, .report-form .field-group > input[type="radio"]:checked + label, .report-form .field-group > input[type="radio"]:not(:checked) + label, .report-form .field-group > input[type="checkbox"]:checked + label, .report-form .field-group > input[type="checkbox"]:not(:checked) + label {
+        font-size: 18px;
+        line-height: 30px; } }
+  .report-form > input[type="radio"]:checked + label:before, .report-form > input[type="radio"]:not(:checked) + label:before, .report-form > input[type="checkbox"]:checked + label:before, .report-form > input[type="checkbox"]:not(:checked) + label:before, .report-form .field-group > input[type="radio"]:checked + label:before, .report-form .field-group > input[type="radio"]:not(:checked) + label:before, .report-form .field-group > input[type="checkbox"]:checked + label:before, .report-form .field-group > input[type="checkbox"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff; }
+  .report-form > input[type="checkbox"]:checked + label:before, .report-form > input[type="checkbox"]:not(:checked) + label:before, .report-form .field-group > input[type="checkbox"]:checked + label:before, .report-form .field-group > input[type="checkbox"]:not(:checked) + label:before {
+    border-radius: 0; }
+  .report-form > input[type="radio"]:checked + label:after, .report-form > input[type="radio"]:not(:checked) + label:after, .report-form > input[type="checkbox"]:checked + label:after, .report-form > input[type="checkbox"]:not(:checked) + label:after, .report-form .field-group > input[type="radio"]:checked + label:after, .report-form .field-group > input[type="radio"]:not(:checked) + label:after, .report-form .field-group > input[type="checkbox"]:checked + label:after, .report-form .field-group > input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #F7C1C1;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .report-form > input[type="checkbox"]:checked + label:after, .report-form > input[type="checkbox"]:not(:checked) + label:after, .report-form .field-group > input[type="checkbox"]:checked + label:after, .report-form .field-group > input[type="checkbox"]:not(:checked) + label:after {
+    border-radius: 0; }
+  .report-form > input[type="radio"]:not(:checked) + label:after, .report-form > input[type="checkbox"]:not(:checked) + label:after, .report-form .field-group > input[type="radio"]:not(:checked) + label:after, .report-form .field-group > input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  .report-form > input[type="radio"]:checked + label:after, .report-form > input[type="checkbox"]:checked + label:after, .report-form .field-group > input[type="radio"]:checked + label:after, .report-form .field-group > input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .report-form > .select {
+    text-align: center;
+    text-align-last: left;
+    position: relative;
+    margin-bottom: 80px; }
+    @media (max-width: 800px) {
+      .report-form > .select {
+        width: 50%; } }
+    @media (max-width: 640px) {
+      .report-form > .select {
+        width: 100%; } }
+    @media (min-width: 801px) {
+      .report-form > .select {
+        width: 25%; } }
+    .report-form > .select::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #b4b4b4;
+      position: absolute;
+      display: block;
+      right: 25px;
+      bottom: 30px;
+      pointer-events: none; }
+    .report-form > .select > select {
+      max-width: 100%;
+      width: 100%;
+      border: 1px solid currentColor;
+      padding: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: freight-sans-pro, sans-serif;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      cursor: pointer;
+      border-radius: 2px; }
+      .report-form > .select > select.selected {
+        background-color: #272727;
+        color: #ACDAEE;
+        border: transparent; }
+      .report-form > .select > select:hover {
+        background-color: #fff;
+        color: #000; }
 
 /*# sourceMappingURL=style.css.map */
