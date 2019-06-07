@@ -962,9 +962,112 @@ p:empty {
   margin-bottom: 40px;
   text-transform: uppercase; }
 
+.project-filters {
+  background-image: url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23C9C9C9'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23C9C9C9'/%3E%3C/svg%3E");
+  background-size: 2px 2px;
+  background-position: 0 0, 1px 1px;
+  display: flex;
+  flex-flow: row wrap; }
+  .project-filters select {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: freight-sans-pro, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: 25%;
+    text-align: center;
+    height: 60px;
+    padding: 20px;
+    text-align-last: center;
+    background-color: white; }
+
 .section-projects {
-  padding: 0;
-  display: flex; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-right: calc(-40px/2);
+  margin-left: calc(-40px/2);
+  align-content: stretch; }
+  @media screen and (max-width: 64rem) {
+    .section-projects {
+      margin-right: calc(-24px/2);
+      margin-left: calc(-24px/2); } }
+  .section-projects > .project {
+    display: block;
+    width: calc( (100%/12 - 40px)*4 + (4 - 1)*40px);
+    max-width: calc(100% - 40px);
+    margin-right: calc(40px/2);
+    margin-left: calc(40px/2);
+    margin-bottom: 40px;
+    display: flex;
+    flex-flow: column wrap; }
+    @media screen and (max-width: 64rem) {
+      .section-projects > .project {
+        width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-right: calc(24px/2);
+        margin-left: calc(24px/2); } }
+    @media screen and (max-width: 48rem) {
+      .section-projects > .project {
+        width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-right: calc(24px/2);
+        margin-left: calc(24px/2); } }
+    .section-projects > .project.tramitando .content {
+      background-image: url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23F6EBAE'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23F6EBAE'/%3E%3C/svg%3E");
+      background-size: 2px 2px;
+      background-position: 0 0, 1px 1px; }
+    .section-projects > .project.tramitando .status {
+      background-color: #F6EBAE; }
+    .section-projects > .project.em-vigor .content, .section-projects > .project.sancionado .content, .section-projects > .project.aprovado .content, .section-projects > .project.sancionada .content, .section-projects > .project.aprovada .content {
+      background-image: url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23F7C1C1'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23F7C1C1'/%3E%3C/svg%3E");
+      background-size: 2px 2px;
+      background-position: 0 0, 1px 1px; }
+    .section-projects > .project.em-vigor .status, .section-projects > .project.sancionado .status, .section-projects > .project.aprovado .status, .section-projects > .project.sancionada .status, .section-projects > .project.aprovada .status {
+      background-color: #F7C1C1; }
+    .section-projects > .project.suspensa .content, .section-projects > .project.recusado .content, .section-projects > .project.rejeitado .content, .section-projects > .project.arquivado .content, .section-projects > .project.suspenso .content, .section-projects > .project.derrubado .content, .section-projects > .project.vetado .content, .section-projects > .project.retirado .content, .section-projects > .project.suspensa-pelo-stf .content, .section-projects > .project.solicitacao-dos-vereadores-nao-foi-atendida .content {
+      background-image: url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23A7E1BB'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23A7E1BB'/%3E%3C/svg%3E");
+      background-size: 2px 2px;
+      background-position: 0 0, 1px 1px; }
+    .section-projects > .project.suspensa .status, .section-projects > .project.recusado .status, .section-projects > .project.rejeitado .status, .section-projects > .project.arquivado .status, .section-projects > .project.suspenso .status, .section-projects > .project.derrubado .status, .section-projects > .project.vetado .status, .section-projects > .project.retirado .status, .section-projects > .project.suspensa-pelo-stf .status, .section-projects > .project.solicitacao-dos-vereadores-nao-foi-atendida .status {
+      background-color: #A7E1BB; }
+    .section-projects > .project .content {
+      padding: 20px;
+      border-radius: 0 0 6px 6px;
+      background-image: url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23F1F1F1'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23F1F1F1'/%3E%3C/svg%3E");
+      background-size: 2px 2px;
+      background-position: 0 0, 1px 1px;
+      flex-grow: 1; }
+    .section-projects > .project .status {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: freight-sans-pro, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 300;
+      padding: 10px 20px;
+      background-color: rgba(201, 201, 201, 0.5);
+      color: #272727;
+      border-radius: 6px 6px 0 0;
+      flex-grow: 0;
+      position: relative; }
+      .section-projects > .project .status .link {
+        font-size: 16px;
+        line-height: 20px;
+        font-family: freight-sans-pro, sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-style: normal;
+        position: absolute;
+        display: inline-block;
+        right: 10px;
+        top: 0;
+        line-height: 40px; }
+    .section-projects > .project.hidden {
+      display: none; }
   .section-projects > .list {
     padding-left: 1rem;
     padding-right: 1rem;
