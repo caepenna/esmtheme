@@ -1406,32 +1406,33 @@ p:empty {
       margin-right: calc(24px/2);
       margin-left: calc(24px/2); } }
 
-    .section-tactics > .tactic > div > .info > .illustration {
-      order: 0; }
+    .section-tactics > .tactic > div > .illustration {
+      order: 0;
+      margin-bottom: 30px; }
       @media (min-width: 801px) {
-        .section-tactics > .tactic > div > .info > .illustration {
+        .section-tactics > .tactic > div > .illustration {
           display: block;
           width: calc( (100%/12 - 40px)*5 + (5 - 1)*40px);
           max-width: calc(100% - 40px);
           margin-right: calc(40px/2);
           margin-left: calc(40px/2); } }
   @media screen and (min-width: 801px) and (max-width: 64rem) {
-    .section-tactics > .tactic > div > .info > .illustration {
+    .section-tactics > .tactic > div > .illustration {
       width: calc( (100%/12 - 24px)*5 + (5 - 1)*24px);
       max-width: calc(100% - 24px);
       margin-right: calc(24px/2);
       margin-left: calc(24px/2); } }
   @media screen and (min-width: 801px) and (max-width: 48rem) {
-    .section-tactics > .tactic > div > .info > .illustration {
+    .section-tactics > .tactic > div > .illustration {
       width: calc( (100%/12 - 24px)*5 + (5 - 1)*24px);
       max-width: calc(100% - 24px);
       margin-right: calc(24px/2);
       margin-left: calc(24px/2); } }
 
-      .section-tactics > .tactic > div > .info > .illustration .image {
+      .section-tactics > .tactic > div > .illustration .image {
         padding-top: 100%;
         position: relative; }
-        .section-tactics > .tactic > div > .info > .illustration .image img {
+        .section-tactics > .tactic > div > .illustration .image img {
           position: absolute;
           top: 0;
           width: 100%;
