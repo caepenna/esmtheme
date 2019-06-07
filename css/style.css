@@ -713,7 +713,7 @@ p:empty {
     padding-right: 40px;
     padding-top: 4rem;
     padding-bottom: 4rem;
-    width: 50%; }
+    max-width: 100%; }
     @media (min-width: 801px) {
       .section-cases > .left {
         padding-left: calc(2rem + 1vw);
@@ -728,6 +728,7 @@ p:empty {
         padding-right: calc((100vw - 72rem) / 2); } }
     @media (min-width: 801px) {
       .section-cases > .left {
+        width: 50%;
         padding-top: 8rem;
         padding-bottom: 8rem; } }
     .section-cases > .left > .title {
@@ -760,6 +761,9 @@ p:empty {
     background-image: url("../assets/images/flag.svg");
     background-size: cover;
     width: 50%; }
+    @media (max-width: 800px) {
+      .section-cases > .right {
+        display: none; } }
 
 .section-caseslist {
   counter-reset: case;
@@ -1184,10 +1188,7 @@ p:empty {
     counter-increment: tactic;
     background-color: rgba(167, 225, 187, 0.5);
     padding-top: 120px;
-    padding-bottom: 120px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between; }
+    padding-bottom: 120px; }
     @media (min-width: 801px) {
       .section-tactics > .tactic {
         padding-left: calc(2rem + 1vw);
@@ -1200,106 +1201,122 @@ p:empty {
       .section-tactics > .tactic {
         padding-left: calc((100vw - 72rem) / 2);
         padding-right: calc((100vw - 72rem) / 2); } }
-    .section-tactics > .tactic:nth-child(2n+1) > div > .info {
-      order: 0; }
+    @media (min-width: 801px) {
+      .section-tactics > .tactic {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between; } }
+    @media (min-width: 801px) {
+      .section-tactics > .tactic:nth-child(2n+1) > div > .info {
+        order: 0; }
+      .section-tactics > .tactic:nth-child(2n+1) > div > .illustration {
+        margin-left: calc((100%/12 - 40px)*1 + (1 - 1)*40px + 1.5*40px);
+        order: 1; } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
     .section-tactics > .tactic:nth-child(2n+1) > div > .illustration {
-      margin-left: calc((100%/12 - 40px)*1 + (1 - 1)*40px + 1.5*40px);
-      order: 1; }
-      @media screen and (max-width: 64rem) {
-        .section-tactics > .tactic:nth-child(2n+1) > div > .illustration {
-          margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
-      @media screen and (max-width: 48rem) {
-        .section-tactics > .tactic:nth-child(2n+1) > div > .illustration {
-          margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+      margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+  @media screen and (min-width: 801px) and (max-width: 48rem) {
+    .section-tactics > .tactic:nth-child(2n+1) > div > .illustration {
+      margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+
     .section-tactics > .tactic:nth-child(2n) {
       background-color: white; }
-      .section-tactics > .tactic:nth-child(2n) > div > .info {
-        margin-left: calc((100%/12 - 40px)*1 + (1 - 1)*40px + 1.5*40px);
-        order: 1; }
-        @media screen and (max-width: 64rem) {
-          .section-tactics > .tactic:nth-child(2n) > div > .info {
-            margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
-        @media screen and (max-width: 48rem) {
-          .section-tactics > .tactic:nth-child(2n) > div > .info {
-            margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
-      .section-tactics > .tactic:nth-child(2n) > div > .illustration {
-        order: 0; }
+      @media (min-width: 801px) {
+        .section-tactics > .tactic:nth-child(2n) > div > .info {
+          margin-left: calc((100%/12 - 40px)*1 + (1 - 1)*40px + 1.5*40px);
+          order: 1; } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .section-tactics > .tactic:nth-child(2n) > div > .info {
+      margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+  @media screen and (min-width: 801px) and (max-width: 48rem) {
+    .section-tactics > .tactic:nth-child(2n) > div > .info {
+      margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+      @media (min-width: 801px) {
+        .section-tactics > .tactic:nth-child(2n) > div > .illustration {
+          order: 0; } }
+    @media (min-width: 801px) {
+      .section-tactics > .tactic > div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin-right: calc(-40px/2);
+        margin-left: calc(-40px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
     .section-tactics > .tactic > div {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      margin-right: calc(-40px/2);
-      margin-left: calc(-40px/2); }
-      @media screen and (max-width: 64rem) {
-        .section-tactics > .tactic > div {
-          margin-right: calc(-24px/2);
-          margin-left: calc(-24px/2); } }
+      margin-right: calc(-24px/2);
+      margin-left: calc(-24px/2); } }
+
+    .section-tactics > .tactic > div > .info h2 {
+      font-family: freight-sans-pro, sans-serif;
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 900; }
+      .section-tactics > .tactic > div > .info h2.-uppercase {
+        text-transform: uppercase; }
+      .section-tactics > .tactic > div > .info h2.-light {
+        font-weight: 400; }
+      @media (min-width: 801px) {
+        .section-tactics > .tactic > div > .info h2 {
+          font-size: 40px;
+          line-height: 50px; } }
+      .section-tactics > .tactic > div > .info h2::before {
+        content: counter(tactic) " - "; }
+    .section-tactics > .tactic > div > .info p {
+      margin-top: 30px; }
+    @media (min-width: 801px) {
       .section-tactics > .tactic > div > .info {
         display: block;
         width: calc( (100%/12 - 40px)*6 + (6 - 1)*40px);
         max-width: calc(100% - 40px);
         margin-right: calc(40px/2);
         margin-left: calc(40px/2);
-        order: 1; }
-        @media screen and (max-width: 64rem) {
-          .section-tactics > .tactic > div > .info {
-            width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        @media screen and (max-width: 48rem) {
-          .section-tactics > .tactic > div > .info {
-            width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        .section-tactics > .tactic > div > .info h2 {
-          font-family: freight-sans-pro, sans-serif;
-          font-size: 32px;
-          line-height: 36px;
-          font-weight: 900; }
-          .section-tactics > .tactic > div > .info h2.-uppercase {
-            text-transform: uppercase; }
-          .section-tactics > .tactic > div > .info h2.-light {
-            font-weight: 400; }
-          @media (min-width: 801px) {
-            .section-tactics > .tactic > div > .info h2 {
-              font-size: 40px;
-              line-height: 50px; } }
-          .section-tactics > .tactic > div > .info h2::before {
-            content: counter(tactic) " - "; }
-        .section-tactics > .tactic > div > .info p {
-          margin-top: 30px; }
-      .section-tactics > .tactic > div > .illustration {
-        display: block;
-        width: calc( (100%/12 - 40px)*5 + (5 - 1)*40px);
-        max-width: calc(100% - 40px);
-        margin-right: calc(40px/2);
-        margin-left: calc(40px/2);
-        order: 0; }
-        @media screen and (max-width: 64rem) {
-          .section-tactics > .tactic > div > .illustration {
-            width: calc( (100%/12 - 24px)*5 + (5 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        @media screen and (max-width: 48rem) {
-          .section-tactics > .tactic > div > .illustration {
-            width: calc( (100%/12 - 24px)*5 + (5 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        .section-tactics > .tactic > div > .illustration .image {
-          padding-top: 100%;
-          position: relative; }
-          .section-tactics > .tactic > div > .illustration .image img {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            bottom: 0;
-            border-radius: 50%;
-            object-fit: cover; }
+        order: 1; } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .section-tactics > .tactic > div > .info {
+      width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 48rem) {
+    .section-tactics > .tactic > div > .info {
+      width: calc( (100%/12 - 24px)*6 + (6 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+
+    .section-tactics > .tactic > div > .info > .illustration {
+      order: 0; }
+      @media (min-width: 801px) {
+        .section-tactics > .tactic > div > .info > .illustration {
+          display: block;
+          width: calc( (100%/12 - 40px)*5 + (5 - 1)*40px);
+          max-width: calc(100% - 40px);
+          margin-right: calc(40px/2);
+          margin-left: calc(40px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .section-tactics > .tactic > div > .info > .illustration {
+      width: calc( (100%/12 - 24px)*5 + (5 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 48rem) {
+    .section-tactics > .tactic > div > .info > .illustration {
+      width: calc( (100%/12 - 24px)*5 + (5 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+
+      .section-tactics > .tactic > div > .info > .illustration .image {
+        padding-top: 100%;
+        position: relative; }
+        .section-tactics > .tactic > div > .info > .illustration .image img {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          border-radius: 50%;
+          object-fit: cover; }
 
 .section-casesnav {
   background-color: #272727;
@@ -2064,6 +2081,26 @@ p:empty {
                 max-width: calc(100% - 24px);
                 margin-right: calc(24px/2);
                 margin-left: calc(24px/2); } }
+            @media (max-width: 800px) {
+              .books-slider .book > .info > .excerpt > div > p {
+                display: block;
+                width: calc( (100%/9 - 40px)*9 + (9 - 1)*40px);
+                max-width: calc(100% - 40px);
+                margin-right: calc(40px/2);
+                margin-left: calc(40px/2); } }
+  @media screen and (max-width: 800px) and (max-width: 64rem) {
+    .books-slider .book > .info > .excerpt > div > p {
+      width: calc( (100%/9 - 24px)*9 + (9 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (max-width: 800px) and (max-width: 48rem) {
+    .books-slider .book > .info > .excerpt > div > p {
+      width: calc( (100%/9 - 24px)*9 + (9 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+
           .books-slider .book > .info > .excerpt > div > .metainfo {
             display: block;
             width: calc( (100%/9 - 40px)*3 + (3 - 1)*40px);
@@ -2082,6 +2119,9 @@ p:empty {
                 max-width: calc(100% - 24px);
                 margin-right: calc(24px/2);
                 margin-left: calc(24px/2); } }
+            @media (max-width: 800px) {
+              .books-slider .book > .info > .excerpt > div > .metainfo {
+                display: none; } }
             .books-slider .book > .info > .excerpt > div > .metainfo > p {
               font-style: italic;
               font-family: freight-macro-pro, serif; }

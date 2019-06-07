@@ -33,15 +33,6 @@
       	?>
       		<article class="tactic">
             <div>
-              <div class="info">
-                <?php if( $titulo ): ?>
-          				<h2><?php echo $titulo ?></h2>
-          			<?php endif; ?>
-
-                <?php if( $texto ): ?>
-          				<p><?php echo $texto ?></p>
-          			<?php endif; ?>
-              </div>
               <div class="illustration">
                 <!-- Se precisar da url (pra usar como background-image, por exemplo) -->
                 <?php //echo wp_get_attachment_url($imagem); ?>
@@ -50,6 +41,15 @@
                 <div class="image">
                   <?php echo wp_get_attachment_image($imagem, 'medium_large'); ?>
                 </div>
+              </div>
+              <div class="info">
+                <?php if( $titulo ): ?>
+          				<h2><?php echo $titulo ?></h2>
+          			<?php endif; ?>
+
+                <?php if( $texto ): ?>
+          				<p><?php echo $texto ?></p>
+          			<?php endif; ?>
               </div>
             </div>
       		</article>

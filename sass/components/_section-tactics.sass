@@ -7,46 +7,52 @@
     background-color: rgba($color-greenchalk, .5)
     padding-top: 120px
     padding-bottom: 120px
-    display: flex
-    flex-flow: row wrap
-    justify-content: space-between
+    +media-mediumup
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
     &:nth-child(2n+1)
-      > div
-        > .info
-          order: 0
-        > .illustration
-          +offset(1)
-          order: 1
+      +media-mediumup
+        > div
+          > .info
+            order: 0
+          > .illustration
+            +offset(1)
+            order: 1
     &:nth-child(2n)
       background-color: white
-      > div
-        > .info
-          +offset(1)
-          order: 1
-        > .illustration
-          order: 0
+      +media-mediumup
+        > div
+          > .info
+            +offset(1)
+            order: 1
+          > .illustration
+            order: 0
     > div
-      +grid-container
+      +media-mediumup
+        +grid-container
       > .info
-        +grid(6)
-        order: 1
         h2
           +h4
           &::before
             content: counter(tactic) " - "
         p
           margin-top: 30px
-      > .illustration
-        +grid(5)
-        order: 0
-        .image
-          padding-top: 100%
-          position: relative
-          img
-            position: absolute
-            top: 0
-            width: 100%
-            height: 100%
-            bottom: 0
-            border-radius: 50%
-            object-fit: cover
+        +media-mediumup
+          +grid(6)
+          order: 1
+        > .illustration
+          order: 0
+          +media-mediumup
+            +grid(5)
+          .image
+            padding-top: 100%
+            position: relative
+            img
+              position: absolute
+              top: 0
+              width: 100%
+              height: 100%
+              bottom: 0
+              border-radius: 50%
+              object-fit: cover
