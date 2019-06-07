@@ -7,14 +7,19 @@
   counter-reset: link
   padding-top: 0
   > .link
+    flex-basis: calc((100% / 1) - 0px)
+    +media-mediumup
+      flex-basis: calc((100% / 2) - 80px)
+    +media-largeup
+      flex-basis: calc((100% / 3) - 80px)
     font-family: $font-family-body-serif
     font-style: italic
-    flex-basis: calc((100% / 3) - 80px)
     margin-right: 80px
     padding-left: 40px
     position: relative
     font-size: 18px
     line-height: 30px
+    margin-bottom: 40px
     > span
       background-image: linear-gradient(#fff, #fff)
       background-position: 0% center

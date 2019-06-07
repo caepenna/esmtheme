@@ -1478,14 +1478,21 @@ p:empty {
   counter-reset: link;
   padding-top: 0; }
   .section-casesnav > .link {
+    flex-basis: calc((100% / 1) - 0px);
     font-family: freight-macro-pro, serif;
     font-style: italic;
-    flex-basis: calc((100% / 3) - 80px);
     margin-right: 80px;
     padding-left: 40px;
     position: relative;
     font-size: 18px;
-    line-height: 30px; }
+    line-height: 30px;
+    margin-bottom: 40px; }
+    @media (min-width: 801px) {
+      .section-casesnav > .link {
+        flex-basis: calc((100% / 2) - 80px); } }
+    @media (min-width: 1153px) {
+      .section-casesnav > .link {
+        flex-basis: calc((100% / 3) - 80px); } }
     .section-casesnav > .link > span {
       background-image: linear-gradient(#fff, #fff);
       background-position: 0% center;
