@@ -222,7 +222,7 @@ p:empty {
     right: 0;
     background-color: #272727;
     transition: 0.3s ease;
-    z-index: 99;
+    z-index: 97;
     pointer-events: none;
     display: flex;
     justify-content: space-between;
@@ -473,7 +473,7 @@ p:empty {
     width: 64px;
     height: 64px;
     position: relative;
-    z-index: 9;
+    z-index: 99;
     cursor: pointer;
     font-size: 32px;
     margin-left: -16px; }
