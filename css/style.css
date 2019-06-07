@@ -792,138 +792,152 @@ p:empty {
       padding-top: 0;
       margin-top: 0; }
     .section-caseslist > .section-case > .case {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      margin-right: calc(-40px/2);
-      margin-left: calc(-40px/2);
       counter-increment: case; }
-      @media screen and (max-width: 64rem) {
+      @media (min-width: 801px) {
         .section-caseslist > .section-case > .case {
-          margin-right: calc(-24px/2);
-          margin-left: calc(-24px/2); } }
-      .section-caseslist > .section-case > .case > .capa {
-        display: block;
-        width: calc( (100%/12 - 40px)*4 + (4 - 1)*40px);
-        max-width: calc(100% - 40px);
-        margin-right: calc(40px/2);
-        margin-left: calc(40px/2); }
-        @media screen and (max-width: 64rem) {
-          .section-caseslist > .section-case > .case > .capa {
-            width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        @media screen and (max-width: 48rem) {
-          .section-caseslist > .section-case > .case > .capa {
-            width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        .section-caseslist > .section-case > .case > .capa > .title {
-          margin-top: 10px;
-          border-top: 10px solid #272727;
-          padding-top: 40px; }
-          .section-caseslist > .section-case > .case > .capa > .title::before {
-            content: counter(case) " - "; }
-        .section-caseslist > .section-case > .case > .capa > .img {
-          margin-top: 80px; }
-          .section-caseslist > .section-case > .case > .capa > .img img {
-            width: 100%;
-            height: auto; }
-      .section-caseslist > .section-case > .case > .text {
-        display: block;
-        width: calc( (100%/12 - 40px)*7 + (7 - 1)*40px);
-        max-width: calc(100% - 40px);
-        margin-right: calc(40px/2);
-        margin-left: calc(40px/2);
-        margin-left: calc((100%/12 - 40px)*1 + (1 - 1)*40px + 1.5*40px); }
-        @media screen and (max-width: 64rem) {
-          .section-caseslist > .section-case > .case > .text {
-            width: calc( (100%/12 - 24px)*7 + (7 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        @media screen and (max-width: 48rem) {
-          .section-caseslist > .section-case > .case > .text {
-            width: calc( (100%/12 - 24px)*7 + (7 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        @media screen and (max-width: 64rem) {
-          .section-caseslist > .section-case > .case > .text {
-            margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
-        @media screen and (max-width: 48rem) {
-          .section-caseslist > .section-case > .case > .text {
-            margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
-        .section-caseslist > .section-case > .case > .text > .intro {
-          font-family: freight-macro-pro, serif;
-          font-style: italic;
-          font-size: 28px;
-          line-height: 40px;
-          margin-top: 0; }
-        .section-caseslist > .section-case > .case > .text > .detalhes {
-          margin-top: 40px; }
-        .section-caseslist > .section-case > .case > .text p {
-          margin-top: 20px; }
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          margin-right: calc(-40px/2);
+          margin-left: calc(-40px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .section-caseslist > .section-case > .case {
+      margin-right: calc(-24px/2);
+      margin-left: calc(-24px/2); } }
+
+      @media (min-width: 801px) {
+        .section-caseslist > .section-case > .case > .capa {
+          display: block;
+          width: calc( (100%/12 - 40px)*4 + (4 - 1)*40px);
+          max-width: calc(100% - 40px);
+          margin-right: calc(40px/2);
+          margin-left: calc(40px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .section-caseslist > .section-case > .case > .capa {
+      width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 48rem) {
+    .section-caseslist > .section-case > .case > .capa {
+      width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+
+      .section-caseslist > .section-case > .case > .capa > .title {
+        margin-top: 10px;
+        border-top: 10px solid #272727;
+        padding-top: 40px; }
+        .section-caseslist > .section-case > .case > .capa > .title::before {
+          content: counter(case) " - "; }
+      .section-caseslist > .section-case > .case > .capa > .img {
+        margin-top: 80px; }
+        .section-caseslist > .section-case > .case > .capa > .img img {
+          width: 100%;
+          height: auto; }
+      @media (min-width: 801px) {
+        .section-caseslist > .section-case > .case > .text {
+          display: block;
+          width: calc( (100%/12 - 40px)*7 + (7 - 1)*40px);
+          max-width: calc(100% - 40px);
+          margin-right: calc(40px/2);
+          margin-left: calc(40px/2);
+          margin-left: calc((100%/12 - 40px)*1 + (1 - 1)*40px + 1.5*40px); } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .section-caseslist > .section-case > .case > .text {
+      width: calc( (100%/12 - 24px)*7 + (7 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 48rem) {
+    .section-caseslist > .section-case > .case > .text {
+      width: calc( (100%/12 - 24px)*7 + (7 - 1)*24px);
+      max-width: calc(100% - 24px);
+      margin-right: calc(24px/2);
+      margin-left: calc(24px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .section-caseslist > .section-case > .case > .text {
+      margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+  @media screen and (min-width: 801px) and (max-width: 48rem) {
+    .section-caseslist > .section-case > .case > .text {
+      margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+
+      .section-caseslist > .section-case > .case > .text > .intro {
+        font-family: freight-macro-pro, serif;
+        font-style: italic;
+        font-size: 28px;
+        line-height: 40px;
+        margin-top: 0; }
+      .section-caseslist > .section-case > .case > .text > .detalhes {
+        margin-top: 40px; }
+      .section-caseslist > .section-case > .case > .text p {
+        margin-top: 20px; }
     .section-caseslist > .section-case > .protect {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      margin-right: calc(-40px/2);
-      margin-left: calc(-40px/2);
       border-top: 1px solid #272727;
       padding-top: 70px;
       margin-top: 70px; }
-      @media screen and (max-width: 64rem) {
+      .section-caseslist > .section-case > .protect > .content > p {
+        margin-top: 20px; }
+        @media (min-width: 801px) {
+          .section-caseslist > .section-case > .protect > .content > p:first-child {
+            margin-top: 0; } }
+      @media (min-width: 801px) {
         .section-caseslist > .section-case > .protect {
-          margin-right: calc(-24px/2);
-          margin-left: calc(-24px/2); } }
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          margin-right: calc(-40px/2);
+          margin-left: calc(-40px/2); } }
+  @media screen and (min-width: 801px) and (max-width: 64rem) {
+    .section-caseslist > .section-case > .protect {
+      margin-right: calc(-24px/2);
+      margin-left: calc(-24px/2); } }
+      @media (min-width: 801px) {
+          .section-caseslist > .section-case > .protect > .title {
+            display: block;
+            width: calc( (100%/12 - 40px)*4 + (4 - 1)*40px);
+            max-width: calc(100% - 40px);
+            margin-right: calc(40px/2);
+            margin-left: calc(40px/2); } }
+    @media screen and (min-width: 801px) and (max-width: 64rem) {
       .section-caseslist > .section-case > .protect > .title {
-        display: block;
-        width: calc( (100%/12 - 40px)*4 + (4 - 1)*40px);
-        max-width: calc(100% - 40px);
-        margin-right: calc(40px/2);
-        margin-left: calc(40px/2); }
-        @media screen and (max-width: 64rem) {
-          .section-caseslist > .section-case > .protect > .title {
-            width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        @media screen and (max-width: 48rem) {
-          .section-caseslist > .section-case > .protect > .title {
-            width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
+        width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-right: calc(24px/2);
+        margin-left: calc(24px/2); } }
+    @media screen and (min-width: 801px) and (max-width: 48rem) {
+      .section-caseslist > .section-case > .protect > .title {
+        width: calc( (100%/12 - 24px)*4 + (4 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-right: calc(24px/2);
+        margin-left: calc(24px/2); } }
+      @media (min-width: 801px) {
+          .section-caseslist > .section-case > .protect > .content {
+            display: block;
+            width: calc( (100%/12 - 40px)*7 + (7 - 1)*40px);
+            max-width: calc(100% - 40px);
+            margin-right: calc(40px/2);
+            margin-left: calc(40px/2);
+            margin-left: calc((100%/12 - 40px)*1 + (1 - 1)*40px + 1.5*40px); } }
+    @media screen and (min-width: 801px) and (max-width: 64rem) {
       .section-caseslist > .section-case > .protect > .content {
-        display: block;
-        width: calc( (100%/12 - 40px)*7 + (7 - 1)*40px);
-        max-width: calc(100% - 40px);
-        margin-right: calc(40px/2);
-        margin-left: calc(40px/2);
-        margin-left: calc((100%/12 - 40px)*1 + (1 - 1)*40px + 1.5*40px); }
-        @media screen and (max-width: 64rem) {
-          .section-caseslist > .section-case > .protect > .content {
-            width: calc( (100%/12 - 24px)*7 + (7 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        @media screen and (max-width: 48rem) {
-          .section-caseslist > .section-case > .protect > .content {
-            width: calc( (100%/12 - 24px)*7 + (7 - 1)*24px);
-            max-width: calc(100% - 24px);
-            margin-right: calc(24px/2);
-            margin-left: calc(24px/2); } }
-        @media screen and (max-width: 64rem) {
-          .section-caseslist > .section-case > .protect > .content {
-            margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
-        @media screen and (max-width: 48rem) {
-          .section-caseslist > .section-case > .protect > .content {
-            margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
-        .section-caseslist > .section-case > .protect > .content > p:not(:first-child) {
-          margin-top: 20px; }
+        width: calc( (100%/12 - 24px)*7 + (7 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-right: calc(24px/2);
+        margin-left: calc(24px/2); } }
+    @media screen and (min-width: 801px) and (max-width: 48rem) {
+      .section-caseslist > .section-case > .protect > .content {
+        width: calc( (100%/12 - 24px)*7 + (7 - 1)*24px);
+        max-width: calc(100% - 24px);
+        margin-right: calc(24px/2);
+        margin-left: calc(24px/2); } }
+    @media screen and (min-width: 801px) and (max-width: 64rem) {
+      .section-caseslist > .section-case > .protect > .content {
+        margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
+    @media screen and (min-width: 801px) and (max-width: 48rem) {
+      .section-caseslist > .section-case > .protect > .content {
+        margin-left: calc((100%/12 - 24px)*1 + (1 - 1)*24px + 1.5*24px); } }
 
 .section-books > hr {
   height: 10px;

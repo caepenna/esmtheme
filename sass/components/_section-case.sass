@@ -12,10 +12,12 @@
       padding-top: 0
       margin-top: 0
     > .case
-      +grid-container
+      +media-mediumup
+        +grid-container
       counter-increment: case
       > .capa
-        +grid(4)
+        +media-mediumup
+          +grid(4)
         > .title
           margin-top: 10px
           border-top: 10px solid $color-blackboard
@@ -28,8 +30,9 @@
             width: 100%
             height: auto
       > .text
-        +grid(7)
-        +offset(1)
+        +media-mediumup
+          +grid(7)
+          +offset(1)
         > .intro
           font-family: $font-family-body-serif
           font-style: italic
@@ -41,15 +44,18 @@
         p
           margin-top: 20px
     > .protect
-      +grid-container
       border-top: 1px solid $color-blackboard
       padding-top: 70px
       margin-top: 70px
-      > .title
-        +grid(4)
-      > .content
-        +grid(7)
-        +offset(1)
-        > p
-          &:not(:first-child)
-            margin-top: 20px
+      > .content > p
+        margin-top: 20px
+        +media-mediumup
+          &:first-child
+            margin-top: 0
+      +media-mediumup
+        +grid-container
+        > .title
+          +grid(4)
+        > .content
+          +grid(7)
+          +offset(1)
