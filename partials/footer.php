@@ -15,13 +15,13 @@
       <section class="section-follow">
         <div class="board">
           <h2 class="title -uppercase">Acompanhe a Frente</h2>
-          <p class="subtitle">Participe da nossa lista de e-mails e fique por dentro de todas as novidades sobre a Frente, projetos e ações parceiros.</p>
-          <form class="form" action="index.html" method="post">
-            <input class="esm-input" type="text" name="name" placeholder="seu nome">
+          <p class="subtitle">Caso você esteja sendo perseguido, responda nosso questionário de denúncia.</p>
+          <!-- <form class="form" action="index.html" method="post"> -->
+            <!-- <input class="esm-input" type="text" name="name" placeholder="seu nome">
             <input class="esm-input" type="text" name="email" placeholder="seu e-mail">
-            <br>
-            <button class="esm-button" type="submit">Cadastrar</button>
-          </form>
+            <br> -->
+            <a class="esm-button" href="http://www.parabolicadesign.com/escolasemmordaca/denuncie/">Responder</a>
+          <!-- </form> -->
         </div>
       </section>
 
