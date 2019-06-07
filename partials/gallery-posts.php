@@ -51,10 +51,12 @@
         }
       ?>
       <a href="<?php echo $link; ?>" class="post">
-        <figure class="thumb">
-          <?php echo wp_get_attachment_image($thumbnail, 'small'); ?>
+        <div class="thumb">
+          <figure>
+            <?php echo wp_get_attachment_image($thumbnail, 'small'); ?>
+          </figure>
           <h4 class="tag"><?php echo $area_name; ?></h4>
-        </figure>
+        </div>
         <h3 class="title"><?php echo $titulo; ?></h3>
       </a>
 
