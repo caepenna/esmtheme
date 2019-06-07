@@ -2,14 +2,61 @@
   +checkboard-background(#c9c9c9)
   display: flex
   flex-flow: row wrap
-  select
-    +font-link
-    width: 25%
+  .select
+    +media-mediumdown
+      width: 50%
+    +media-smallonly
+      width: 100%
+    +media-mediumup
+      width: 25%
     text-align: center
-    height: 60px
-    padding: 20px
     text-align-last: center
     background-color: white
+    padding: 15px
+    position: relative
+    &::before
+      content: ''
+      width: 0
+      height: 0
+      border-left: 8px solid transparent
+      border-right: 8px solid transparent
+      border-top: 8px solid rgba(#000, 0.2)
+      position: absolute
+      display: block
+      right: 20px
+      bottom: 30px
+      pointer-events: none
+    > label
+      width: 100%
+      text-transform: uppercase
+      font-weight: 400
+      color: rgba($color-blackboard, 0.6)
+      font-family: $font-family-body-sans
+      font-size: 14px
+      line-height: 14px
+      letter-spacing: 2px
+    > select
+      max-width: 100%
+      width: 100%
+      border: 1px solid currentColor
+      padding: 10px
+      padding-left: 0
+      padding-right: 15px
+      font-family: $font-family-body-sans
+      font-size: 18px
+      line-height: 18px
+      font-weight: 600
+      letter-spacing: -0.5px
+      background-color: rgba($color-blackboard, 0.075)
+      cursor: pointer
+      &:active,
+      &:focus
+        background-color: rgba($color-bluechalk, 0.075)
+        color: $color-bluechalk
+        background-color: rgba($color-bluechalk, 0.1)
+      &:hover
+        background-color: #fff
+        color: #000
 
 .section-projects
   +grid-container

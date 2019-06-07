@@ -999,19 +999,63 @@ p:empty {
   background-position: 0 0, 1px 1px;
   display: flex;
   flex-flow: row wrap; }
-  .project-filters select {
-    font-size: 16px;
-    line-height: 20px;
-    font-family: freight-sans-pro, sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    width: 25%;
+  .project-filters .select {
     text-align: center;
-    height: 60px;
-    padding: 20px;
     text-align-last: center;
-    background-color: white; }
+    background-color: white;
+    padding: 15px;
+    position: relative; }
+    @media (max-width: 800px) {
+      .project-filters .select {
+        width: 50%; } }
+    @media (max-width: 640px) {
+      .project-filters .select {
+        width: 100%; } }
+    @media (min-width: 801px) {
+      .project-filters .select {
+        width: 25%; } }
+    .project-filters .select::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid rgba(0, 0, 0, 0.2);
+      position: absolute;
+      display: block;
+      right: 20px;
+      bottom: 30px;
+      pointer-events: none; }
+    .project-filters .select > label {
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: rgba(39, 39, 39, 0.6);
+      font-family: freight-sans-pro, sans-serif;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 2px; }
+    .project-filters .select > select {
+      max-width: 100%;
+      width: 100%;
+      border: 1px solid currentColor;
+      padding: 10px;
+      padding-left: 0;
+      padding-right: 15px;
+      font-family: freight-sans-pro, sans-serif;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      background-color: rgba(39, 39, 39, 0.075);
+      cursor: pointer; }
+      .project-filters .select > select:active, .project-filters .select > select:focus {
+        background-color: rgba(172, 218, 238, 0.075);
+        color: #ACDAEE;
+        background-color: rgba(172, 218, 238, 0.1); }
+      .project-filters .select > select:hover {
+        background-color: #fff;
+        color: #000; }
 
 .section-projects {
   display: flex;

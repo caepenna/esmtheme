@@ -31,155 +31,179 @@
 
       <section class="project-filters">
 
-        <select>
-          <option data-filter="" disabled selected>Esfera</option>
-          <?php
-            $slugs_esferas = array();
-            $nomes_esferas = array();
-            foreach($projects_query as $project){
-              if(!in_array(slugify($project[esfera]), $slugs_esferas)){
-                $slugs_esferas[] = slugify($project[esfera]);
-                $nomes_esferas[] = $project[esfera];
-                if(slugify($project[esfera] != '')){ ?>
-                    <option data-filter="<?php echo slugify($project[esfera]); ?>"><?php echo $project[esfera]; ?></option>
-                <?php
-                }
-              }
-            }
-         ?>
-        </select>
-
-        <select>
-          <option data-filter="" disabled selected>Estado</option>
-          <?php
-            $slugs_estados = array();
-            $nomes_estados = array();
-            foreach($projects_query as $project){
-              if(!in_array(slugify($project[estado]), $slugs_estados)){
-                $slugs_estados[] = slugify($project[estado]);
-                $nomes_estados[] = $project[estado];
-                if(slugify($project[estado] != '')){ ?>
-                    <option data-filter="<?php echo slugify($project[estado]); ?>"><?php echo $project[estado]; ?></option>
-                <?php
-                }
-              }
-            }
-         ?>
-        </select>
-
-        <select>
-          <option data-filter="" disabled selected>Município</option>
-          <?php
-            $slugs_municipios = array();
-            $nomes_municipios = array();
-            foreach($projects_query as $project){
-              if(!in_array(slugify($project[municipio]), $slugs_municipios)){
-                $slugs_municipios[] = slugify($project[municipio]);
-                $nomes_municipios[] = $project[municipio];
-                if(slugify($project[municipio] != '')){ ?>
-                    <option data-filter="<?php echo slugify($project[municipio]); ?>"><?php echo $project[municipio]; ?></option>
-                <?php
-                }
-              }
-            }
-         ?>
-        </select>
-
-        <select>
-          <option data-filter="" disabled selected>Tipo</option>
-          <?php
-            $slugs_tipo_projetos = array();
-            $nomes_tipo_projetos = array();
-            foreach($projects_query as $project){
-              if(!in_array(slugify($project[tipo_projeto]), $slugs_tipo_projetos)){
-                $slugs_tipo_projetos[] = slugify($project[tipo_projeto]);
-                $nomes_tipo_projetos[] = $project[tipo_projeto];
-                if(slugify($project[tipo_projeto] != '')){ ?>
-                    <option data-filter="<?php echo slugify($project[tipo_projeto]); ?>"><?php echo $project[tipo_projeto]; ?></option>
-                <?php
-                }
-              }
-            }
-         ?>
-        </select>
-
-        <select>
-          <option data-filter="" disabled selected>Ano</option>
-          <?php
-            $slugs_ano_projetos = array();
-            $nomes_ano_projetos = array();
-            foreach($projects_query as $project){
-              if(!in_array(slugify($project[ano_projeto]), $slugs_ano_projetos)){
-                $slugs_ano_projetos[] = slugify($project[ano_projeto]);
-                $nomes_ano_projetos[] = $project[ano_projeto];
-                if(slugify($project[ano_projeto] != 0000)){ ?>
-                    <option data-filter="<?php echo slugify($project[ano_projeto]); ?>"><?php echo $project[ano_projeto]; ?></option>
-                <?php
-                }
-              }
-            }
-         ?>
-        </select>
-
-        <select>
-          <option data-filter="" disabled selected>Categoria</option>
-          <?php
-            $slugs_categorias = array();
-            $nomes_categorias = array();
-            foreach($projects_query as $project){
-              if(!in_array(slugify($project[categoria]), $slugs_categorias)){
-                $slugs_categorias[] = slugify($project[categoria]);
-                $nomes_categorias[] = $project[categoria];
-                if(slugify($project[categoria] != '')){ ?>
-                    <option data-filter="<?php echo slugify($project[categoria]); ?>"><?php echo $project[categoria]; ?></option>
-                <?php
-                }
-              }
-            }
-         ?>
-        </select>
-
-        <select>
-          <option data-filter="" disabled selected>Partido</option>
-          <?php
-            $slugs_partidos = array();
-            $nomes_partidos = array();
-            foreach($projects_query as $project){
-
-              $pieces = explode(";", $project[partido]);
-
-              foreach($pieces as $piece){
-                $text = slugify($piece);
-                if(!in_array($text, $slugs_partidos)){
-                  $slugs_partidos[] = $text;
-                  $nomes_partidos[] = $project[partido];
-                  if($text != ''){ ?>
-                      <option data-filter="<?php echo $text; ?>"><?php echo $piece; ?></option>
+        <div class="select">
+          <label for="">Esfera:</label>
+          <select>
+            <option data-filter="" disabled selected>Selecione a esfera</option>
+            <?php
+              $slugs_esferas = array();
+              $nomes_esferas = array();
+              foreach($projects_query as $project){
+                if(!in_array(slugify($project[esfera]), $slugs_esferas)){
+                  $slugs_esferas[] = slugify($project[esfera]);
+                  $nomes_esferas[] = $project[esfera];
+                  if(slugify($project[esfera] != '')){ ?>
+                      <option data-filter="<?php echo slugify($project[esfera]); ?>"><?php echo $project[esfera]; ?></option>
                   <?php
                   }
                 }
               }
-            }
-         ?>
-        </select>
+           ?>
+          </select>
+        </div>
 
-        <select>
-          <option data-filter="" disabled selected>Status</option>
-          <?php
-            $slugs_status = array();
-            $nomes_status = array();
-            foreach($projects_query as $project){
-              if(!in_array(slugify($project[status]), $slugs_status)){
-                $slugs_status[] = slugify($project[status]);
-                $nomes_status[] = $project[status];
-                if(slugify($project[status] != '')){ ?>
-                    <option data-filter="<?php echo slugify($project[status]); ?>"><?php echo $project[status]; ?></option>
-                <?php
+        <div class="select">
+          <label for="">Estado:</label>
+          <select>
+            <option data-filter="" disabled selected>Selecione o estado</option>
+            <?php
+              $slugs_estados = array();
+              $nomes_estados = array();
+              foreach($projects_query as $project){
+                if(!in_array(slugify($project[estado]), $slugs_estados)){
+                  $slugs_estados[] = slugify($project[estado]);
+                  $nomes_estados[] = $project[estado];
+                  if(slugify($project[estado] != '')){ ?>
+                      <option data-filter="<?php echo slugify($project[estado]); ?>"><?php echo $project[estado]; ?></option>
+                  <?php
+                  }
                 }
               }
-            }
-         ?>
-        </select>
+           ?>
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="">Município:</label>
+          <select>
+            <option data-filter="" disabled selected>Selecione o município</option>
+            <?php
+              $slugs_municipios = array();
+              $nomes_municipios = array();
+              foreach($projects_query as $project){
+                if(!in_array(slugify($project[municipio]), $slugs_municipios)){
+                  $slugs_municipios[] = slugify($project[municipio]);
+                  $nomes_municipios[] = $project[municipio];
+                  if(slugify($project[municipio] != '')){ ?>
+                      <option data-filter="<?php echo slugify($project[municipio]); ?>"><?php echo $project[municipio]; ?></option>
+                  <?php
+                  }
+                }
+              }
+           ?>
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="">Tipo:</label>
+          <select>
+            <option data-filter="" disabled selected>Selecione o tipo</option>
+            <?php
+              $slugs_tipo_projetos = array();
+              $nomes_tipo_projetos = array();
+              foreach($projects_query as $project){
+                if(!in_array(slugify($project[tipo_projeto]), $slugs_tipo_projetos)){
+                  $slugs_tipo_projetos[] = slugify($project[tipo_projeto]);
+                  $nomes_tipo_projetos[] = $project[tipo_projeto];
+                  if(slugify($project[tipo_projeto] != '')){ ?>
+                      <option data-filter="<?php echo slugify($project[tipo_projeto]); ?>"><?php echo $project[tipo_projeto]; ?></option>
+                  <?php
+                  }
+                }
+              }
+           ?>
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="">Ano:</label>
+          <select>
+            <option data-filter="" disabled selected>Selecione o ano</option>
+            <?php
+              $slugs_ano_projetos = array();
+              $nomes_ano_projetos = array();
+              foreach($projects_query as $project){
+                if(!in_array(slugify($project[ano_projeto]), $slugs_ano_projetos)){
+                  $slugs_ano_projetos[] = slugify($project[ano_projeto]);
+                  $nomes_ano_projetos[] = $project[ano_projeto];
+                  if(slugify($project[ano_projeto] != 0000)){ ?>
+                      <option data-filter="<?php echo slugify($project[ano_projeto]); ?>"><?php echo $project[ano_projeto]; ?></option>
+                  <?php
+                  }
+                }
+              }
+           ?>
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="">Categoria:</label>
+          <select>
+            <option data-filter="" disabled selected>Selecione a categoria</option>
+            <?php
+              $slugs_categorias = array();
+              $nomes_categorias = array();
+              foreach($projects_query as $project){
+                if(!in_array(slugify($project[categoria]), $slugs_categorias)){
+                  $slugs_categorias[] = slugify($project[categoria]);
+                  $nomes_categorias[] = $project[categoria];
+                  if(slugify($project[categoria] != '')){ ?>
+                      <option data-filter="<?php echo slugify($project[categoria]); ?>"><?php echo $project[categoria]; ?></option>
+                  <?php
+                  }
+                }
+              }
+           ?>
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="">Partido:</label>
+          <select>
+            <option data-filter="" disabled selected>Selecione o partido</option>
+            <?php
+              $slugs_partidos = array();
+              $nomes_partidos = array();
+              foreach($projects_query as $project){
+
+                $pieces = explode(";", $project[partido]);
+
+                foreach($pieces as $piece){
+                  $text = slugify($piece);
+                  if(!in_array($text, $slugs_partidos)){
+                    $slugs_partidos[] = $text;
+                    $nomes_partidos[] = $project[partido];
+                    if($text != ''){ ?>
+                        <option data-filter="<?php echo $text; ?>"><?php echo $piece; ?></option>
+                    <?php
+                    }
+                  }
+                }
+              }
+           ?>
+          </select>
+        </div>
+
+        <div class="select">
+          <label for="">Status:</label>
+          <select>
+            <option data-filter="" disabled selected>Selecione o status</option>
+            <?php
+              $slugs_status = array();
+              $nomes_status = array();
+              foreach($projects_query as $project){
+                if(!in_array(slugify($project[status]), $slugs_status)){
+                  $slugs_status[] = slugify($project[status]);
+                  $nomes_status[] = $project[status];
+                  if(slugify($project[status] != '')){ ?>
+                      <option data-filter="<?php echo slugify($project[status]); ?>"><?php echo $project[status]; ?></option>
+                  <?php
+                  }
+                }
+              }
+           ?>
+          </select>
+        </div>
 
       </section>
 
