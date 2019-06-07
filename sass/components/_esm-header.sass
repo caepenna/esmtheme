@@ -1,11 +1,18 @@
 .esm-header
-  $menu-size: 64px
+  $size-menu: 64px
+  $size-header: $space-header
+  padding-top: calc( ( #{$size-header} - #{$size-menu} ) / 2 )
+  padding-bottom: calc( ( #{$size-header} - #{$size-menu} ) / 2 )
   +container-width
   background-color: $color-blackboard
   color: #fff
-  padding-top: 28px
-  padding-bottom: 28px
   display: flex
+  transition: all 0.3s ease
+  top: 0
+  left: 0
+  right: 0
+  position: fixed
+  z-index: 88
 
   &.-home
     background-color: transparent
@@ -13,6 +20,15 @@
     position: absolute
     > .title
       display: none
+
+  &.-hidden
+    top: -$size-header
+
+  &.-smaller
+    $size-header: 80px
+    padding-top: calc( ( #{$size-header} - #{$size-menu} ) / 2 )
+    padding-bottom: calc( ( #{$size-header} - #{$size-menu} ) / 2 )
+    background-color: $color-blackboard
 
   > .navigation
     +container-width
@@ -25,7 +41,7 @@
     right: 0
     background-color: $color-blackboard
     transition: 0.3s ease
-    z-index: 8
+    z-index: 99
     pointer-events: none
     display: flex
     justify-content: space-between
@@ -58,18 +74,18 @@
     +title-small
     flex-grow: 1
     text-align: center
-    padding-right: calc( #{$menu-size} - (#{$menu-size} / 4) )
+    padding-right: calc( #{$size-menu} - (#{$size-menu} / 4) )
     +media-mediumup
       font-size: 30px
 
   > .menu
-    width: $menu-size
-    height: $menu-size
+    width: $size-menu
+    height: $size-menu
     position: relative
     z-index: 9
     cursor: pointer
-    font-size: $menu-size/2
-    margin-left: -$menu-size/4
+    font-size: $size-menu/2
+    margin-left: -$size-menu/4
 
     &:hover
       +esm-hover
