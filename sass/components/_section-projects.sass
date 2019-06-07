@@ -1,6 +1,62 @@
-.section-projects
-  padding: 0
+.project-filters
+  +checkboard-background(#c9c9c9)
   display: flex
+  flex-flow: row wrap
+  select
+    +font-link
+    width: 25%
+    text-align: center
+    height: 60px
+    padding: 20px
+    text-align-last: center
+    background-color: white
+.section-projects
+  +grid-container
+  align-content: stretch
+  > .project
+    +grid(4)
+    margin-bottom: 40px
+    display: flex
+    flex-flow: column wrap
+    &.tramitando
+      .content
+        +checkboard-background($color-yellowchalk)
+      .status
+        background-color: $color-yellowchalk
+    &.em-vigor, &.sancionado, &.aprovado, &.sancionada, &.aprovada
+      .content
+        +checkboard-background($color-pinkchalk)
+      .status
+        background-color: $color-pinkchalk
+    &.suspensa, &.recusado, &.rejeitado, &.arquivado, &.suspenso, &.derrubado, &.vetado, &.retirado, &.suspensa-pelo-stf, &.solicitacao-dos-vereadores-nao-foi-atendida
+      .content
+        +checkboard-background($color-greenchalk)
+      .status
+        background-color: $color-greenchalk
+    .content
+      padding: 20px
+      border-radius: 0 0 6px 6px
+      +checkboard-background(#f1f1f1)
+      flex-grow: 1
+    .status
+      +font-link
+      font-weight: 300
+      padding: 10px 20px
+      background-color: rgba(#c9c9c9, .5)
+      color: $color-blackboard
+      border-radius: 6px 6px 0 0
+      flex-grow: 0
+      position: relative
+      .link
+        +font-link
+        font-style: normal
+        position: absolute
+        display: inline-block
+        right: 10px
+        top: 0
+        line-height: 40px
+    &.hidden
+      display: none
   > .list
     +container-width
     padding-top: $space-deca
