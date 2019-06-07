@@ -20,98 +20,286 @@
   <main>
 
     <section class="section-title">
-      <h2 class="title">Descubra projetos pela educação  sem censura <em>pelo Brasil.</em></h2>
+      <h2 class="title">Descubra projetos pela educação sem censura <em>pelo Brasil.</em></h2>
     </section>
 
-    <section class="section-projects">
-      <div class="list">
+    <?php
+      global $wpdb;
+      $user_count = $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}projects" );
+      $projects_query = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}projects", ARRAY_A);
+    ?>
 
-        <!-- Estado -->
+      <section class="project-filters">
+
         <select>
-          <option value="">MG</option>
-          <option value="">MS</option>
+          <option data-filter="" disabled selected>Esfera</option>
+          <?php
+            $slugs_esferas = array();
+            $nomes_esferas = array();
+            foreach($projects_query as $project){
+              if(!in_array(slugify($project[esfera]), $slugs_esferas)){
+                $slugs_esferas[] = slugify($project[esfera]);
+                $nomes_esferas[] = $project[esfera];
+                if(slugify($project[esfera] != '')){ ?>
+                    <option data-filter="<?php echo slugify($project[esfera]); ?>"><?php echo $project[esfera]; ?></option>
+                <?php
+                }
+              }
+            }
+         ?>
         </select>
 
-        <!-- Município -->
         <select>
-          <option value="">Outro Preto</option>
-          <option value="">Campo Grande</option>
+          <option data-filter="" disabled selected>Estado</option>
+          <?php
+            $slugs_estados = array();
+            $nomes_estados = array();
+            foreach($projects_query as $project){
+              if(!in_array(slugify($project[estado]), $slugs_estados)){
+                $slugs_estados[] = slugify($project[estado]);
+                $nomes_estados[] = $project[estado];
+                if(slugify($project[estado] != '')){ ?>
+                    <option data-filter="<?php echo slugify($project[estado]); ?>"><?php echo $project[estado]; ?></option>
+                <?php
+                }
+              }
+            }
+         ?>
         </select>
 
-        <!-- Tipo de projeto, "Tipo" -->
         <select>
-          <option value="">Escola sem Partido</option>
-          <option value="">Antigênero</option>
-          <option value="">Antipornografia</option>
+          <option data-filter="" disabled selected>Município</option>
+          <?php
+            $slugs_municipios = array();
+            $nomes_municipios = array();
+            foreach($projects_query as $project){
+              if(!in_array(slugify($project[municipio]), $slugs_municipios)){
+                $slugs_municipios[] = slugify($project[municipio]);
+                $nomes_municipios[] = $project[municipio];
+                if(slugify($project[municipio] != '')){ ?>
+                    <option data-filter="<?php echo slugify($project[municipio]); ?>"><?php echo $project[municipio]; ?></option>
+                <?php
+                }
+              }
+            }
+         ?>
         </select>
 
-        <!-- Status do projeto, "Status" -->
-        <!-- <select>
-          <option value="">Em Vigor</option>
-          <option value="">Sancionado</option>
-          <option value="">Retirado</option>
-        </select> -->
+        <select>
+          <option data-filter="" disabled selected>Tipo</option>
+          <?php
+            $slugs_tipo_projetos = array();
+            $nomes_tipo_projetos = array();
+            foreach($projects_query as $project){
+              if(!in_array(slugify($project[tipo_projeto]), $slugs_tipo_projetos)){
+                $slugs_tipo_projetos[] = slugify($project[tipo_projeto]);
+                $nomes_tipo_projetos[] = $project[tipo_projeto];
+                if(slugify($project[tipo_projeto] != '')){ ?>
+                    <option data-filter="<?php echo slugify($project[tipo_projeto]); ?>"><?php echo $project[tipo_projeto]; ?></option>
+                <?php
+                }
+              }
+            }
+         ?>
+        </select>
 
-        <ul>
-          <!-- Loop que constrói lista de projetos -->
-          <?php  $i = 1; foreach( $projetos as $post ): setup_postdata( $post ); ?>
-            <?php
-              //vars
-              $titulo = get_the_title();
-              $responsavel = get_field('responsavel');
-              $telefone = get_field('telefone');
-              $email = get_field('email');
-              $municipio = get_field('municipio');
-              $coordenadas = get_field('coordenadas');
-              $status = get_field('status');
-              $id = $post->post_name;
-            ?>
-            <li>
+        <select>
+          <option data-filter="" disabled selected>Ano</option>
+          <?php
+            $slugs_ano_projetos = array();
+            $nomes_ano_projetos = array();
+            foreach($projects_query as $project){
+              if(!in_array(slugify($project[ano_projeto]), $slugs_ano_projetos)){
+                $slugs_ano_projetos[] = slugify($project[ano_projeto]);
+                $nomes_ano_projetos[] = $project[ano_projeto];
+                if(slugify($project[ano_projeto] != 0000)){ ?>
+                    <option data-filter="<?php echo slugify($project[ano_projeto]); ?>"><?php echo $project[ano_projeto]; ?></option>
+                <?php
+                }
+              }
+            }
+         ?>
+        </select>
 
-              <?php if( $titulo ): ?>
-                <h5><?php echo $titulo ?></h5>
+        <select>
+          <option data-filter="" disabled selected>Categoria</option>
+          <?php
+            $slugs_categorias = array();
+            $nomes_categorias = array();
+            foreach($projects_query as $project){
+              if(!in_array(slugify($project[categoria]), $slugs_categorias)){
+                $slugs_categorias[] = slugify($project[categoria]);
+                $nomes_categorias[] = $project[categoria];
+                if(slugify($project[categoria] != '')){ ?>
+                    <option data-filter="<?php echo slugify($project[categoria]); ?>"><?php echo $project[categoria]; ?></option>
+                <?php
+                }
+              }
+            }
+         ?>
+        </select>
+
+        <select>
+          <option data-filter="" disabled selected>Partido</option>
+          <?php
+            $slugs_partidos = array();
+            $nomes_partidos = array();
+            foreach($projects_query as $project){
+
+              $pieces = explode(";", $project[partido]);
+
+              foreach($pieces as $piece){
+                $text = slugify($piece);
+                if(!in_array($text, $slugs_partidos)){
+                  $slugs_partidos[] = $text;
+                  $nomes_partidos[] = $project[partido];
+                  if($text != ''){ ?>
+                      <option data-filter="<?php echo $text; ?>"><?php echo $piece; ?></option>
+                  <?php
+                  }
+                }
+              }
+            }
+         ?>
+        </select>
+
+        <select>
+          <option data-filter="" disabled selected>Status</option>
+          <?php
+            $slugs_status = array();
+            $nomes_status = array();
+            foreach($projects_query as $project){
+              if(!in_array(slugify($project[status]), $slugs_status)){
+                $slugs_status[] = slugify($project[status]);
+                $nomes_status[] = $project[status];
+                if(slugify($project[status] != '')){ ?>
+                    <option data-filter="<?php echo slugify($project[status]); ?>"><?php echo $project[status]; ?></option>
+                <?php
+                }
+              }
+            }
+         ?>
+        </select>
+
+      </section>
+
+      <section class="section-projects">
+
+        <?php
+          foreach($projects_query as $project){
+        ?>
+          <div class="project <?php
+          echo slugify($project[esfera])
+          . " "
+          . slugify($project[estado])
+          . " "
+          . slugify($project[municipio])
+          . " "
+          . slugify($project[tipo_projeto])
+          . " "
+          . slugify($project[categoria])
+          . " "
+          . slugify($project[status])
+          . " ";
+          if($project[ano_projeto] != 0000){ echo $project[ano_projeto] . " "; }
+
+          $pieces = explode(";", $project[partido]);
+          foreach($pieces as $piece){
+            $text = slugify($piece);
+            if($text != ''){
+              echo $text . " ";
+            }
+          }
+          ?>">
+            <div class="status">
+              <?php
+                if ($project[status] == ''):
+                  echo "Status desconhecido";
+                else:
+                  echo $project[status];
+                endif;
+              ?>
+              <?php if ($project[link] != ''): ?>
+                <a class="link" href="<?php echo $project[link]; ?>" target="_blank">Link</a>
+              <?php endif; ?>
+            </div>
+
+            <div class="content">
+
+              <h6 class="title">
+                <?php
+                  echo $project[tipo_projeto];
+                  if ($project[numero_projeto] != ''):
+                    echo ' / ' . $project[numero_projeto];
+                  endif;
+                ?>
+              </h6>
+
+
+              <?php if ($project[ano_projeto] != '0000'): ?>
+                <p class="ano">
+                  <?php echo $project[ano_projeto]; ?>
+                </p>
               <?php endif; ?>
 
-              <?php if( $responsavel ): ?>
-                <p><em>Responsável: </em><?php echo $responsavel ?></p>
+              <p class="local">
+                <?php
+                  if ($project[municipio] != ''):
+                    echo $project[municipio] . ' | ';
+                  endif;
+                  echo $project[estado];
+                ?>
+              </p>
+
+              <?php if ($project[esfera] != ''): ?>
+                <p class="esfera">
+                  <em>Abrangência: </em><?php echo $project[esfera]; ?>
+                </p>
               <?php endif; ?>
 
-              <?php if( $telefone ): ?>
-                <p><em>Telefone: </em><?php echo $telefone ?></p>
+              <?php if ($project[categoria] != ''): ?>
+                <p class="categoria">
+                  <em>Categoria: </em><?php echo $project[categoria]; ?>
+                </p>
               <?php endif; ?>
 
-              <?php if( $email ): ?>
-                <p><em>Email: </em><?php echo $email ?></p>
+              <?php if ($project[partido] != ''): ?>
+                <p class="partido">
+                  <em>Iniciativa:</em>
+                  <?php echo $project[partido]; ?>
+                </p>
               <?php endif; ?>
 
 
-            </li>
+            </div>
 
-          <?php $i++; endforeach; wp_reset_postdata(); ?>
+          </div>
+        <?php } ?>
 
-        </ul>
+      </section>
 
-      </div>
-      <div class="map">
-        <div id="map"></div>
-        <h6>Ouro Preto / MG</h6>
-      </div>
-    </section>
+    <?php endwhile; ?>
 
-  </main>
+</main>
 
-  <script type="text/javascript">
-    window.onload = function () {
-      mapboxgl.accessToken = 'pk.eyJ1IjoibGFib3VsYW5nZXJpZSIsImEiOiJjamZtcTVwMnUxM2JtMzBwbzhxaDE0MzRvIn0.IR-XQlIH_92_ZhqwsFwDhw';
-      const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/laboulangerie/cjrkwgeqh0qs32sob15q8sc1g',
-        center: [-47.938,-15.796],
-        zoom: 11
-      });
-    };
-  </script>
+<script>
+  $( 'select' ).change(function() {
 
-<?php endwhile; ?>
+    var filter = $(this).find("option:selected").data("filter");
+
+    $('select').not(this).each(function(){
+      $(this).val($(this).find('option:first').val());
+     });
+
+    $('.section-projects .project:not(.hidden)').each(function(){
+      $(this).addClass('hidden');
+    });
+
+    $('.section-projects .project.' + filter ).each(function(){
+      $(this).removeClass('hidden');
+    });
+
+  });
+</script>
 
 <?php get_template_part( 'partials/footer' ); ?>
