@@ -14,7 +14,7 @@
 
       <section class="section-follow">
         <div class="board">
-          <h2 class="title -uppercase">Acompanhe a Frente</h2>
+          <h2 class="title -uppercase">Denuncie</h2>
           <p class="subtitle">Caso você esteja sendo perseguido, responda nosso questionário de denúncia.</p>
           <!-- <form class="form" action="index.html" method="post"> -->
             <!-- <input class="esm-input" type="text" name="name" placeholder="seu nome">
