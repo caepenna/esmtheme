@@ -239,222 +239,243 @@ p:empty {
       .esm-header > .navigation {
         padding-left: calc((100vw - 72rem) / 2);
         padding-right: calc((100vw - 72rem) / 2); } }
-    .esm-header > .navigation > img {
-      margin-top: 50px; }
-    .esm-header > .navigation > ul {
+    .esm-header > .navigation > .links > ul {
       margin-top: 180px; }
-      .esm-header > .navigation > ul > li {
+      .esm-header > .navigation > .links > ul > li {
         font-family: avory-i-latin, sans-serif;
         text-transform: uppercase;
         font-size: 30px;
         line-height: 40px;
         opacity: 0;
         transform: translateX(-50%); }
-        .esm-header > .navigation > ul > li:not(:first-child) {
+        .esm-header > .navigation > .links > ul > li:not(:first-child) {
           margin-top: 20px; }
+    .esm-header > .navigation > .links > .medias {
+      margin-top: 60px; }
+      .esm-header > .navigation > .links > .medias > a {
+        color: transparent;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin-left: 20px;
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center center; }
+        .esm-header > .navigation > .links > .medias > a:first-child {
+          margin-left: 0; }
+        .esm-header > .navigation > .links > .medias > a.facebook {
+          background-image: url("../assets/images/social-facebook.svg"); }
+        .esm-header > .navigation > .links > .medias > a.twitter {
+          background-image: url("../assets/images/social-twitter.svg"); }
+        .esm-header > .navigation > .links > .medias > a.instagram {
+          background-image: url("../assets/images/social-instagram.svg"); }
+        .esm-header > .navigation > .links > .medias > a.youtube {
+          background-image: url("../assets/images/social-youtube.svg"); }
+    .esm-header > .navigation > img {
+      margin-top: 50px; }
   .esm-header.-open > .navigation {
     pointer-events: auto;
     opacity: 1; }
-    .esm-header.-open > .navigation > ul > li {
+    .esm-header.-open > .navigation > .links > ul > li {
       opacity: 1;
       transform: translateX(0); }
-      .esm-header.-open > .navigation > ul > li:nth-child(1) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(1) {
         transition: all 0.4s 0.05s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(2) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(2) {
         transition: all 0.4s 0.1s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(3) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(3) {
         transition: all 0.4s 0.15s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(4) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(4) {
         transition: all 0.4s 0.2s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(5) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(5) {
         transition: all 0.4s 0.25s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(6) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(6) {
         transition: all 0.4s 0.3s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(7) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(7) {
         transition: all 0.4s 0.35s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(8) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(8) {
         transition: all 0.4s 0.4s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(9) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(9) {
         transition: all 0.4s 0.45s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(10) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(10) {
         transition: all 0.4s 0.5s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(11) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(11) {
         transition: all 0.4s 0.55s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(12) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(12) {
         transition: all 0.4s 0.6s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(13) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(13) {
         transition: all 0.4s 0.65s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(14) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(14) {
         transition: all 0.4s 0.7s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(15) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(15) {
         transition: all 0.4s 0.75s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(16) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(16) {
         transition: all 0.4s 0.8s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(17) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(17) {
         transition: all 0.4s 0.85s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(18) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(18) {
         transition: all 0.4s 0.9s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(19) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(19) {
         transition: all 0.4s 0.95s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(20) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(20) {
         transition: all 0.4s 1s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(21) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(21) {
         transition: all 0.4s 1.05s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(22) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(22) {
         transition: all 0.4s 1.1s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(23) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(23) {
         transition: all 0.4s 1.15s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(24) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(24) {
         transition: all 0.4s 1.2s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(25) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(25) {
         transition: all 0.4s 1.25s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(26) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(26) {
         transition: all 0.4s 1.3s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(27) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(27) {
         transition: all 0.4s 1.35s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(28) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(28) {
         transition: all 0.4s 1.4s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(29) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(29) {
         transition: all 0.4s 1.45s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(30) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(30) {
         transition: all 0.4s 1.5s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(31) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(31) {
         transition: all 0.4s 1.55s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(32) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(32) {
         transition: all 0.4s 1.6s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(33) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(33) {
         transition: all 0.4s 1.65s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(34) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(34) {
         transition: all 0.4s 1.7s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(35) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(35) {
         transition: all 0.4s 1.75s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(36) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(36) {
         transition: all 0.4s 1.8s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(37) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(37) {
         transition: all 0.4s 1.85s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(38) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(38) {
         transition: all 0.4s 1.9s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(39) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(39) {
         transition: all 0.4s 1.95s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(40) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(40) {
         transition: all 0.4s 2s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(41) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(41) {
         transition: all 0.4s 2.05s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(42) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(42) {
         transition: all 0.4s 2.1s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(43) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(43) {
         transition: all 0.4s 2.15s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(44) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(44) {
         transition: all 0.4s 2.2s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(45) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(45) {
         transition: all 0.4s 2.25s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(46) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(46) {
         transition: all 0.4s 2.3s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(47) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(47) {
         transition: all 0.4s 2.35s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(48) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(48) {
         transition: all 0.4s 2.4s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(49) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(49) {
         transition: all 0.4s 2.45s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(50) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(50) {
         transition: all 0.4s 2.5s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(51) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(51) {
         transition: all 0.4s 2.55s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(52) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(52) {
         transition: all 0.4s 2.6s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(53) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(53) {
         transition: all 0.4s 2.65s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(54) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(54) {
         transition: all 0.4s 2.7s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(55) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(55) {
         transition: all 0.4s 2.75s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(56) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(56) {
         transition: all 0.4s 2.8s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(57) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(57) {
         transition: all 0.4s 2.85s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(58) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(58) {
         transition: all 0.4s 2.9s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(59) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(59) {
         transition: all 0.4s 2.95s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(60) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(60) {
         transition: all 0.4s 3s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(61) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(61) {
         transition: all 0.4s 3.05s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(62) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(62) {
         transition: all 0.4s 3.1s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(63) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(63) {
         transition: all 0.4s 3.15s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(64) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(64) {
         transition: all 0.4s 3.2s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(65) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(65) {
         transition: all 0.4s 3.25s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(66) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(66) {
         transition: all 0.4s 3.3s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(67) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(67) {
         transition: all 0.4s 3.35s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(68) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(68) {
         transition: all 0.4s 3.4s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(69) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(69) {
         transition: all 0.4s 3.45s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(70) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(70) {
         transition: all 0.4s 3.5s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(71) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(71) {
         transition: all 0.4s 3.55s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(72) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(72) {
         transition: all 0.4s 3.6s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(73) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(73) {
         transition: all 0.4s 3.65s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(74) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(74) {
         transition: all 0.4s 3.7s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(75) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(75) {
         transition: all 0.4s 3.75s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(76) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(76) {
         transition: all 0.4s 3.8s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(77) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(77) {
         transition: all 0.4s 3.85s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(78) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(78) {
         transition: all 0.4s 3.9s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(79) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(79) {
         transition: all 0.4s 3.95s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(80) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(80) {
         transition: all 0.4s 4s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(81) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(81) {
         transition: all 0.4s 4.05s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(82) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(82) {
         transition: all 0.4s 4.1s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(83) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(83) {
         transition: all 0.4s 4.15s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(84) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(84) {
         transition: all 0.4s 4.2s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(85) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(85) {
         transition: all 0.4s 4.25s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(86) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(86) {
         transition: all 0.4s 4.3s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(87) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(87) {
         transition: all 0.4s 4.35s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(88) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(88) {
         transition: all 0.4s 4.4s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(89) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(89) {
         transition: all 0.4s 4.45s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(90) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(90) {
         transition: all 0.4s 4.5s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(91) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(91) {
         transition: all 0.4s 4.55s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(92) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(92) {
         transition: all 0.4s 4.6s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(93) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(93) {
         transition: all 0.4s 4.65s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(94) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(94) {
         transition: all 0.4s 4.7s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(95) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(95) {
         transition: all 0.4s 4.75s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(96) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(96) {
         transition: all 0.4s 4.8s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(97) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(97) {
         transition: all 0.4s 4.85s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(98) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(98) {
         transition: all 0.4s 4.9s ease; }
-      .esm-header.-open > .navigation > ul > li:nth-child(99) {
+      .esm-header.-open > .navigation > .links > ul > li:nth-child(99) {
         transition: all 0.4s 4.95s ease; }
   .esm-header > .title {
     font-family: freight-macro-pro, serif;
@@ -1766,6 +1787,9 @@ p:empty {
   .gallery-books .more-books > a {
     margin-left: auto;
     margin-right: auto; }
+
+.videos-section {
+  padding-top: 0; }
 
 .gallery-videos #ajaxContainer {
   display: flex;

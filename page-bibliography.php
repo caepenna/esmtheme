@@ -23,10 +23,6 @@
 			<h3 class="title">Livros</h3>
 			<?php get_template_part( 'partials/gallery', 'books' ); ?>
 		</section>
-    <section class="section-subtitle">
-			<h3 class="title">Vídeos</h3>
-			<?php get_template_part( 'partials/gallery', 'videos' ); ?>
-		</section>
   </main>
 
 <?php endwhile; ?>

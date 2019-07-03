@@ -46,24 +46,46 @@
     display: flex
     justify-content: space-between
     align-items: flex-start
+    > .links
+      > ul
+        margin-top: 180px
+        > li
+          font-family: $font-family-heading
+          text-transform: uppercase
+          font-size: 30px
+          line-height: 40px
+          opacity: 0
+          transform: translateX(-50%)
+          &:not(:first-child)
+            margin-top: 20px
+      > .medias
+        margin-top: 60px
+        > a
+          color: transparent
+          width: 40px
+          height: 40px
+          display: inline-block
+          margin-left: 20px
+          background-size: 40px
+          background-repeat: no-repeat
+          background-position: center center
+          &:first-child
+            margin-left: 0
+          &.facebook
+            background-image: url('../assets/images/social-facebook.svg')
+          &.twitter
+            background-image: url('../assets/images/social-twitter.svg')
+          &.instagram
+            background-image: url('../assets/images/social-instagram.svg')
+          &.youtube
+            background-image: url('../assets/images/social-youtube.svg')
     > img
       margin-top: 50px
-    > ul
-      margin-top: 180px
-      > li
-        font-family: $font-family-heading
-        text-transform: uppercase
-        font-size: 30px
-        line-height: 40px
-        opacity: 0
-        transform: translateX(-50%)
-        &:not(:first-child)
-          margin-top: 20px
 
   &.-open > .navigation
     pointer-events: auto
     opacity: 1
-    > ul > li
+    > .links > ul > li
       opacity: 1
       transform: translateX(0)
       @for $i from 1 through 99

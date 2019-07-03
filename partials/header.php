@@ -36,15 +36,23 @@
         ?>
       </h1>
       <div class="navigation">
-        <?php wp_nav_menu(
-          array(
-            'theme_location' => 'header-menu',
-            'container' => '',
-            'container_id' => '',
-            'container_class' => 'container-class',
-            'items_wrap' => '<ul>%3$s</ul>'
-          )
-        ); ?>
+        <div class="links">
+          <?php wp_nav_menu(
+            array(
+              'theme_location' => 'header-menu',
+              'container' => '',
+              'container_id' => '',
+              'container_class' => 'container-class',
+              'items_wrap' => '<ul>%3$s</ul>'
+            )
+          ); ?>
+          <div class="medias">
+            <a class="facebook" href="#">Facebook</a>
+            <a class="twitter" href="#">Twitter</a>
+            <a class="instagram" href="#">Instagram</a>
+            <a class="youtube" href="#">Youtube</a>
+          </div>
+        </div>
         <img src="<?php echo $baseurl.'/assets/images/logo.svg' ?>" alt="Frente Nacional Escola sem Mordaça">
       </div>
     </header>
