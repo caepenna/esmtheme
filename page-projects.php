@@ -55,7 +55,7 @@
         <div class="select">
           <label for="">Estado:</label>
           <select>
-            <option data-filter="" disabled selected>Selecione o estado</option>
+            <option data-filter="" disabled selected>Selecione a UF</option>
             <?php
               $slugs_estados = array();
               $nomes_estados = array();
@@ -73,7 +73,7 @@
           </select>
         </div>
 
-        <div class="select">
+        <div class="select full">
           <label for="">Município:</label>
           <select>
             <option data-filter="" disabled selected>Selecione o município</option>
@@ -94,7 +94,7 @@
           </select>
         </div>
 
-        <div class="select">
+        <div class="select full">
           <label for="">Tipo:</label>
           <select>
             <option data-filter="" disabled selected>Selecione o tipo</option>
@@ -310,6 +310,9 @@
   $( 'select' ).change(function() {
 
     var filter = $(this).find("option:selected").data("filter");
+
+    $('select').removeClass('selected');
+    $(this).addClass('selected');
 
     $('select').not(this).each(function(){
       $(this).val($(this).find('option:first').val());

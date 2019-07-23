@@ -1,12 +1,16 @@
 .report-header
   background-color: $color-pinkchalk
   display: flex
+  flex-flow: row wrap
+  +media-mediumup
+    flex-flow: row nowrap
   > .title
     +h4
     min-width: 360px
     margin-right: 140px
     padding-top: 55px
     border-top: 5px solid #fff
+    margin-bottom: 40px
   > .paragraphs > p
     color: rgba($color-blackboard, 0.8)
     &:not(:first-child)

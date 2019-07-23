@@ -6,54 +6,58 @@
     +media-mediumdown
       width: 50%
     +media-smallonly
-      width: 100%
+      //width: 100%
     +media-mediumup
       width: 25%
+    &.full
+      +media-smallonly
+        width: 100%
     text-align: center
-    text-align-last: center
-    background-color: white
+    text-align-last: left
     padding: 15px
     position: relative
     &::before
       content: ''
       width: 0
       height: 0
-      border-left: 8px solid transparent
-      border-right: 8px solid transparent
-      border-top: 8px solid rgba(#000, 0.2)
+      border-left: 6px solid transparent
+      border-right: 6px solid transparent
+      border-top: 6px solid #b4b4b4
       position: absolute
       display: block
-      right: 20px
+      right: 25px
       bottom: 30px
       pointer-events: none
     > label
-      width: 100%
-      text-transform: uppercase
-      font-weight: 400
+      +font-link
       color: rgba($color-blackboard, 0.6)
-      font-family: $font-family-body-sans
       font-size: 14px
-      line-height: 14px
-      letter-spacing: 2px
+      line-height: 30px
+      text-align: left
+      min-width: 100%
+      display: block
     > select
       max-width: 100%
       width: 100%
       border: 1px solid currentColor
       padding: 10px
-      padding-left: 0
+      padding-left: 15px
       padding-right: 15px
       font-family: $font-family-body-sans
       font-size: 18px
       line-height: 18px
       font-weight: 600
       letter-spacing: -0.5px
-      background-color: rgba($color-blackboard, 0.075)
       cursor: pointer
+      border-radius: 2px
+      &.selected
+        background-color: $color-blackboard
+        color: $color-bluechalk
+        border: transparent
       &:active,
       &:focus
-        background-color: rgba($color-bluechalk, 0.075)
-        color: $color-bluechalk
-        background-color: rgba($color-bluechalk, 0.1)
+        //color: $color-blackboard
+        //background-color: rgba($color-bluechalk, 1)
       &:hover
         background-color: #fff
         color: #000
@@ -64,13 +68,15 @@
   > .project
     +media-mediumup
       +grid(4)
+      display: flex
+      flex-flow: column wrap
     +media-mediumdown
       +grid(6)
+      display: flex
+      flex-flow: column wrap
     +media-smallonly
       +grid(12)
     margin-bottom: 40px
-    display: flex
-    flex-flow: column wrap
     &.tramitando
       .content
         +checkboard-background($color-yellowchalk)
