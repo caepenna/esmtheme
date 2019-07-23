@@ -246,12 +246,26 @@ p:empty {
       .esm-header > .navigation > ul > li {
         font-family: avory-i-latin, sans-serif;
         text-transform: uppercase;
-        font-size: 30px;
-        line-height: 40px;
         opacity: 0;
         transform: translateX(-50%); }
-        .esm-header > .navigation > ul > li:not(:first-child) {
-          margin-top: 20px; }
+        @media (min-width: 801px) {
+          .esm-header > .navigation > ul > li {
+            font-size: 30px;
+            line-height: 40px; }
+            .esm-header > .navigation > ul > li:not(:first-child) {
+              margin-top: 20px; } }
+        @media (max-width: 800px) {
+          .esm-header > .navigation > ul > li {
+            font-size: 22.5px;
+            line-height: 30px; }
+            .esm-header > .navigation > ul > li:not(:first-child) {
+              margin-top: 15px; } }
+        @media (max-width: 640px) {
+          .esm-header > .navigation > ul > li {
+            font-size: 15px;
+            line-height: 20px; }
+            .esm-header > .navigation > ul > li:not(:first-child) {
+              margin-top: 10px; } }
   .esm-header.-open > .navigation {
     pointer-events: auto;
     opacity: 1; }
