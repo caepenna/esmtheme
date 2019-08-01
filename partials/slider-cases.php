@@ -31,7 +31,7 @@
           <article class="case">
             <?php if( $depo ): ?>
               <p><?php echo $depo ?></p>
-              <a href="<?php echo get_site_url(); ?>/casos-modelo/#<?php echo $id ?>">Saiba como agir</a>
+              <a class="esm-link" href="<?php echo get_site_url(); ?>/casos-modelo/#<?php echo $id ?>">Saiba como agir</a>
             <?php endif; ?>
           </article>
         <?php $i++; endforeach; wp_reset_postdata(); ?>

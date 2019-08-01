@@ -1,5 +1,9 @@
 .section-news
   background-color: mix($color-bluechalk, #fff)
+  text-align: center
+
+  > *
+    text-align: left
 
   &.-dark
     background-color: $color-blackboard
@@ -9,10 +13,7 @@
     margin-bottom: 40px
     text-transform: uppercase
 
-  > .link
-    +font-link
+  > .esm-link
     margin-top: 40px
     text-align: center
-    display: block
-    margin-left: auto
-    margin-right: auto
+    display: inline-block

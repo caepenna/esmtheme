@@ -22,7 +22,7 @@
       </div>
       <?php the_content(); ?>
       <!-- O Wordpress tá printando uns <p> a mais aqui -->
-      <a class="link" href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
+      <a class="esm-link" href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
     </section>
 
     <?php get_template_part( 'partials/slider', 'cases' ); ?>
@@ -30,7 +30,7 @@
 		<section class="section-news">
       <h2 class="title">Notícias</h2>
 			<?php get_template_part( 'partials/slider', 'archive' ); ?>
-    	<a class="link" href="/noticias">Mais notícias</a>
+    	<a class="esm-link" href="/noticias">Mais notícias</a>
     </section>
 
 		<section class="section-books">
