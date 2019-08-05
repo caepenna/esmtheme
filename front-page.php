@@ -22,11 +22,7 @@
       </div>
       <?php the_content(); ?>
       <!-- O Wordpress tá printando uns <p> a mais aqui -->
-<<<<<<< HEAD
-      <a class="link" href="http://www.parabolicadesign.com/escolasemmordaca/estrategias/"><?php echo $botao_capa['title']; ?></a>
-=======
       <a class="esm-link" href="<?php echo $botao_capa['url']; ?>"><?php echo $botao_capa['title']; ?></a>
->>>>>>> e60a3c34519568d3e3c0e90ca45ef12e7c3aa08d
     </section>
 
     <?php get_template_part( 'partials/slider', 'cases' ); ?>

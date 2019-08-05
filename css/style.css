@@ -244,9 +244,10 @@ p:empty {
       .esm-header > .navigation > .links > ul > li {
         font-family: avory-i-latin, sans-serif;
         text-transform: uppercase;
+        font-size: 30px;
+        line-height: 40px;
         opacity: 0;
         transform: translateX(-50%); }
-<<<<<<< HEAD
         .esm-header > .navigation > .links > ul > li:not(:first-child) {
           margin-top: 20px; }
     .esm-header > .navigation > .links > .medias {
@@ -272,7 +273,13 @@ p:empty {
           background-image: url("../assets/images/social-youtube.svg"); }
     .esm-header > .navigation > img {
       margin-top: 50px; }
-=======
+    .esm-header > .navigation > ul {
+      margin-top: 180px; }
+      .esm-header > .navigation > ul > li {
+        font-family: avory-i-latin, sans-serif;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateX(-50%); }
         @media (min-width: 801px) {
           .esm-header > .navigation > ul > li {
             font-size: 30px;
@@ -291,7 +298,6 @@ p:empty {
             line-height: 20px; }
             .esm-header > .navigation > ul > li:not(:first-child) {
               margin-top: 10px; } }
->>>>>>> e60a3c34519568d3e3c0e90ca45ef12e7c3aa08d
   .esm-header.-open > .navigation {
     pointer-events: auto;
     opacity: 1; }
@@ -628,10 +634,6 @@ p:empty {
       text-transform: uppercase;
       letter-spacing: 0.1em; }
 
-<<<<<<< HEAD
-.home {
-  padding-top: 0; }
-=======
 .esm-link {
   font-size: 16px;
   line-height: 20px;
@@ -656,7 +658,9 @@ p:empty {
     right: 0; }
   .esm-link:active::before {
     opacity: 0.5; }
->>>>>>> e60a3c34519568d3e3c0e90ca45ef12e7c3aa08d
+
+.home {
+  padding-top: 0; }
 
 .section-hero {
   background-color: rgba(167, 225, 187, 0.5);
