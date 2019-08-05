@@ -40,7 +40,7 @@
               </div>
             </div>
           </div>
-          <a class="link" href="<?php echo $link; ?>">Saiba mais…</a>
+          <a class="esm-link" href="<?php echo $link; ?>">Saiba mais…</a>
       </article>
     </div>
 

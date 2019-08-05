@@ -1,0 +1,19 @@
+.esm-link
+  +font-link
+  position: relative
+  &::before
+    +checkboard-background($color-pinkchalk)
+    content: ''
+    left: 0
+    right: 100%
+    top: 0.4375em
+    bottom: 0.4375em
+    position: absolute
+    display: block
+    transition: all 0.3s ease
+  &:hover
+    &::before
+      right: 0
+  &:active
+    &::before
+      opacity: 0.5
